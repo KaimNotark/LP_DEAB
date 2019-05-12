@@ -1,0 +1,28 @@
+{
+  "name": "LP_DEAB",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "parcel-bundler": "^1.12.3",
+    "postcss-modules": "^1.4.1"
+  },
+  "devDependencies": {
+    "sass": "^1.20.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaimNotark/LP_DEAB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaimNotark/LP_DEAB/issues"
+  },
+  "homepage": "https://github.com/KaimNotark/LP_DEAB#readme"
+}

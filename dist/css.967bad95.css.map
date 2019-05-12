@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA;IACI,UAAU;AACd;AACA;IACI,YAAY;AAChB","file":"css.967bad95.css","sourceRoot":"..\\src","sourcesContent":[".overview__title {\r\n    color: red;\r\n}\r\n.q111 {\r\n    color: green;\r\n}"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["scss\\index.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;;;AAEJ;EACI,YAAA","file":"app.c328ef1a.css","sourceRoot":"..\\src","sourcesContent":[".overview__title {\r\n    color: red;\r\n}\r\n.q111 {\r\n    color: green;\r\n}"]}
