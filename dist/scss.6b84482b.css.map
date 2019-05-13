@@ -1,0 +1,1 @@
+{"version":3,"sources":["scss\\index.scss"],"names":[],"mappings":"AAEA;EACI,OAHQ","file":"scss.6b84482b.css","sourceRoot":"..\\src","sourcesContent":["$colorOfH2: green;\r\n\r\n.overview__title {\r\n    color: $colorOfH2;\r\n}"]}
