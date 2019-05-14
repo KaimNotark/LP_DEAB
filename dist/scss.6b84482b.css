@@ -1,5 +1,81 @@
-.overview__title {
-  color: green;
+@font-face {
+  font-family: "nunito";
+  src: url(/Nunitosansregular.361a1884.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper *,
+.wrapper *::before,
+.wrapper *::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Myriad Pro Regular", "Verdana", "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header-list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+}
+
+.header-item {
+  display: block;
+  margin-top: 18px;
+}
+
+._item-avatar {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.header-item__link {
+  width: 10%;
+  height: 16px;
+  color: #007fff;
+  font-family: "nunito";
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+.header-avatar {
+  width: 52px;
+  height: 52px;
+}
+
+.img-avatar {
+  user-select: none;
 }
 
 /*# sourceMappingURL=/scss.6b84482b.css.map */
