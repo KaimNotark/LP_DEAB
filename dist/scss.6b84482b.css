@@ -78,4 +78,32 @@ body {
   user-select: none;
 }
 
+.main {
+  padding-top: 100px;
+}
+
+.hello__title {
+  font-family: nunito;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: center;
+}
+
+._blue {
+  color: #007fff;
+}
+
+.hello-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-left: 0%;
+}
+
+.hello-item {
+  display: block;
+  margin: 0px 18px;
+}
+
 /*# sourceMappingURL=/scss.6b84482b.css.map */

@@ -82,3 +82,43 @@ body {
 .img-avatar {
   user-select: none;
 }
+
+.main {
+  padding-top: 100px;
+}
+
+.hello {}
+
+.hello__title {
+  // width: 550px;
+  // height: 120px;
+  font-family: nunito;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: center;
+}
+
+._blue {
+  color: $textBlue;
+}
+
+.hello-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-left: 0%;
+}
+
+.hello-item {
+  display: block;
+  margin: 0px 18px;
+}
+
+.hello-item__link {}
+
+.img-twitter {}
+
+.img-behance {}
+
+.img-instagram {}
