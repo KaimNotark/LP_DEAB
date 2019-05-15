@@ -10,7 +10,8 @@ $white: #ffffff;
 
 %buttonYellow {
   display: block;
-  padding: 0 10px;
+  position: relative;
+  // padding: 0 10px;
   width: 80px;
   height: 23px;
   background-color: $yellow;
@@ -174,7 +175,8 @@ body {
   margin-top: -170px;
 }
 
-.works-img {}
+.works-img {
+}
 
 .works__button {
   @extend %buttonYellow;
@@ -200,7 +202,9 @@ body {
 .img-ocean {
   width: 520px;
   height: 505px;
-
+  
+  // border: none;
+  // z-index: -10;
 }
 
 .img-mountains {
