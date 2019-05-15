@@ -2,6 +2,29 @@
   font-family: "nunito";
   src: url(/Nunitosansregular.361a1884.ttf);
 }
+.works__button {
+  display: block;
+  padding: 0 10px;
+  width: 80px;
+  height: 23px;
+  background-color: #ffe300;
+  border-radius: 14px;
+  font-family: nunito;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 22px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.1s ease, border-color 0.3s ease;
+}
+
+.works__button:hover {
+  background-color: #000000;
+  border: 1px solid #ffe300;
+  color: #ffe300;
+}
+
 html {
   scroll-behavior: smooth;
 }

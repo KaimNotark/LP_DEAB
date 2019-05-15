@@ -3,7 +3,33 @@
   src: url(../fonts/Nunitosansregular.ttf);
 }
 
-$textBlue: #007fff;
+$blue: #007fff;
+$yellow: #ffe300;
+$black: #000000;
+
+%buttonYellow {
+  display: block;
+  padding: 0 10px;
+  width: 80px;
+  height: 23px;
+  background-color: $yellow;
+  border-radius: 14px;
+  font-family: nunito;
+  color: $black;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 22px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color .1s ease,
+    border-color .3s ease;
+}
+
+%buttonYellowHover {
+  background-color: $black;
+  border: 1px solid $yellow;
+  color: $yellow;
+}
 
 html {
   scroll-behavior: smooth;
@@ -64,7 +90,7 @@ body {
 .header-item__link {
   width: 10%;
   height: 16px;
-  color: $textBlue;
+  color: $blue;
   font-family: 'nunito';
   font-size: 12px;
   font-weight: 800;
@@ -100,7 +126,7 @@ body {
 }
 
 ._blue {
-  color: $textBlue;
+  color: $blue;
 }
 
 .hello-list {
@@ -122,3 +148,30 @@ body {
 .img-behance {}
 
 .img-instagram {}
+
+
+.works {}
+
+.works-list {}
+
+.works-item {}
+
+.works-img {}
+
+.works__button {
+  @extend %buttonYellow;
+}
+
+.works__button:hover {
+  @extend %buttonYellowHover;
+}
+
+.works__sub-tittle {}
+
+.img-ocean {}
+
+.img-mountains {}
+
+.img-doors {}
+
+.img-building {}
