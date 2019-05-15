@@ -411,5 +411,29 @@ body {
 }
 
 .footer {
-  margin-top: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.footer__content {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.footer__buttons {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__button {
+  color: #979797;
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  text-decoration: none;
+  // text-align: right;
 }
