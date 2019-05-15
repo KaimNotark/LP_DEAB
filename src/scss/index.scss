@@ -289,3 +289,33 @@ body {
 .links {
   margin-top: 50px;
 }
+
+.links-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links-list {
+  display: block;
+  padding-left: 0;
+  width: 47%;
+}
+
+.links-item {
+  display: block;
+  margin-top: 40px;
+}
+
+.links-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+._justify {
+  display: block;
+  padding-left: 0;
+}
+
+.contacts {
+  margin-top: 50px;
+}
