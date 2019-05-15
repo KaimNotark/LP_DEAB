@@ -233,4 +233,18 @@ body {
   margin-top: 50px;
 }
 
+.gad-list {
+  display: flex;
+  padding-left: 0;
+}
+
+.gad-item {
+  display: block;
+  width: 25%;
+}
+
+.links {
+  margin-top: 50px;
+}
+
 /*# sourceMappingURL=/scss.6b84482b.css.map */
