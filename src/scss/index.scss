@@ -6,6 +6,7 @@
 $blue: #007fff;
 $yellow: #ffe300;
 $black: #000000;
+$white: #ffffff;
 
 %buttonYellow {
   display: block;
@@ -13,6 +14,7 @@ $black: #000000;
   width: 80px;
   height: 23px;
   background-color: $yellow;
+  border: 1px solid $yellow;
   border-radius: 14px;
   font-family: nunito;
   color: $black;
@@ -27,7 +29,6 @@ $black: #000000;
 
 %buttonYellowHover {
   background-color: $black;
-  border: 1px solid $yellow;
   color: $yellow;
 }
 
@@ -72,19 +73,18 @@ body {
 .header-list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-left: 0;
 }
 
 .header-item {
   display: block;
-  margin-top: 18px;
 }
 
 ._item-avatar {
   width: 50%;
   display: flex;
   justify-content: center;
-  margin-top: 0;
 }
 
 .header-item__link {
@@ -150,28 +150,86 @@ body {
 .img-instagram {}
 
 
-.works {}
+.works {
+  padding-top: 100px;
+}
 
-.works-list {}
+.works-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding-left: 0;
+}
 
-.works-item {}
+.works-item {
+  display: block;
+}
+
+.works-item._item-ocean {
+  align-self: flex-start;
+}
+
+.works-item._item-doors {
+  margin-top: -170px;
+}
 
 .works-img {}
 
 .works__button {
   @extend %buttonYellow;
+  margin-top: -150px;
+  margin-left: 50px;
 }
 
 .works__button:hover {
   @extend %buttonYellowHover;
 }
 
-.works__sub-tittle {}
+.works__sub-tittle {
+  width: 275px;
+  height: 72px;
+  color: $white;
+  font-family: nunito;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-left: 50px;
+}
 
-.img-ocean {}
+.img-ocean {
+  width: 520px;
+  height: 505px;
 
-.img-mountains {}
+}
 
-.img-doors {}
+.img-mountains {
+  width: 520px;
+  height: 737px;
+}
 
-.img-building {}
+.img-doors {
+  width: 520px;
+  height: 667px;
+}
+
+.img-building {
+  width: 520px;
+  height: 435px;
+}
+
+.works__sub-tittle._ocean {}
+
+.works__sub-tittle._mountains {
+  margin-top: -150px;
+}
+
+.works__sub-tittle._doors {
+  margin-top: -150px;
+}
+
+.works__sub-tittle._building {}
+
+.about {
+  margin-top: 200px;
+}
