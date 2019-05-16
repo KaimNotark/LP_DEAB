@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "autoprefixer": "^9.5.1",
     "parcel-bundler": "^1.12.3"
   },
   "devDependencies": {
