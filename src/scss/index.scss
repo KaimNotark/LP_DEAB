@@ -375,7 +375,7 @@ body {
 }
 
 .contact-form__input {
-  color: $gray;
+  color: $black;
   font-family: nunito;
   font-size: 16px;
   font-weight: 600;
@@ -385,8 +385,15 @@ body {
   border-left: none;
   border-bottom-color: $gray;
 }
+
+.contact-form__input::-webkit-input-placeholder {
+  color: $gray;
+}
+
 ._message {
   height: 100px;
+  border-bottom-width: 3px;
+  resize: none;
 }
 .contact-form__span {
   font-family: nunito;
