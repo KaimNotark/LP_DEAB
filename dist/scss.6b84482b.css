@@ -5,6 +5,7 @@
 .works__button {
   display: block;
   position: relative;
+  padding: 2px 0 0 0;
   width: 80px;
   height: 23px;
   background-color: #ffe300;
@@ -14,7 +15,7 @@
   color: #000000;
   font-size: 12px;
   font-weight: 800;
-  line-height: 22px;
+  line-height: 16px;
   text-decoration: none;
   text-align: center;
   -webkit-transition: background-color 0.1s ease, border-color 0.3s ease;
@@ -116,7 +117,7 @@ body {
           user-select: none;
 }
 
-.main {
+.hello {
   padding-top: 100px;
 }
 
@@ -201,6 +202,15 @@ body {
   height: 505px;
 }
 
+.img-ocean-mobile,
+.img-mountains-mobile,
+.img-doors-mobile,
+.img-building-mobile {
+  width: 0%;
+  max-width: 0px;
+  visibility: hidden;
+}
+
 .img-mountains {
   width: 520px;
   height: 737px;
@@ -278,6 +288,24 @@ body {
   width: 25%;
 }
 
+.img-google-mobile {
+  width: 0%;
+  max-width: 0px;
+  visibility: hidden;
+}
+
+.img-airbnb-mobile {
+  width: 0%;
+  max-width: 0px;
+  visibility: hidden;
+}
+
+.img-dropbox-mobile {
+  width: 0%;
+  max-width: 0px;
+  visibility: hidden;
+}
+
 .links {
   margin-top: 50px;
 }
@@ -314,6 +342,10 @@ body {
 ._justify {
   display: block;
   padding-left: 0;
+}
+
+._gray-text {
+  color: #979797;
 }
 
 .contacts {
