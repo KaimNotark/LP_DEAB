@@ -347,6 +347,14 @@ body {
   color: $grayText;
 }
 
+._year-mobile {
+  visibility: hidden;
+}
+
+._year-desktop {
+  visibility: visible;
+}
+
 .contacts {
   margin-top: 50px;
 }

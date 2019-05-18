@@ -1,4 +1,4 @@
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 480px) {
 
   .header {
     padding-top: 50px;
@@ -42,7 +42,8 @@
   }
 
   .works-item {
-    /* padding-top: 50px; */
+    /* border: 1 solid #ffffff; */
+    /* margin-top: 100px; */
   }
 
   .works__button {
@@ -76,9 +77,18 @@
             justify-content: center;
     width: 100%;
     max-width: 315px;
-    /* padding-bottom: 30px; */
     margin: 0 auto;
     visibility: visible;
+  }
+
+  .img-ocean-mobile,
+  .img-doors-mobile,
+  .img-building-mobile {
+    margin-top: 30vw;
+  }
+
+  .img-mountains-mobile {
+    margin-top: 20vw;
   }
 
   .works-item._item-ocean {
@@ -173,15 +183,86 @@
             justify-content: center;
   }
 
-.links-list {
-  width: 80%;
-  padding: 0 0 0 0;
-}
-.links-content {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
+  .links-list {
+    width: 80%;
+    padding: 0 0 0 0;
+  }
+
+  .links-content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  ._year-mobile {
+    visibility: visible;
+  }
+
+  ._year-desktop {
+    visibility: hidden;
+  }
+
+  .contacts {
+    margin-left: 10%;
+  }
+
+  .row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  ._width-25proc {
+    width: 90%;
+  }
+
+  .column {
+    /* width: 80%; */
+  }
+
+  ._form-column {
+    width: 100%;
+  }
+
+  ._width-75proc {
+    width: 90%;
+    margin-top: 50px;
+  }
+
+  ._message {
+    height: 150px;
+  }
+
+  ._button-mobile {
+    margin-top: 5vw;
+    margin-left: 66vw;
+  }
+
+  .footer {
+    margin-left: 10%;
+  }
+
+  .footer__content {
+    width: 90%;
+    font-size: 12px;
+  }
+
+  .footer__buttons {
+    width: 90%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+  }
+
+  .footer__button {
+    width: 100%;
+    font-size: 12px;
+  }
+
   /* modal window */
   .modal-list {
     display: block;
