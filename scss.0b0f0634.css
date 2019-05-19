@@ -1,6 +1,7 @@
-@font-face {
+/* @font-face {
     font-family: nunito;
-    src: url(./Nunitosansregular.39aea47a.ttf)
+    src: url(./Nunitosansregular.ttf); */
+    /* src: url(./Nunitosansregular.woff); */
 }
 
 .works__button {
@@ -12,6 +13,7 @@
     border: 1px solid #ffe300;
     border-radius: 14px;
     font-family: nunito;
+    /* font-family: 'Nunito', sans-serif; */
     color: #000;
     font-size: 12px;
     font-weight: 800;
@@ -83,7 +85,7 @@ body {
     width: 10%;
     height: 16px;
     color: #007fff;
-    font-family: nunito;
+    font-family: Nunito;
     font-size: 12px;
     font-weight: 800;
     line-height: 16px;
@@ -106,7 +108,7 @@ body {
 }
 
 .hello__title {
-    font-family: nunito;
+    font-family: Nunito;
     font-size: 48px;
     font-weight: 700;
     line-height: 60px;
