@@ -1,0 +1,53 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add autoprefixer -D
+
+PATH: 
+  C:\Users\Alex_\AppData\Local\Temp\yarn--1558295189237-0.579664527680231;C:\Users\Alex_\Git_Projects\cloned\LP_DEAB\node_modules\.bin;C:\Users\Alex_\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Program Files\libexec\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Alex_\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Alex_\bin;C:\Python27;C:\Python27\Scripts;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files\Oculus\Support\oculus-runtime;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\dotnet;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git LFS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\ProgramData\chocolatey\bin;D:\OSPanel\modules\php\PHP-7.2-x64;C:\ProgramData\ComposerSetup\bin;%NVM_HOME%;%NVM_SYMLINK%;C:\Program Files\erl10.1\bin;C:\Program Files (x86)\Elixir\bin;C:\Users\Alex_\.mix\escripts;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Ruby25-x64\bin;C:\Ruby26-x64\bin;C:\Users\Alex_\AppData\Local\Microsoft\WindowsApps;C:\Program Files\heroku\bin;C:\Program Files\JetBrains\WebStorm 2018.3.3\bin;C:\Users\Alex_\AppData\Local\.meteor;C:\Users\Alex_\AppData\Roaming\Composer\vendor\bin;C:\Users\Alex_\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Alex_\AppData\Local\Yarn\bin;C:\Users\Alex_\AppData\Local\atom\bin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  10.14.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Alex_\Git_Projects\cloned\LP_DEAB\node_modules\deasync\bin\win32-x64-node-10\deasync.node'
+
+npm manifest: 
+  {
+    "name": "LP_DEAB",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+      "parcel-bundler": "^1.12.3"
+    },
+    "devDependencies": {
+      "autoprefixer": "^9.5.1",
+      "sass": "^1.20.1"
+    },
+    "scripts": {
+      "start": "parcel ./src/index.html --open",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/KaimNotark/LP_DEAB.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/KaimNotark/LP_DEAB/issues"
+    },
+    "homepage": "https://github.com/KaimNotark/LP_DEAB#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
