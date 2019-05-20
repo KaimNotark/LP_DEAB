@@ -2,275 +2,318 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <title>landing page DEAB</title>
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./normalize.e1f125f0.css">
-    <link rel="stylesheet" href="./sweetalert2.min.a8def367.css">
-    <link rel="stylesheet" href="./scss.19ee19ef.css">
-    <link rel="stylesheet" href="./index-mobile.5bda6b31.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>landing page DEAB</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./normalize.e1f125f0.css">
+  <link rel="stylesheet" href="./sweetalert2.min.a8def367.css">
+  <link rel="stylesheet" href="./scss.c13dc2f0.css">
+  <link rel="stylesheet" href="./index-mobile.23670188.css">
+  <link rel="stylesheet" href="./modal.3d2eb1c4.css">
 </head>
 
 <body>
-    <div id="wrapper" class="wrapper">
-        <header class="header">
-            <div class="container">
-                <nav class="header-menu">
-                    <ul class="header-list">
-                        <li class="header-item"> <a href="#works" class="header-item__link"> works </a> </li>
-                        <li class="header-item"> <a href="#about" class="header-item__link"> about </a> </li>
-                        <li class="header-item _item-avatar">
-                            <picture class="header-avatar">
-                                <source srcset="" media="" type=""> <img src="./header-avatar.754fe700.png" srcset=""
-                                    alt="avatar" class="img-avatar"> </picture>
-                        </li>
-                        <li class="header-item"> <a href="#links" class="header-item__link"> links </a> </li>
-                        <li class="header-item"> <a href="#contacts" class="header-item__link"> contacts </a> </li>
-                    </ul>
+  <div id="wrapper" class="wrapper">
+    <header class="header">
+      <div class="container">
+        <nav class="header-menu">
+          <div class="header-mobile__btn-div"> <button data-modal="modal-window" class="header-mobile__btn-open">
+            </button>
+            <picture class="header-mobile-avatar">
+              <source srcset="" media="" type=""> <img src="./header-avatar.754fe700.png" srcset="" alt="avatar"
+                class="img-avatar"> </picture>
+          </div>
+          <ul class="header-list">
+            <li class="header-item"> <a href="#works" class="header-item__link"> works </a> </li>
+            <li class="header-item"> <a href="#about" class="header-item__link"> about </a> </li>
+            <li class="header-item _item-avatar">
+              <picture class="header-avatar">
+                <source srcset="" media="" type=""> <img src="./header-avatar.754fe700.png" srcset="" alt="avatar"
+                  class="img-avatar"> </picture>
+            </li>
+            <li class="header-item"> <a href="#links" class="header-item__link"> links </a> </li>
+            <li class="header-item"> <a href="#contacts" class="header-item__link"> contacts </a> </li>
+          </ul>
+        </nav>
+        <div id="modalBtn" class="modal__btn-div"> <button data-modal="modal-window" class="modal__btn-open">
+          </button>
+          <picture class="modal-avatar">
+            <source srcset="" media="" type=""> <img src="./header-avatar.754fe700.png" srcset="" alt="avatar"
+              class="img-avatar"> </picture>
+        </div>
+        <div id="modal-window" class="modal">
+          <div data-modal-close="modal-window" class="modal__overlay"></div>
+          <div class="modal__dialog">
+            <div class="modal__content">
+              <header class="modal__header">
+                <div class="modal-logo">
+                  <picture class="modal-avatar">
+                    <source srcset="" media="" type=""> <img src="./header-avatar.754fe700.png" srcset="" alt="avatar"
+                      class="img-avatar"> </picture>
+                </div> <button data-modal-close="modal-window" title="Close menu" class="modal-close">×</button>
+              </header>
+              <div class="modal-main">
+                <nav class="modal-menu">
+                  <ul class="modal-list">
+                    <li class="modal-item"> <a data-modal-close="modal-window" href="#works" class="modal-item__link">
+                        works </a> </li>
+                    <li class="modal-item"> <a data-modal-close="modal-window" href="#about" class="modal-item__link">
+                        about </a> </li>
+                    <li class="modal-item"> <a data-modal-close="modal-window" href="#links" class="modal-item__link">
+                        links </a> </li>
+                    <li class="modal-item"> <a data-modal-close="modal-window" href="#contacts"
+                        class="modal-item__link"> contacts </a> </li>
+                  </ul>
                 </nav>
+              </div>
+              <footer class="modal-footer">
+                <p class="modal-footer-p"> Site navigation. Select a section. </p>
+              </footer>
             </div>
-        </header>
-        <main class="main">
-            <section class="hello">
-                <div class="container">
-                    <h1 class="hello__title"> Motivation Is The First </h1>
-                    <h1 class="hello__title"> Step To <span class="_blue">Success</span> </h1>
-                    <ul class="hello-list">
-                        <li class="hello-item"> <a href="#" class="hello-item__link"> <img
-                                    src="./hello-twitter.19f52355.png" alt="twitter" class="img-twitter"> </a> </li>
-                        <li class="hello-item"> <a href="#" class="hello-item__link"> <img
-                                    src="./hello-behance.de6af25f.png" alt="behance" class="img-behance"> </a> </li>
-                        <li class="hello-item"> <a href="#" class="hello-item__link"> <img
-                                    src="./hello-instagram.e57b7087.png" alt="instagram" class="img-instagram"> </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section id="works" class="works">
-                <div class="container">
-                    <ul class="works-list">
-                        <li class="works-item _item-ocean"> <img src="./works-ocean-mobile.ca685de1.png" alt="ocean"
-                                class="img-ocean-mobile">
-                            <picture class="works-img">
-                                <source srcset="" media="" type=""> <img src="./works-ocean.d940708a.png" srcset=""
-                                    alt="ocean" class="img-ocean"> </picture> <a href="#" class="works__button">
-                                Featured </a>
-                            <h2 class="works__sub-tittle _ocean"> Motivation Is The First Step To Success </h2>
-                        </li>
-                        <li class="works-item"> <img src="./works-mountains-mobile.905cd398.png" alt="mountains"
-                                class="img-mountains-mobile">
-                            <picture class="works-img">
-                                <source srcset="" media="" type=""> <img src="./works-mountains.08938026.png" srcset=""
-                                    alt="mountains" class="img-mountains"> </picture>
-                            <h2 class="works__sub-tittle _mountains"> How Great Is The Strength Of Your Belief </h2>
-                        </li>
-                        <li class="works-item _item-doors"> <img src="./works-doors-mobile.99d2cf3c.png" alt="doors"
-                                class="img-doors-mobile">
-                            <picture class="works-img">
-                                <source srcset="" media="" type=""> <img src="./works-doors.90e6e724.png" srcset=""
-                                    alt="doors" class="img-doors"> </picture>
-                            <h2 class="works__sub-tittle _doors"> Benjamin Franklin S Method Of Habit Formation </h2>
-                        </li>
-                        <li class="works-item"> <img src="./works-building-mobile.c3479174.png" alt="building"
-                                class="img-building-mobile">
-                            <picture class="works-img">
-                                <source srcset="" media="" type=""> <img src="./works-building.5135f39a.png" srcset=""
-                                    alt="building" class="img-building"> </picture> <a href="#" class="works__button">
-                                Featured </a>
-                            <h2 class="works__sub-tittle _building"> Increasing Prosperity With Positive Thinkings </h2>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section id="about" class="about">
-                <div class="container">
-                    <ul class="about-list">
-                        <li class="about-item">
-                            <h2 class="about__sub-tittle"> UX/UI </h2>
-                            <p class="about__content"> Of course, motivation really isn’t <span class="_blue">simple at
-                                    all</span>. That is why there is multi-billion industry focused on self-help books,
-                                tapes, seminars, camps, and coaches. </p>
-                        </li>
-                        <li class="about-item">
-                            <h2 class="about__sub-tittle"> Motion </h2>
-                            <p class="about__content"> As humans, we have progressed in so many ways, but we have lost
-                                touch with our bodies, nature, and the power of prayer. There seems to be a spiritual
-                                renaissance, of sorts, going on in the “new age” movement. </p>
-                        </li>
-                        <li class="about-item">
-                            <h2 class="about__sub-tittle"> Branding </h2>
-                            <p class="about__content"> If at anytime, you notice that a friend of yours is getting
-                                demotivated about life, try to inspire him/her as much as you can. Even if you are
-                                physically away from your friend you can send him inspirational ecards and tell him to
-                                download motivational screensavers and wallpapers. So motivate everyone who needs the
-                                boost. </p>
-                        </li>
-                        <li class="about-item">
-                            <h2 class="about__sub-tittle"> Development </h2>
-                            <p class="about__content"> Personally, the importance does not lie in what religion you are;
-                                however, a lack of religion does seem to run parallel with depression. This is
-                                classified as spiritual illness, which will have a negative effect on you mentally,
-                                physically, or totally. </p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="gad">
-                <div class="container">
-                    <ul class="gad-list">
-                        <li class="gad-item _item-google"> <img src="./gad-google-mobile.16c90179.png" alt="google"
-                                class="img-google-mobile">
-                            <picture class="gad-picture">
-                                <source srcset="" media="" type=""> <img src="./gad-google.711c2576.png" srcset=""
-                                    alt="google" class="img-google"> </picture>
-                        </li>
-                        <li class="gad-item _item-airbnb"> <img src="./gad-airbnb-mobile.4978bc92.png" alt="airbnb"
-                                class="img-airbnb-mobile">
-                            <picture class="gad-picture">
-                                <source srcset="" media="" type=""> <img src="./gad-airbnb.48fe863d.png" srcset=""
-                                    alt="airbnb" class="img-airbnb"> </picture>
-                        </li>
-                        <li class="gad-item _item-dropbox"> <img src="./gad-dropbox-mobile.ffc87bef.png" alt="dropbox"
-                                class="img-dropbox-mobile">
-                            <picture class="gad-picture">
-                                <source srcset="" media="" type=""> <img src="./gad-dropbox.9ebe8988.png" srcset=""
-                                    alt="dropbox" class="img-dropbox"> </picture>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section id="links" class="links">
-                <div class="container">
-                    <div class="links-wrapper">
-                        <ul class="links-list">
-                            <li class="links-item">
-                                <div class="links-content"> <span class="_justify _blue">Harness The Power Of Words In
-                                        Your Life <span class="_gray-text _year-mobile">2018</span></span> <span
-                                        class="_justify _gray-text _year-desktop">2018</span> </div>
-                            </li>
-                            <li class="links-item">
-                                <div class="links-content"> <span class="_justify _blue">Benjamin Franklin S Method Of
-                                        Habit Formation <span class="_gray-text _year-mobile">2018</span> </span> <span
-                                        class="_justify _gray-text _year-desktop">2018</span> </div>
-                            </li>
-                            <li class="links-item">
-                                <div class="links-content"> <span class="_justify _blue">Hypnotize Yourself Into The
-                                        Ghost Of Christmas Future <span class="_gray-text _year-mobile">2017</span>
-                                    </span> <span class="_justify _gray-text _year-desktop">2017</span> </div>
-                            </li>
-                            <li class="links-item">
-                                <div class="links-content"> <span class="_justify _blue">Self Motivation How To Keep
-                                        Yourself Motivated <span class="_gray-text _year-mobile">2016</span> </span>
-                                    <span class="_justify _gray-text _year-desktop">2016</span> </div>
-                            </li>
-                        </ul>
-                        <ul class="links-list">
-                            <li class="links-item">
-                                <div class="links-content"> <span class="_justify _blue">A Starter Guide To Self Imp
-                                        rovement <span class="_gray-text _year-mobile">2018</span> </span> <span
-                                        class="_justify _gray-text _year-desktop">2018</span> </div>
-                            </li>
-                            <li class="links-item">
-                                <div class="links-content"> <span class="_justify _blue">Does Your Life Lack Meaning
-                                        <span class="_gray-text _year-mobile">2018</span></span> <span
-                                        class="_justify _gray-text _year-desktop">2018</span> </div>
-                            </li>
-                            <li class="links-item">
-                                <div class="links-content"> <span class="_justify _blue">Hypnotize Yourself Into The
-                                        Ghost Of Christmas Future <span class="_gray-text _year-mobile">2016</span>
-                                    </span> <span class="_justify _gray-text _year-desktop">2016</span> </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section id="contacts" class="contacts">
-                <div class="container row">
-                    <div class="column _width-25proc">
-                        <h2 class="contacts__sub-tittle">Contacts</h2>
-                        <p class="contacts__content"> Positive pleasure-oriented goals are much more powerful motivators
-                            than negative fear-based ones. </p>
-                        <ul class="contacts-list">
-                            <li class="contacts-item"> <a href="#" class="hello-item__link"> <img
-                                        src="./hello-twitter.19f52355.png" alt="twitter" class="img-twitter"> </a> </li>
-                            <li class="hello-item"> <a href="#" class="hello-item__link"> <img
-                                        src="./hello-behance.de6af25f.png" alt="behance" class="img-behance"> </a> </li>
-                            <li class="hello-item"> <a href="#" class="hello-item__link"> <img
-                                        src="./hello-instagram.e57b7087.png" alt="instagram" class="img-instagram"> </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="column _width-75proc">
-                        <form class="contact-form" id="formId" method="POST" enctype="application/x-www-form-urlencoded"
-                            action="http://httpbin.org/get" autocomplete="on">
-                            <div class="container row">
-                                <div class="column _form-column"> <label class="contact-form__label"> <input
-                                            class="contact-form__input" type="text" name="name" autocomplete="off"
-                                            placeholder="Incognito" spellcheck="true"> <span
-                                            class="contact-form__span">NAME</span> </label> <label
-                                        class="contact-form__label"> <input class="contact-form__input" type="email"
-                                            name="email" autocomplete="off" placeholder="incognito@gmail.com"> <span
-                                            class="contact-form__span">E-MAIL</span> </label> <label
-                                        class="contact-form__label"> <textarea class="contact-form__input _message"
-                                            name="message" maxlength="500" placeholder="Your question or suggestion"
-                                            wrap="hard"></textarea> <span class="contact-form__span">MESSAGE</span>
-                                    </label> </div>
-                                <div class="column _button-mobile"> <button type="submit" value="кнопка Submit"
-                                        class="contact-form__button"> <img src="./form-button.054d406b.png" alt="button"
-                                            class="img-button"> </button> </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="container row">
-                <p class="footer__content"> Copyright © 2018 Denis Abdullin – deab.ru </p>
-                <div class="footer__buttons"> <a href="#" class="footer__button"> Invoicing </a> <a href="#"
-                        class="footer__button"> Documents </a> </div>
-            </div>
-        </footer>
-    </div>
-    <script src="./sweetalert2.min.84a6efbc.js"></script>
-    <script src="./axios.min.cce82449.js"></script>
-    <script>
-        var t = document.getElementById("formId");
-        t.addEventListener("submit", function (t) {
-            t.preventDefault(), t.stopPropagation();
-            var e = t.target.querySelectorAll("input, textarea");
-            console.log(e);
-            var o = {},
-                r = !0,
-                a = !1,
-                l = void 0;
-            try {
-                for (var n, c = e[Symbol.iterator](); !(r = (n = c.next()).done); r = !0) {
-                    var s = n.value;
-                    o[s.name] = s.value
-                }
-            } catch (i) {
-                a = !0, l = i
-            } finally {
-                try {
-                    r || null == c.return || c.return()
-                } finally {
-                    if (a) throw l
-                }
-            }
-            console.log(o), axios.post("http://localhost:5000/call", o).then(function (t) {
-                console.log(t), Swal.fire(t.data, "Всё хорошо, сервер принял запрос.", "success")
-            }).catch(function (t) {
-                console.error(t.response.data), Swal.fire({
-                    type: "error",
-                    title: "Что-то пошло не так.",
-                    text: t.response.data,
-                    footer: "Сервер запрос не принял."
-                })
-            })
-        });
-    </script>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hello">
+        <div class="container">
+          <h1 class="hello__title"> Motivation Is The First </h1>
+          <h1 class="hello__title"> Step To <span class="_blue">Success</span> </h1>
+          <ul class="hello-list">
+            <li class="hello-item"> <a href="#" class="hello-item__link"> <img src="./hello-twitter.19f52355.png"
+                  alt="twitter" class="img-twitter"> </a> </li>
+            <li class="hello-item"> <a href="#" class="hello-item__link"> <img src="./hello-behance.de6af25f.png"
+                  alt="behance" class="img-behance"> </a> </li>
+            <li class="hello-item"> <a href="#" class="hello-item__link"> <img src="./hello-instagram.e57b7087.png"
+                  alt="instagram" class="img-instagram"> </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="works" class="works">
+        <div class="container">
+          <ul class="works-list">
+            <li class="works-item _item-ocean"> <img src="./works-ocean-mobile.ca685de1.png" alt="ocean"
+                class="img-ocean-mobile">
+              <picture class="works-img">
+                <source srcset="" media="" type=""> <img src="./works-ocean.d940708a.png" srcset="" alt="ocean"
+                  class="img-ocean"> </picture> <a href="#" class="works__button">
+                Featured </a>
+              <h2 class="works__sub-tittle _ocean"> Motivation Is The First Step To Success </h2>
+            </li>
+            <li class="works-item"> <img src="./works-mountains-mobile.905cd398.png" alt="mountains"
+                class="img-mountains-mobile">
+              <picture class="works-img">
+                <source srcset="" media="" type=""> <img src="./works-mountains.08938026.png" srcset="" alt="mountains"
+                  class="img-mountains"> </picture>
+              <h2 class="works__sub-tittle _mountains"> How Great Is The Strength Of Your Belief </h2>
+            </li>
+            <li class="works-item _item-doors"> <img src="./works-doors-mobile.99d2cf3c.png" alt="doors"
+                class="img-doors-mobile">
+              <picture class="works-img">
+                <source srcset="" media="" type=""> <img src="./works-doors.90e6e724.png" srcset="" alt="doors"
+                  class="img-doors"> </picture>
+              <h2 class="works__sub-tittle _doors"> Benjamin Franklin S Method Of Habit Formation </h2>
+            </li>
+            <li class="works-item"> <img src="./works-building-mobile.c3479174.png" alt="building"
+                class="img-building-mobile">
+              <picture class="works-img">
+                <source srcset="" media="" type=""> <img src="./works-building.5135f39a.png" srcset="" alt="building"
+                  class="img-building"> </picture> <a href="#" class="works__button">
+                Featured </a>
+              <h2 class="works__sub-tittle _building"> Increasing Prosperity With Positive Thinkings </h2>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="container">
+          <ul class="about-list">
+            <li class="about-item">
+              <h2 class="about__sub-tittle"> UX/UI </h2>
+              <p class="about__content"> Of course, motivation really isn’t <span class="_blue">simple at
+                  all</span>. That is why there is multi-billion industry focused on self-help books,
+                tapes, seminars, camps, and coaches. </p>
+            </li>
+            <li class="about-item">
+              <h2 class="about__sub-tittle"> Motion </h2>
+              <p class="about__content"> As humans, we have progressed in so many ways, but we have lost
+                touch with our bodies, nature, and the power of prayer. There seems to be a spiritual
+                renaissance, of sorts, going on in the “new age” movement. </p>
+            </li>
+            <li class="about-item">
+              <h2 class="about__sub-tittle"> Branding </h2>
+              <p class="about__content"> If at anytime, you notice that a friend of yours is getting
+                demotivated about life, try to inspire him/her as much as you can. Even if you are
+                physically away from your friend you can send him inspirational ecards and tell him to
+                download motivational screensavers and wallpapers. So motivate everyone who needs the
+                boost. </p>
+            </li>
+            <li class="about-item">
+              <h2 class="about__sub-tittle"> Development </h2>
+              <p class="about__content"> Personally, the importance does not lie in what religion you are;
+                however, a lack of religion does seem to run parallel with depression. This is
+                classified as spiritual illness, which will have a negative effect on you mentally,
+                physically, or totally. </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="gad">
+        <div class="container">
+          <ul class="gad-list">
+            <li class="gad-item _item-google"> <img src="./gad-google-mobile.16c90179.png" alt="google"
+                class="img-google-mobile">
+              <picture class="gad-picture">
+                <source srcset="" media="" type=""> <img src="./gad-google.711c2576.png" srcset="" alt="google"
+                  class="img-google"> </picture>
+            </li>
+            <li class="gad-item _item-airbnb"> <img src="./gad-airbnb-mobile.4978bc92.png" alt="airbnb"
+                class="img-airbnb-mobile">
+              <picture class="gad-picture">
+                <source srcset="" media="" type=""> <img src="./gad-airbnb.48fe863d.png" srcset="" alt="airbnb"
+                  class="img-airbnb"> </picture>
+            </li>
+            <li class="gad-item _item-dropbox"> <img src="./gad-dropbox-mobile.ffc87bef.png" alt="dropbox"
+                class="img-dropbox-mobile">
+              <picture class="gad-picture">
+                <source srcset="" media="" type=""> <img src="./gad-dropbox.9ebe8988.png" srcset="" alt="dropbox"
+                  class="img-dropbox"> </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="links" class="links">
+        <div class="container">
+          <div class="links-wrapper">
+            <ul class="links-list">
+              <li class="links-item">
+                <div class="links-content"> <span class="_justify _blue">Harness The Power Of Words In
+                    Your Life <span class="_gray-text _year-mobile">2018</span></span> <span
+                    class="_justify _gray-text _year-desktop">2018</span> </div>
+              </li>
+              <li class="links-item">
+                <div class="links-content"> <span class="_justify _blue">Benjamin Franklin S Method Of
+                    Habit Formation <span class="_gray-text _year-mobile">2018</span> </span> <span
+                    class="_justify _gray-text _year-desktop">2018</span> </div>
+              </li>
+              <li class="links-item">
+                <div class="links-content"> <span class="_justify _blue">Hypnotize Yourself Into The
+                    Ghost Of Christmas Future <span class="_gray-text _year-mobile">2017</span>
+                  </span> <span class="_justify _gray-text _year-desktop">2017</span> </div>
+              </li>
+              <li class="links-item">
+                <div class="links-content"> <span class="_justify _blue">Self Motivation How To Keep
+                    Yourself Motivated <span class="_gray-text _year-mobile">2016</span> </span>
+                  <span class="_justify _gray-text _year-desktop">2016</span> </div>
+              </li>
+            </ul>
+            <ul class="links-list">
+              <li class="links-item">
+                <div class="links-content"> <span class="_justify _blue">A Starter Guide To Self Imp
+                    rovement <span class="_gray-text _year-mobile">2018</span> </span> <span
+                    class="_justify _gray-text _year-desktop">2018</span> </div>
+              </li>
+              <li class="links-item">
+                <div class="links-content"> <span class="_justify _blue">Does Your Life Lack Meaning
+                    <span class="_gray-text _year-mobile">2018</span></span> <span
+                    class="_justify _gray-text _year-desktop">2018</span> </div>
+              </li>
+              <li class="links-item">
+                <div class="links-content"> <span class="_justify _blue">Hypnotize Yourself Into The
+                    Ghost Of Christmas Future <span class="_gray-text _year-mobile">2016</span>
+                  </span> <span class="_justify _gray-text _year-desktop">2016</span> </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="contacts" class="contacts">
+        <div class="container row">
+          <div class="column _width-25proc">
+            <h2 class="contacts__sub-tittle">Contacts</h2>
+            <p class="contacts__content"> Positive pleasure-oriented goals are much more powerful motivators
+              than negative fear-based ones. </p>
+            <ul class="contacts-list">
+              <li class="contacts-item"> <a href="#" class="hello-item__link"> <img src="./hello-twitter.19f52355.png"
+                    alt="twitter" class="img-twitter"> </a> </li>
+              <li class="hello-item"> <a href="#" class="hello-item__link"> <img src="./hello-behance.de6af25f.png"
+                    alt="behance" class="img-behance"> </a> </li>
+              <li class="hello-item"> <a href="#" class="hello-item__link"> <img src="./hello-instagram.e57b7087.png"
+                    alt="instagram" class="img-instagram"> </a>
+              </li>
+            </ul>
+          </div>
+          <div class="column _width-75proc">
+            <form class="contact-form" id="formId" method="POST" enctype="application/x-www-form-urlencoded"
+              action="http://httpbin.org/get" autocomplete="on">
+              <div class="container row">
+                <div class="column _form-column"> <label class="contact-form__label"> <input class="contact-form__input"
+                      type="text" name="name" autocomplete="off" placeholder="Incognito" spellcheck="true"> <span
+                      class="contact-form__span">NAME</span> </label> <label class="contact-form__label"> <input
+                      class="contact-form__input" type="email" name="email" autocomplete="off"
+                      placeholder="incognito@gmail.com"> <span class="contact-form__span">E-MAIL</span> </label> <label
+                    class="contact-form__label"> <textarea class="contact-form__input _message" name="message"
+                      maxlength="500" placeholder="Your question or suggestion" wrap="hard"></textarea> <span
+                      class="contact-form__span">MESSAGE</span>
+                  </label> </div>
+                <div class="column _button-mobile"> <button type="submit" value="кнопка Submit"
+                    class="contact-form__button"> <img src="./form-button.054d406b.png" alt="button" class="img-button">
+                  </button> </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container row">
+        <p class="footer__content"> Copyright © 2018 Denis Abdullin – deab.ru </p>
+        <div class="footer__buttons"> <a href="#" class="footer__button"> Invoicing </a> <a href="#"
+            class="footer__button"> Documents </a> </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./modal.f66502a2.js"></script>
+  <script src="./sweetalert2.min.84a6efbc.js"></script>
+  <script src="./axios.min.cce82449.js"></script>
+  <script>
+    var t = document.getElementById("formId");
+    t.addEventListener("submit", function (t) {
+      t.preventDefault(), t.stopPropagation();
+      var e = t.target.querySelectorAll("input, textarea");
+      console.log(e);
+      var o = {},
+        r = !0,
+        a = !1,
+        l = void 0;
+      try {
+        for (var n, c = e[Symbol.iterator](); !(r = (n = c.next()).done); r = !0) {
+          var s = n.value;
+          o[s.name] = s.value
+        }
+      } catch (i) {
+        a = !0, l = i
+      } finally {
+        try {
+          r || null == c.return || c.return()
+        } finally {
+          if (a) throw l
+        }
+      }
+      console.log(o), axios.post("http://localhost:5000/call", o).then(function (t) {
+        console.log(t), Swal.fire(t.data, "Всё хорошо, сервер принял запрос.", "success")
+      }).catch(function (t) {
+        console.error(t.response.data), Swal.fire({
+          type: "error",
+          title: "Что-то пошло не так.",
+          text: t.response.data,
+          footer: "Сервер запрос не принял."
+        })
+      })
+    });
+  </script>
 </body>
 
 </html>
