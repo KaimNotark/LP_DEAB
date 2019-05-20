@@ -249,14 +249,13 @@
 
 
   .modal__btn-div {
-    top: 2%;
     visibility: visible;
-    opacity: 0.7;
+    opacity: 1;
   }
 
   .modal__btn-div._visible {
     visibility: visible;
-    opacity: 0.7;
+    opacity: 1;
   }
 
   .modal__dialog {
