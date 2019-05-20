@@ -191,10 +191,14 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.style.marginRight = 0;
       btnOpenElem.classList.add('_visible');
 <<<<<<< HEAD
+<<<<<<< HEAD
     }, 200); // время transition в CSS
 =======
     }, 200); // время transition в CSS        
 >>>>>>> 996af4c60ae077f5a54cbdd94042499e67ec90d4
+=======
+    }, 200); // время transition в CSS
+>>>>>>> feature/modal
   } // смотрим на какую кнопку нажали
   // это кнопки вызывающие открытие модалки
 
@@ -221,6 +225,9 @@ document.addEventListener("DOMContentLoaded", function () {
       var targetModalId = event.target.attributes['data-modal-close'].value;
       console.log('targetModalId = ' + targetModalId);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/modal
       closeModal(targetModalId); // появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
 
       var btnOpenElem = document.getElementById('modalBtn');
@@ -255,9 +262,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         ;
       }, 200); // время transition в CSS
+<<<<<<< HEAD
 =======
       closeModal(targetModalId);
 >>>>>>> 996af4c60ae077f5a54cbdd94042499e67ec90d4
+=======
+>>>>>>> feature/modal
     });
   });
 });
@@ -290,10 +300,14 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
 <<<<<<< HEAD
+<<<<<<< HEAD
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "52504" + '/');
 =======
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "51800" + '/');
 >>>>>>> 996af4c60ae077f5a54cbdd94042499e67ec90d4
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52504" + '/');
+>>>>>>> feature/modal
 
   ws.onmessage = function (event) {
     checkedAssets = {};

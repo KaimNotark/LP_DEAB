@@ -52,11 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.style.marginRight = 0;
       btnOpenElem.classList.add('_visible');
 <<<<<<< HEAD
+<<<<<<< HEAD
     }, 200); // время transition в CSS
 
 =======
     }, 200); // время transition в CSS        
 >>>>>>> 996af4c60ae077f5a54cbdd94042499e67ec90d4
+=======
+    }, 200); // время transition в CSS
+
+>>>>>>> feature/modal
   }
 
   // смотрим на какую кнопку нажали
@@ -82,6 +87,9 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log('targetModalId = ' + targetModalId);
       closeModal(targetModalId);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> feature/modal
 
       // появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
       const btnOpenElem = document.getElementById('modalBtn');
@@ -111,8 +119,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 200); // время transition в CSS
       
 
+<<<<<<< HEAD
 =======
 >>>>>>> 996af4c60ae077f5a54cbdd94042499e67ec90d4
+=======
+>>>>>>> feature/modal
     });
   });
 
