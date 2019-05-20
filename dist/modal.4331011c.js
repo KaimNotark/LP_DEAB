@@ -117,79 +117,110 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"js/modal.js":[function(require,module,exports) {
+// ------------------ скрипты модального меню -------------------
+// появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
+var btnOpenElem = document.getElementById('modalBtn');
+var minY = 500;
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
+window.onscroll = function () {
+  // отслеживаем координаты по оси Y
+  var pageY = function pageY() {
+    return window.pageYOffset || window.scrollY;
   };
 
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
+  var scrollYPos = pageY(); // смотрим на разрешение окна браузера
 
-var cssTimeout = null;
+  var widthWin = document.body.clientWidth;
 
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
+  if (widthWin < 480) {
+    minY = 200;
+  } else {
+    minY = 100;
   }
 
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
+  ; // if координаты больше minY, то показываем кнопку, else убираем
 
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
+  if (scrollYPos >= minY) {
+    btnOpenElem.classList.add('_visible');
+  } else {
+    btnOpenElem.classList.remove('_visible');
+  }
 
-    cssTimeout = null;
-  }, 50);
-}
+  ;
+}; // убрать скролл страницы после отображения модального окна
 
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/normalize.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
 
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+document.addEventListener("DOMContentLoaded", function () {
+  // вычисляем ширину полосы прокрутки и берем ее модуль
+  var scrollbar = Math.abs(document.body.clientWidth - window.innerWidth) + 'px';
+  console.log(scrollbar);
+
+  var pageOffset = function pageOffset() {
+    return window.pageYOffset || window.scrollY;
+  };
+
+  var prevBodyOverflow = document.body.style.overflow || 'initial'; // сохраняем значение overflow на старте страницы
+
+  var prevScrollYPosition = 0; // вводим переменную для сохранения параметра scrollY
+  // функция отрабатывающая открытие модального окна
+
+  function openModal(selector) {
+    prevScrollYPosition = pageOffset(); // сохраняем значение параметра scrollY
+
+    prevBodyOverflow = document.body.style.overflow; // сохраняем значение overflow до открытия модалки
+
+    var el = document.getElementById(selector);
+    el.classList.add('_opened'); // добавляем модификатор _opened
+
+    document.body.style.overflow = 'hidden'; // скрываем полосу прокрутки
+
+    document.body.style.marginRight = scrollbar; // компенсируем отсутсвие полосы прокрутки (иначе будет скачкообразнное смещение страницы)
+
+    btnOpenElem.classList.remove('_visible');
+  } // функция отрабатывающая закрытие модального окна
+
+
+  function closeModal(selector) {
+    var el = document.getElementById(selector);
+    el.classList.remove('_opened'); // удаляем модификатор _opened
+    // ждем пока отработает transition в CSS, чтобы вернуть полосу прокрутки
+
+    setTimeout(function () {
+      document.body.style.overflow = prevBodyOverflow;
+      document.body.style.marginRight = 0;
+      btnOpenElem.classList.add('_visible');
+    }, 200); // время transition в CSS        
+  } // смотрим на какую кнопку нажали
+  // это кнопки вызывающие открытие модалки
+
+
+  var modalTrigger = Array.from(document.querySelectorAll('[data-modal]')); // формируем массив из всех элементов содержащих data-modal
+
+  console.log('modalTrigger = ' + modalTrigger); // проверяем, что он сформировался
+  // перебираем массив и выделяем элемент по которому кликнули
+
+  modalTrigger.forEach(function (element) {
+    element.addEventListener('click', function (event) {
+      var targetModalId = event.target.attributes['data-modal'].value;
+      console.log('targetModalId = ' + targetModalId); // проверяем тот ли это элемент
+
+      openModal(targetModalId); // обращаемся к функции, которая откроет модалку
+    });
+  }); // смотрим на какую кнопку нажали
+  // это кнопки вызывающие закрытие модалки
+
+  var modalCloseTrigger = Array.from(document.querySelectorAll('[data-modal-close]'));
+  console.log(modalCloseTrigger);
+  modalCloseTrigger.forEach(function (element) {
+    element.addEventListener('click', function (event) {
+      var targetModalId = event.target.attributes['data-modal-close'].value;
+      console.log('targetModalId = ' + targetModalId);
+      closeModal(targetModalId);
+    });
+  });
+});
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -392,5 +423,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/normalize.1114379f.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal.js"], null)
+//# sourceMappingURL=/modal.4331011c.js.map

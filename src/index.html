@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
   <title>landing page DEAB</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/sweetalert2.min.css" />
-  <link rel="stylesheet" href="scss/index.scss" />
-  <link rel="stylesheet" href="css/index-mobile.css" />
-  <!-- <link rel="stylesheet" href="css/modal.css" />
-  <link rel="stylesheet" href="css/index-670.css" />
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/sweetalert2.min.css" />
+  <link rel="stylesheet" href="./scss/index.scss" />
+  <link rel="stylesheet" href="./css/index-mobile.css" />
+  <link rel="stylesheet" href="./css/modal.css" />
+  <!-- <link rel="stylesheet" href="css/index-670.css" />
   <link rel="stylesheet" href="css/flickity.css" media="screen" /> -->
 </head>
 
@@ -23,6 +23,15 @@
       <div class="container">
 
         <nav class="header-menu">
+
+          <div id="" class="header-mobile__btn-div">
+            <button data-modal="modal-window" class="header-mobile__btn-open">
+            </button>
+            <picture class="header-mobile-avatar">
+              <source srcset="" media="" type="" />
+              <img src="./img/header-avatar.png" srcset="" alt="avatar" class="img-avatar" />
+            </picture>
+          </div>
 
           <ul class="header-list">
             <li class="header-item">
@@ -38,7 +47,7 @@
             <li class="header-item _item-avatar">
               <picture class="header-avatar">
                 <source srcset="" media="" type="" />
-                <img src="img/header-avatar.png" srcset="" alt="avatar" class="img-avatar" />
+                <img src="./img/header-avatar.png" srcset="" alt="avatar" class="img-avatar" />
               </picture>
             </li>
             <li class="header-item">
@@ -54,7 +63,70 @@
 
           </ul>
         </nav>
+        <!-- modal -->
+        <!-- btn for open modal -->
+        <div id="modalBtn" class="modal__btn-div">
+          <button data-modal="modal-window" class="modal__btn-open">
+          </button>
+          <picture class="modal-avatar">
+            <source srcset="" media="" type="" />
+            <img src="./img/header-avatar.png" srcset="" alt="avatar" class="img-avatar" />
+          </picture>
+        </div>
+        <!-- само модальное окно -->
+        <div id="modal-window" class="modal">
+          <!-- оверлей (подложка) кликая по нему модалка должна закрыться -->
+          <div data-modal-close="modal-window" class="modal__overlay"></div>
 
+          <div class="modal__dialog">
+            <div class="modal__content">
+
+              <header class="modal__header">
+                <div class="modal-logo">
+                  <picture class="modal-avatar">
+                    <source srcset="" media="" type="" />
+                    <img src="./img/header-avatar.png" srcset="" alt="avatar" class="img-avatar" />
+                  </picture>
+                </div>
+                <button data-modal-close="modal-window" title="Close menu" class="modal-close">×</button>
+              </header>
+
+              <div class="modal-main">
+                <nav class="modal-menu">
+                  <ul class="modal-list">
+                    <li class="modal-item">
+                      <a data-modal-close="modal-window" href="#works" class="modal-item__link">
+                        works
+                      </a>
+                    </li>
+                    <li class="modal-item">
+                      <a data-modal-close="modal-window" href="#about" class="modal-item__link">
+                        about
+                      </a>
+                    </li>
+                    <li class="modal-item">
+                      <a data-modal-close="modal-window" href="#links" class="modal-item__link">
+                        links
+                      </a>
+                    </li>
+                    <li class="modal-item">
+                      <a data-modal-close="modal-window" href="#contacts" class="modal-item__link">
+                        contacts
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <footer class="modal-footer">
+                <p class="modal-footer-p">
+                  Site navigation. Select a section.
+                </p>
+              </footer>
+
+            </div>
+          </div>
+        </div> <!-- /modal -->
       </div> <!-- /container -->
     </header>
 
@@ -393,6 +465,7 @@
 
   </div>
 
+  <script src="js/modal.js"></script>
   <script src="js/sweetalert2.min.js"></script>
   <script src="js/axios.min.js"></script>
   <script>
