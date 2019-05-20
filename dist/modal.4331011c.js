@@ -190,15 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = prevBodyOverflow;
       document.body.style.marginRight = 0;
       btnOpenElem.classList.add('_visible');
-<<<<<<< HEAD
-<<<<<<< HEAD
     }, 200); // время transition в CSS
-=======
-    }, 200); // время transition в CSS        
->>>>>>> 996af4c60ae077f5a54cbdd94042499e67ec90d4
-=======
-    }, 200); // время transition в CSS
->>>>>>> feature/modal
   } // смотрим на какую кнопку нажали
   // это кнопки вызывающие открытие модалки
 
@@ -224,10 +216,6 @@ document.addEventListener("DOMContentLoaded", function () {
     element.addEventListener('click', function (event) {
       var targetModalId = event.target.attributes['data-modal-close'].value;
       console.log('targetModalId = ' + targetModalId);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> feature/modal
       closeModal(targetModalId); // появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
 
       var btnOpenElem = document.getElementById('modalBtn');
@@ -237,8 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return window.pageYOffset || window.scrollY;
       };
 
-      var scrollYPos = pageY();
-      console.log('scrollYPos=pageY() = ' + scrollYPos); // смотрим на разрешение окна браузера
+      var scrollYPos = pageY(); // смотрим на разрешение окна браузера
 
       var widthWin = document.body.clientWidth;
 
@@ -254,20 +241,12 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         if (scrollYPos <= minY) {
           btnOpenElem.classList.remove('_visible');
-          console.log('remove(_visible)');
         } else {
           btnOpenElem.classList.add('_visible');
-          console.log('add(_visible)');
         }
 
         ;
       }, 200); // время transition в CSS
-<<<<<<< HEAD
-=======
-      closeModal(targetModalId);
->>>>>>> 996af4c60ae077f5a54cbdd94042499e67ec90d4
-=======
->>>>>>> feature/modal
     });
   });
 });
@@ -299,15 +278,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52504" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51800" + '/');
->>>>>>> 996af4c60ae077f5a54cbdd94042499e67ec90d4
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52504" + '/');
->>>>>>> feature/modal
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61602" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
