@@ -73,6 +73,11 @@ body {
 
 .header-menu {}
 
+.header-mobile__btn-div {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .header-list {
   display: flex;
   justify-content: space-between;
