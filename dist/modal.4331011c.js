@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = prevBodyOverflow;
       document.body.style.marginRight = 0;
       btnOpenElem.classList.add('_visible');
-    }, 200); // время transition в CSS        
+    }, 200); // время transition в CSS
   } // смотрим на какую кнопку нажали
   // это кнопки вызывающие открытие модалки
 
@@ -216,7 +216,40 @@ document.addEventListener("DOMContentLoaded", function () {
     element.addEventListener('click', function (event) {
       var targetModalId = event.target.attributes['data-modal-close'].value;
       console.log('targetModalId = ' + targetModalId);
-      closeModal(targetModalId);
+      closeModal(targetModalId); // появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
+
+      var btnOpenElem = document.getElementById('modalBtn');
+      var minY = 500; // отслеживаем координаты по оси Y
+
+      var pageY = function pageY() {
+        return window.pageYOffset || window.scrollY;
+      };
+
+      var scrollYPos = pageY();
+      console.log('scrollYPos=pageY() = ' + scrollYPos); // смотрим на разрешение окна браузера
+
+      var widthWin = document.body.clientWidth;
+
+      if (widthWin < 480) {
+        minY = 200;
+      } else {
+        minY = 100;
+      }
+
+      ;
+      console.log('minY= ' + minY); // if координаты больше minY, то показываем кнопку, else убираем
+
+      setTimeout(function () {
+        if (scrollYPos <= minY) {
+          btnOpenElem.classList.remove('_visible');
+          console.log('remove(_visible)');
+        } else {
+          btnOpenElem.classList.add('_visible');
+          console.log('add(_visible)');
+        }
+
+        ;
+      }, 200); // время transition в CSS
     });
   });
 });
@@ -248,7 +281,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52994" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52504" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
