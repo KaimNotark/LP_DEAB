@@ -61,6 +61,11 @@ body {
   margin: 0 auto;
 }
 
+.header-mobile__btn-div {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .header-list {
   display: -webkit-box;
   display: -ms-flexbox;
