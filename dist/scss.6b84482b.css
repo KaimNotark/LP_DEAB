@@ -44,6 +44,13 @@ p {
   margin: 0;
 }
 
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   min-height: 100vh;
   font-family: "Myriad Pro Regular", "Verdana", "Arial", sans-serif;
@@ -76,7 +83,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 0;
 }
 
 .header-item {
@@ -123,6 +129,8 @@ body {
 }
 
 .hello__title {
+  width: 50%;
+  margin-left: 25%;
   font-family: nunito;
   font-size: 48px;
   font-weight: 700;
@@ -142,7 +150,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 30px;
-  padding-left: 0%;
 }
 
 .hello-item {
@@ -166,7 +173,6 @@ body {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  padding-left: 0;
 }
 
 .works-item {
@@ -248,7 +254,6 @@ body {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-left: 0;
 }
 
 .about-item {
@@ -281,7 +286,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 0;
 }
 
 .gad-item {
@@ -322,7 +326,6 @@ body {
 
 .links-list {
   display: block;
-  padding-left: 0;
   width: 47%;
 }
 
@@ -399,7 +402,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding-top: 30px;
-  padding-left: 0%;
 }
 
 .contacts-item {
