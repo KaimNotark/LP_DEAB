@@ -462,53 +462,7 @@
   </div>
 
   <script src="/modal.4331011c.js"></script>
-  <script src="/sweetalert2.min.b95c6753.js"></script>
-  <script src="/axios.min.0eb22e50.js"></script>
-  <script>var form = document.getElementById('formId');
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  event.stopPropagation();
-  var parsedForm = event.target.querySelectorAll('input, textarea');
-  console.log(parsedForm);
-  var prsObj = {};
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = parsedForm[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var val = _step.value;
-      prsObj[val.name] = val.value;
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return != null) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-
-  console.log(prsObj);
-  axios.post('http://localhost:5000/call', prsObj).then(function (response) {
-    console.log(response);
-    Swal.fire(response.data, 'Всё хорошо, сервер принял запрос.', 'success');
-  }).catch(function (error) {
-    console.error(error.response.data);
-    Swal.fire({
-      type: 'error',
-      title: 'Что-то пошло не так.',
-      text: error.response.data,
-      footer: 'Сервер запрос не принял.'
-    });
-  });
-});</script>
+  <script src="/form.90d872a0.js"></script>
 
 </body>
 
