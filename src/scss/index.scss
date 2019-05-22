@@ -1,38 +1,37 @@
-// @font-face {
-//   font-family: 'nunito';
-//   src: url(../fonts/Nunitosansregular.ttf);
-// }
+$color-blue: #007fff;
+$color-yellow: #ffe300;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gray: #cfcfcf;
+$color-gray-dark: #979797;
 
-$blue: #007fff;
-$yellow: #ffe300;
-$black: #000000;
-$white: #ffffff;
-$gray: #cfcfcf;
-$grayText: #979797;
+$font-family-primary: 'Nunito',
+sans-serif;
 
 %buttonYellow {
-  display: block;
-  position: relative;
-  padding: 2px 0 0 0;
+  // display: block;
+  // position: relative;
   width: 80px;
-  height: 23px;
-  background-color: $yellow;
-  border: 1px solid $yellow;
-  border-radius: 14px;
-  font-family: nunito;
-  color: $black;
+  height: 24px;
+  padding: 0;
   font-size: 12px;
   font-weight: 800;
   line-height: 16px;
-  text-decoration: none;
   text-align: center;
-  transition: background-color .1s ease,
-    border-color .3s ease;
+  text-decoration: none;
+  color: $color-black;
+  background-color: $color-yellow;
+  border-radius: 14px;
+  border: 1px solid $color-yellow;
+  // font-family: nunito;
+  transition:
+    background-color 0.2s linear,
+    border-color 0.2s linear;
 }
 
 %buttonYellowHover {
-  background-color: $black;
-  color: $yellow;
+  background-color: $color-black;
+  color: $color-yellow;
 }
 
 html {
@@ -55,9 +54,16 @@ p {
   margin: 0;
 }
 
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   min-height: 100vh;
-  font-family: 'Myriad Pro Regular', 'Verdana', 'Arial', sans-serif;
+  font-family: $font-family-primary;
   box-sizing: border-box;
 }
 
@@ -82,7 +88,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 0;
 }
 
 .header-item {
@@ -139,7 +144,6 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 30px;
-  padding-left: 0%;
 }
 
 .hello-item {
@@ -165,7 +169,6 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: baseline;
-  padding-left: 0;
 }
 
 .works-item {
@@ -253,7 +256,6 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   // align-items: baseline;
-  padding-left: 0;
 }
 
 .about-item {
@@ -284,7 +286,6 @@ body {
 
 .gad-list {
   display: flex;
-  padding-left: 0;
 }
 
 .gad-item {
@@ -329,7 +330,6 @@ body {
 
 .links-list {
   display: block;
-  padding-left: 0;
   width: 47%;
 }
 
@@ -345,7 +345,7 @@ body {
 
 ._justify {
   display: block;
-  padding-left: 0;
+  // padding-left: 0;
 }
 
 ._gray-text {
@@ -398,7 +398,6 @@ body {
 .contacts-list {
   display: flex;
   padding-top: 30px;
-  padding-left: 0%;
 }
 
 .contacts-item {
