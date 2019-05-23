@@ -271,7 +271,7 @@
             justify-content: flex-start;
   }
 
-  ._width-25proc {
+  .column._width-20proc {
     width: 90%;
   }
 
@@ -283,7 +283,7 @@
     width: 100%;
   }
 
-  ._width-75proc {
+  .column._width-75proc {
     width: 90%;
     margin-top: 50px;
   }
@@ -306,7 +306,7 @@
     font-size: 12px;
   }
 
-  .footer__buttons {
+  .footer-buttons {
     width: 90%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -315,7 +315,7 @@
             justify-content: initial;
   }
 
-  .footer__button {
+  .footer-buttons__button {
     width: 100%;
     font-size: 12px;
   }
