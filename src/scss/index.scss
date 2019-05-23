@@ -9,23 +9,18 @@ $font-family-primary: 'Nunito',
 sans-serif;
 
 %button-yellow {
-  // display: block;
-  // position: relative;
   width: 80px;
   height: 24px;
-  padding: 0;
   font-size: 12px;
   font-weight: 800;
-  line-height: 16px;
+  line-height: 22px;
   text-align: center;
   text-decoration: none;
   color: $color-black;
   background-color: $color-yellow;
   border-radius: 14px;
   border: 1px solid $color-yellow;
-  // font-family: nunito;
-  transition:
-    background-color 0.2s linear,
+  transition: background-color 0.2s linear,
     border-color 0.2s linear;
 }
 
@@ -165,109 +160,85 @@ body {
 // -- 02 --
 .works {
   padding-top: 100px;
-}
 
-.works-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  // align-items: baseline;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: flex-start;
-}
-
-.works-item {
-  // display: block;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 520px;
-  padding: 50px;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  &._ocean {
-    background-image: url('../img/works-ocean.png');
-    height: 505px;
-  }
-
-  &._mountains {
-    background-image: url('../img/works-mountains.png');
-    height: 737px;
-  }
-
-  &._doors {
-    background-image: url('../img/works-doors.png');
-    height: 667px;
-    margin-top: -170px;
-  }
-
-  &._building {
-    background-image: url('../img/works-building.png');
-    height: 435px;
-    margin-top: 60px;
-  }
-
-  &__button {
-    width: 80px;
-    height: 24px;
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // align-items: baseline;
+    list-style: none;
+    margin: 0;
     padding: 0;
-    margin-bottom: 16px;
-    font-size: 12px;
-    font-weight: 800;
-    line-height: 22px;
-    text-align: center;
-    text-decoration: none;
-    color: $color-black;
-    background-color: $color-yellow;
-    border-radius: 14px;
-    border: 1px solid $color-yellow;
-    transition: background-color 0.2s linear,
-      border-color 0.2s linear;
+    align-items: flex-start;
+  }
+
+  &-item {
+    // display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 520px;
+    padding: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &._ocean {
+      background-image: url('../img/works-ocean.png');
+      height: 505px;
+    }
+
+    &._mountains {
+      background-image: url('../img/works-mountains.png');
+      height: 737px;
+    }
+
+    &._doors {
+      background-image: url('../img/works-doors.png');
+      height: 667px;
+      margin-top: -170px;
+    }
+
+    &._building {
+      background-image: url('../img/works-building.png');
+      height: 435px;
+      margin-top: 60px;
+    }
+
+    &__button {
+      @extend %button-yellow;
+      padding: 0;
+      margin-bottom: 16px;
+    }
 
     &:hover {
       @extend %button-yellow-hover;
     }
+
+    &__title {
+      color: $color-white;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 36px;
+    }
   }
 
-  &__title {
-    color: $color-white;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 36px;
-  }
 }
 
 ._title-ocean {
   width: 64%;
 }
+
 ._title-mountains {
   width: 75%;
 }
+
 ._title-doors {
   width: 80%;
 }
+
 ._title-building {
   width: 75%;
 }
-
-// .works-item._item-ocean {
-//   align-self: flex-start;
-// }
-
-// .works-item._item-doors {
-//   margin-top: -170px;
-// }
-
-// .works-img {}
-
-// .works__button {
-//   @extend %button-yellow;
-//   margin-top: -150px;
-//   margin-left: 50px;
-// }
 
 .img-ocean-mobile,
 .img-mountains-mobile,
@@ -281,37 +252,38 @@ body {
 // -- 03 --
 .about {
   margin-top: 150px;
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    display: block;
+    width: 47%;
+    margin-top: 50px;
+
+    &__title {
+      font-family: nunito;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 30px;
+    }
+
+    &__content {
+      font-family: Nunito;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 30px;
+      text-align: left;
+      margin-top: 30px;
+    }
+  }
+
 }
 
-.about-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  // align-items: baseline;
-}
-
-.about-item {
-  display: block;
-  width: 47%;
-  margin-top: 50px;
-}
-
-.about__sub-tittle {
-  font-family: nunito;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 30px;
-}
-
-.about__content {
-  font-family: Nunito;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 30px;
-  text-align: left;
-  margin-top: 30px;
-}
-
+// -- 04 --
 .gad {
   margin-top: 50px;
 }
@@ -351,33 +323,34 @@ body {
   visibility: hidden;
 }
 
+// -- 05 --
 .links {
   margin-top: 50px;
-}
 
-.links-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.links-list {
-  display: block;
-  width: 47%;
-}
+  &-list {
+    display: block;
+    width: 47%;
+  }
 
-.links-item {
-  display: block;
-  margin-top: 40px;
-}
+  &-item {
+    display: block;
+    margin-top: 40px;
 
-.links-content {
-  display: flex;
-  justify-content: space-between;
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
 }
 
 ._justify {
   display: block;
-  // padding-left: 0;
 }
 
 ._gray-text {
@@ -392,6 +365,7 @@ body {
   visibility: visible;
 }
 
+// -- 06 --
 .contacts {
   margin-top: 50px;
 }
@@ -496,27 +470,26 @@ body {
 .footer {
   margin-top: 100px;
   margin-bottom: 100px;
-}
 
-.footer__content {
-  font-family: Nunito;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 30px;
-}
+  &__content {
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+  }
 
-.footer__buttons {
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
-}
+  &-buttons {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
 
-.footer__button {
-  color: $color-gray-dark;
-  font-family: Nunito;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 30px;
-  text-decoration: none;
-  // text-align: right;
+    &__button {
+      color: $color-gray-dark;
+      font-family: Nunito;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 30px;
+      text-decoration: none;
+    }
+  }
 }
