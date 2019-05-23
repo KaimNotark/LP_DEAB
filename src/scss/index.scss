@@ -8,7 +8,7 @@ $color-gray-dark: #979797;
 $font-family-primary: 'Nunito',
 sans-serif;
 
-%buttonYellow {
+%button-yellow {
   // display: block;
   // position: relative;
   width: 80px;
@@ -29,7 +29,7 @@ sans-serif;
     border-color 0.2s linear;
 }
 
-%buttonYellowHover {
+%button-yellow-hover {
   background-color: $color-black;
   color: $color-yellow;
 }
@@ -70,28 +70,40 @@ body {
 .header {
   width: 100%;
   padding-top: 100px;
-}
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
+  &-menu {}
 
-.header-menu {}
+  &-mobile__btn-div {
+    visibility: hidden;
+    opacity: 0;
+  }
 
-.header-mobile__btn-div {
-  visibility: hidden;
-  opacity: 0;
-}
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.header-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  &-item {
+    display: block;
 
-.header-item {
-  display: block;
+    &__link {
+      width: 10%;
+      height: 16px;
+      color: $color-blue;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 16px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-decoration: none;
+    }
+  }
+
+  &-avatar {
+    width: 52px;
+    height: 52px
+  }
 }
 
 ._item-avatar {
@@ -100,58 +112,49 @@ body {
   justify-content: center;
 }
 
-.header-item__link {
-  width: 10%;
-  height: 16px;
-  color: $blue;
-  font-family: 'nunito';
-  font-size: 12px;
-  font-weight: 800;
-  line-height: 16px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-decoration: none;
-}
-
-.header-avatar {
-  width: 52px;
-  height: 52px
-}
-
 .img-avatar {
   user-select: none;
 }
 
-.main {}
-
-.hello {
-  padding-top: 100px;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.hello__title {
-  font-family: nunito;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 60px;
-  text-align: center;
+
+.main {}
+
+// -- 01 --
+.hello {
+  padding-top: 100px;
+
+  &__title {
+    width: 50%;
+    margin-left: 25%;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+
+  &-item {
+    display: block;
+    margin: 0px 18px;
+
+    &__link {}
+  }
 }
 
 ._blue {
-  color: $blue;
+  color: $color-blue;
 }
 
-.hello-list {
-  display: flex;
-  justify-content: center;
-  padding-top: 30px;
-}
-
-.hello-item {
-  display: block;
-  margin: 0px 18px;
-}
-
-.hello-item__link {}
 
 .img-twitter {}
 
@@ -159,7 +162,7 @@ body {
 
 .img-instagram {}
 
-
+// -- 02 --
 .works {
   padding-top: 100px;
 }
@@ -168,48 +171,103 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: baseline;
+  // align-items: baseline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: flex-start;
 }
 
 .works-item {
-  display: block;
-}
-
-.works-item._item-ocean {
-  align-self: flex-start;
-}
-
-.works-item._item-doors {
-  margin-top: -170px;
-}
-
-.works-img {}
-
-.works__button {
-  @extend %buttonYellow;
-  margin-top: -150px;
-  margin-left: 50px;
-}
-
-.works__button:hover {
-  @extend %buttonYellowHover;
-}
-
-.works__sub-tittle {
-  width: 275px;
-  height: 72px;
-  color: $white;
-  font-family: nunito;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 36px;
-  margin-left: 50px;
-}
-
-.img-ocean {
+  // display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   width: 520px;
-  height: 505px;
+  padding: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &._ocean {
+    background-image: url('../img/works-ocean.png');
+    height: 505px;
+  }
+
+  &._mountains {
+    background-image: url('../img/works-mountains.png');
+    height: 737px;
+  }
+
+  &._doors {
+    background-image: url('../img/works-doors.png');
+    height: 667px;
+    margin-top: -170px;
+  }
+
+  &._building {
+    background-image: url('../img/works-building.png');
+    height: 435px;
+    margin-top: 60px;
+  }
+
+  &__button {
+    width: 80px;
+    height: 24px;
+    padding: 0;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    color: $color-black;
+    background-color: $color-yellow;
+    border-radius: 14px;
+    border: 1px solid $color-yellow;
+    transition: background-color 0.2s linear,
+      border-color 0.2s linear;
+
+    &:hover {
+      @extend %button-yellow-hover;
+    }
+  }
+
+  &__title {
+    color: $color-white;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+  }
 }
+
+._title-ocean {
+  width: 64%;
+}
+._title-mountains {
+  width: 75%;
+}
+._title-doors {
+  width: 80%;
+}
+._title-building {
+  width: 75%;
+}
+
+// .works-item._item-ocean {
+//   align-self: flex-start;
+// }
+
+// .works-item._item-doors {
+//   margin-top: -170px;
+// }
+
+// .works-img {}
+
+// .works__button {
+//   @extend %button-yellow;
+//   margin-top: -150px;
+//   margin-left: 50px;
+// }
 
 .img-ocean-mobile,
 .img-mountains-mobile,
@@ -220,33 +278,7 @@ body {
   visibility: hidden;
 }
 
-.img-mountains {
-  width: 520px;
-  height: 737px;
-}
-
-.img-doors {
-  width: 520px;
-  height: 667px;
-}
-
-.img-building {
-  width: 520px;
-  height: 435px;
-}
-
-.works__sub-tittle._ocean {}
-
-.works__sub-tittle._mountains {
-  margin-top: -150px;
-}
-
-.works__sub-tittle._doors {
-  margin-top: -150px;
-}
-
-.works__sub-tittle._building {}
-
+// -- 03 --
 .about {
   margin-top: 150px;
 }
@@ -349,7 +381,7 @@ body {
 }
 
 ._gray-text {
-  color: $grayText;
+  color: $color-gray-dark;
 }
 
 ._year-mobile {
@@ -417,7 +449,7 @@ body {
 }
 
 .contact-form__input {
-  color: $black;
+  color: $color-black;
   font-family: nunito;
   font-size: 16px;
   font-weight: 600;
@@ -425,11 +457,11 @@ body {
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom-color: $gray;
+  border-bottom-color: $color-gray;
 }
 
 .contact-form__input::-webkit-input-placeholder {
-  color: $gray;
+  color: $color-gray;
 }
 
 ._message {
@@ -480,7 +512,7 @@ body {
 }
 
 .footer__button {
-  color: $grayText;
+  color: $color-gray-dark;
   font-family: Nunito;
   font-size: 16px;
   font-weight: 600;

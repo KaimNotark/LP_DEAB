@@ -1,24 +1,4 @@
-.works__button {
-  display: block;
-  position: relative;
-  padding: 2px 0 0 0;
-  width: 80px;
-  height: 23px;
-  background-color: #ffe300;
-  border: 1px solid #ffe300;
-  border-radius: 14px;
-  font-family: nunito;
-  color: #000000;
-  font-size: 12px;
-  font-weight: 800;
-  line-height: 16px;
-  text-decoration: none;
-  text-align: center;
-  -webkit-transition: background-color 0.1s ease, border-color 0.3s ease;
-  transition: background-color 0.1s ease, border-color 0.3s ease;
-}
-
-.works__button:hover {
+.works-item__button:hover {
   background-color: #000000;
   color: #ffe300;
 }
@@ -44,9 +24,16 @@ p {
   margin: 0;
 }
 
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   min-height: 100vh;
-  font-family: "Myriad Pro Regular", "Verdana", "Arial", sans-serif;
+  font-family: "Nunito", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -55,17 +42,10 @@ body {
   width: 100%;
   padding-top: 100px;
 }
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 .header-mobile__btn-div {
   visibility: hidden;
   opacity: 0;
 }
-
 .header-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,11 +56,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 0;
 }
-
 .header-item {
   display: block;
+}
+.header-item__link {
+  width: 10%;
+  height: 16px;
+  color: #007fff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+.header-avatar {
+  width: 52px;
+  height: 52px;
 }
 
 ._item-avatar {
@@ -93,24 +86,6 @@ body {
           justify-content: center;
 }
 
-.header-item__link {
-  width: 10%;
-  height: 16px;
-  color: #007fff;
-  font-family: "nunito";
-  font-size: 12px;
-  font-weight: 800;
-  line-height: 16px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-decoration: none;
-}
-
-.header-avatar {
-  width: 52px;
-  height: 52px;
-}
-
 .img-avatar {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -118,22 +93,22 @@ body {
           user-select: none;
 }
 
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .hello {
   padding-top: 100px;
 }
-
 .hello__title {
-  font-family: nunito;
+  width: 50%;
+  margin-left: 25%;
   font-size: 48px;
   font-weight: 700;
   line-height: 60px;
   text-align: center;
 }
-
-._blue {
-  color: #007fff;
-}
-
 .hello-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,12 +117,13 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 30px;
-  padding-left: 0%;
 }
-
 .hello-item {
   display: block;
   margin: 0px 18px;
+}
+._blue {
+  color: #007fff;
 }
 
 .works {
@@ -163,44 +139,86 @@ body {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .works-item {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 520px;
+  padding: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-
-.works-item._item-ocean {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+.works-item._ocean {
+  background-image: url("/works-ocean.025bac14.png");
+  height: 505px;
 }
-
-.works-item._item-doors {
+.works-item._mountains {
+  background-image: url("/works-mountains.7377b155.png");
+  height: 737px;
+}
+.works-item._doors {
+  background-image: url("/works-doors.dab49420.png");
+  height: 667px;
   margin-top: -170px;
 }
-
-.works__button {
-  margin-top: -150px;
-  margin-left: 50px;
+.works-item._building {
+  background-image: url("/works-building.f8bf7c98.png");
+  height: 435px;
+  margin-top: 60px;
 }
-
-.works__sub-tittle {
-  width: 275px;
-  height: 72px;
+.works-item__button {
+  width: 80px;
+  height: 24px;
+  padding: 0;
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 22px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffe300;
+  border-radius: 14px;
+  border: 1px solid #ffe300;
+  -webkit-transition: background-color 0.2s linear, border-color 0.2s linear;
+  transition: background-color 0.2s linear, border-color 0.2s linear;
+}
+.works-item__title {
   color: #ffffff;
-  font-family: nunito;
   font-size: 28px;
   font-weight: 700;
   line-height: 36px;
-  margin-left: 50px;
 }
 
-.img-ocean {
-  width: 520px;
-  height: 505px;
+._title-ocean {
+  width: 64%;
+}
+
+._title-mountains {
+  width: 75%;
+}
+
+._title-doors {
+  width: 80%;
+}
+
+._title-building {
+  width: 75%;
 }
 
 .img-ocean-mobile,
@@ -210,29 +228,6 @@ body {
   width: 0%;
   max-width: 0px;
   visibility: hidden;
-}
-
-.img-mountains {
-  width: 520px;
-  height: 737px;
-}
-
-.img-doors {
-  width: 520px;
-  height: 667px;
-}
-
-.img-building {
-  width: 520px;
-  height: 435px;
-}
-
-.works__sub-tittle._mountains {
-  margin-top: -150px;
-}
-
-.works__sub-tittle._doors {
-  margin-top: -150px;
 }
 
 .about {
@@ -248,7 +243,6 @@ body {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-left: 0;
 }
 
 .about-item {
@@ -281,7 +275,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 0;
 }
 
 .gad-item {
@@ -322,7 +315,6 @@ body {
 
 .links-list {
   display: block;
-  padding-left: 0;
   width: 47%;
 }
 
@@ -342,7 +334,6 @@ body {
 
 ._justify {
   display: block;
-  padding-left: 0;
 }
 
 ._gray-text {
@@ -399,7 +390,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding-top: 30px;
-  padding-left: 0%;
 }
 
 .contacts-item {
