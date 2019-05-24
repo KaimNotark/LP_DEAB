@@ -1,6 +1,6 @@
 .works-item__button {
   width: 80px;
-  height: 24px;
+  height: 23px;
   font-size: 12px;
   font-weight: 800;
   line-height: 22px;
@@ -90,6 +90,8 @@ body {
 .header-avatar {
   width: 52px;
   height: 52px;
+  margin-top: 2px;
+  margin-left: 19px;
 }
 
 ._item-avatar {
@@ -115,7 +117,7 @@ body {
 }
 
 .hello {
-  padding-top: 100px;
+  padding-top: 120px;
 }
 .hello__title {
   width: 50%;
@@ -124,6 +126,7 @@ body {
   font-weight: 700;
   line-height: 60px;
   text-align: center;
+  letter-spacing: 1.3px;
 }
 .hello-list {
   display: -webkit-box;
@@ -132,18 +135,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 30px;
+  padding-top: 50px;
 }
 .hello-item {
   display: block;
-  margin: 0px 18px;
+  margin: 0px 15px;
 }
 ._blue {
   color: #007fff;
 }
 
 .works {
-  padding-top: 100px;
+  padding-top: 116px;
 }
 .works-list {
   display: -webkit-box;
@@ -173,7 +176,7 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 520px;
-  padding: 50px;
+  padding: 0 0 60px 60px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -188,7 +191,7 @@ body {
 .works-item._doors {
   background-image: url("/works-doors.dab49420.png");
   height: 667px;
-  margin-top: -170px;
+  margin-top: -172px;
 }
 .works-item._building {
   background-image: url("/works-building.f8bf7c98.png");
@@ -197,17 +200,18 @@ body {
 }
 .works-item__button {
   padding: 0;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .works-item__title {
   color: #ffffff;
   font-size: 28px;
   font-weight: 700;
   line-height: 36px;
+  letter-spacing: 0.7px;
 }
 
 ._title-ocean {
-  width: 64%;
+  width: 65%;
 }
 
 ._title-mountains {
@@ -215,7 +219,7 @@ body {
 }
 
 ._title-doors {
-  width: 80%;
+  width: 70%;
 }
 
 ._title-building {
@@ -232,7 +236,7 @@ body {
 }
 
 .about {
-  margin-top: 150px;
+  margin-top: 60px;
 }
 .about-list {
   display: -webkit-box;
@@ -247,7 +251,7 @@ body {
 .about-item {
   display: block;
   width: 47%;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 .about-item__title {
   font-family: nunito;
@@ -265,7 +269,8 @@ body {
 }
 
 .gad {
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-left: -7px;
 }
 
 .gad-list {
@@ -298,7 +303,7 @@ body {
 }
 
 .links {
-  margin-top: 50px;
+  margin-top: 82px;
 }
 .links-wrapper {
   display: -webkit-box;
@@ -314,7 +319,7 @@ body {
 }
 .links-item {
   display: block;
-  margin-top: 40px;
+  margin-top: 42px;
 }
 .links-item__content {
   display: -webkit-box;
@@ -342,7 +347,7 @@ body {
 }
 
 .contacts {
-  margin-top: 50px;
+  margin-top: 245px;
 }
 
 .row {
@@ -374,7 +379,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   line-height: 30px;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 .contacts-list {
   display: -webkit-box;
@@ -396,6 +401,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 90%;
+  margin-top: 3px;
 }
 
 .contact-form__label {
@@ -406,6 +412,7 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  margin-top: 16px;
 }
 .contact-form__input {
   color: #000000;
@@ -417,6 +424,7 @@ body {
   border-right: none;
   border-left: none;
   border-bottom-color: #cfcfcf;
+  margin-top: 5px;
 }
 .contact-form__input::-webkit-input-placeholder {
   color: #cfcfcf;
@@ -436,10 +444,12 @@ body {
   border: none;
   width: 52px;
   height: 52px;
+  margin-top: 38px;
+  margin-right: 6px;
 }
 
 ._message {
-  height: 100px;
+  height: 120px;
   border-bottom-width: 3px;
   resize: none;
 }
@@ -450,7 +460,7 @@ body {
 }
 
 .footer {
-  margin-top: 100px;
+  margin-top: 121px;
   margin-bottom: 100px;
 }
 .footer__content {
@@ -460,7 +470,7 @@ body {
   line-height: 30px;
 }
 .footer-buttons {
-  width: 30%;
+  width: 31%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -475,6 +485,10 @@ body {
   font-weight: 600;
   line-height: 30px;
   text-decoration: none;
+}
+
+._invoicing {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=/scss.6b84482b.css.map */

@@ -10,7 +10,7 @@ sans-serif;
 
 %button-yellow {
   width: 80px;
-  height: 24px;
+  height: 23px;
   font-size: 12px;
   font-weight: 800;
   line-height: 22px;
@@ -97,7 +97,9 @@ body {
 
   &-avatar {
     width: 52px;
-    height: 52px
+    height: 52px;
+    margin-top: 2px;
+    margin-left: 19px;
   }
 }
 
@@ -121,7 +123,7 @@ body {
 
 // -- 01 --
 .hello {
-  padding-top: 100px;
+  padding-top: 120px;
 
   &__title {
     width: 50%;
@@ -130,17 +132,18 @@ body {
     font-weight: 700;
     line-height: 60px;
     text-align: center;
+    letter-spacing: 1.3px;
   }
 
   &-list {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 50px;
   }
 
   &-item {
     display: block;
-    margin: 0px 18px;
+    margin: 0px 15px;
 
     &__link {}
   }
@@ -159,7 +162,7 @@ body {
 
 // -- 02 --
 .works {
-  padding-top: 100px;
+  padding-top: 116px;
 
   &-list {
     display: flex;
@@ -176,7 +179,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     width: 520px;
-    padding: 50px;
+    padding: 0 0 60px 60px;
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -193,7 +196,7 @@ body {
     &._doors {
       background-image: url('../img/works-doors.png');
       height: 667px;
-      margin-top: -170px;
+      margin-top: -172px;
     }
 
     &._building {
@@ -205,7 +208,7 @@ body {
     &__button {
       @extend %button-yellow;
       padding: 0;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     &:hover {
@@ -217,13 +220,14 @@ body {
       font-size: 28px;
       font-weight: 700;
       line-height: 36px;
+      letter-spacing: 0.7px;
     }
   }
 
 }
 
 ._title-ocean {
-  width: 64%;
+  width: 65%;
 }
 
 ._title-mountains {
@@ -231,7 +235,7 @@ body {
 }
 
 ._title-doors {
-  width: 80%;
+  width: 70%;
 }
 
 ._title-building {
@@ -249,7 +253,7 @@ body {
 
 // -- 03 --
 .about {
-  margin-top: 150px;
+  margin-top: 60px;
 
   &-list {
     display: flex;
@@ -260,7 +264,7 @@ body {
   &-item {
     display: block;
     width: 47%;
-    margin-top: 50px;
+    margin-top: 60px;
 
     &__title {
       font-family: nunito;
@@ -283,7 +287,8 @@ body {
 
 // -- 04 --
 .gad {
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-left: -7px;
 }
 
 .gad-list {
@@ -323,7 +328,7 @@ body {
 
 // -- 05 --
 .links {
-  margin-top: 50px;
+  margin-top: 82px;
 
   &-wrapper {
     display: flex;
@@ -337,7 +342,7 @@ body {
 
   &-item {
     display: block;
-    margin-top: 40px;
+    margin-top: 42px;
 
     &__content {
       display: flex;
@@ -365,7 +370,7 @@ body {
 
 // -- 06 --
 .contacts {
-  margin-top: 50px;
+  margin-top: 245px;
 }
 
 .row {
@@ -397,7 +402,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     line-height: 30px;
-    margin-top: 50px;
+    margin-top: 60px;
   }
 
   &-list {
@@ -415,6 +420,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 90%;
+  margin-top: 3px;
 }
 
 .contact-form {
@@ -422,6 +428,7 @@ body {
   &__label {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 16px;
   }
 
   &__input {
@@ -434,6 +441,7 @@ body {
     border-right: none;
     border-left: none;
     border-bottom-color: $color-gray;
+    margin-top: 5px;
   }
 
   &__input::-webkit-input-placeholder {
@@ -456,11 +464,13 @@ body {
     border: none;
     width: 52px;
     height: 52px;
+    margin-top: 38px;
+    margin-right: 6px;
   }
 }
 
 ._message {
-  height: 100px;
+  height: 120px;
   border-bottom-width: 3px;
   resize: none;
 }
@@ -471,7 +481,7 @@ body {
 }
 
 .footer {
-  margin-top: 100px;
+  margin-top: 121px;
   margin-bottom: 100px;
 
   &__content {
@@ -482,7 +492,7 @@ body {
   }
 
   &-buttons {
-    width: 30%;
+    width: 31%;
     display: flex;
     justify-content: space-between;
 
@@ -495,4 +505,7 @@ body {
       text-decoration: none;
     }
   }
+}
+._invoicing {
+  margin-right: 5px;
 }
