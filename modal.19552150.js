@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/index-mobile.css":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/modal.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\img\\works-ocean-mobile.png":[["works-ocean-mobile.d423de86.png","img/works-ocean-mobile.png"],"img/works-ocean-mobile.png"],"./..\\img\\works-mountains-mobile.png":[["works-mountains-mobile.6b84963b.png","img/works-mountains-mobile.png"],"img/works-mountains-mobile.png"],"./..\\img\\works-doors-mobile.png":[["works-doors-mobile.8de3eb41.png","img/works-doors-mobile.png"],"img/works-doors-mobile.png"],"./..\\img\\works-building-mobile.png":[["works-building-mobile.d169e817.png","img/works-building-mobile.png"],"img/works-building-mobile.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,4 +393,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/index-mobile.6d92165e.js.map
+//# sourceMappingURL=/modal.19552150.js.map
