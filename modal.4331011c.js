@@ -190,11 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = prevBodyOverflow;
       document.body.style.marginRight = 0;
       btnOpenElem.classList.add('_visible');
-<<<<<<< HEAD
     }, 200); // время transition в CSS
-=======
-    }, 200); // время transition в CSS        
->>>>>>> ef789b1fdbd53af05b223e2e33b604ed0453ee8e
   } // смотрим на какую кнопку нажали
   // это кнопки вызывающие открытие модалки
 
@@ -220,7 +216,6 @@ document.addEventListener("DOMContentLoaded", function () {
     element.addEventListener('click', function (event) {
       var targetModalId = event.target.attributes['data-modal-close'].value;
       console.log('targetModalId = ' + targetModalId);
-<<<<<<< HEAD
       closeModal(targetModalId); // появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
 
       var btnOpenElem = document.getElementById('modalBtn');
@@ -252,9 +247,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         ;
       }, 200); // время transition в CSS
-=======
-      closeModal(targetModalId);
->>>>>>> ef789b1fdbd53af05b223e2e33b604ed0453ee8e
     });
   });
 });
@@ -286,11 +278,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "49918" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51800" + '/');
->>>>>>> ef789b1fdbd53af05b223e2e33b604ed0453ee8e
 
   ws.onmessage = function (event) {
     checkedAssets = {};

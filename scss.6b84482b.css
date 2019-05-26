@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 .works-item__button {
-=======
-.works__button {
-  display: block;
-  position: relative;
-  padding: 2px 0 0 0;
->>>>>>> ef789b1fdbd53af05b223e2e33b604ed0453ee8e
   width: 80px;
   height: 23px;
   font-size: 12px;
@@ -69,15 +62,6 @@ body {
   visibility: hidden;
   opacity: 0;
 }
-<<<<<<< HEAD
-=======
-
-.header-mobile__btn-div {
-  visibility: hidden;
-  opacity: 0;
-}
-
->>>>>>> ef789b1fdbd53af05b223e2e33b604ed0453ee8e
 .header-list {
   display: -webkit-box;
   display: -ms-flexbox;
