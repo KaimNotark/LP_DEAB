@@ -267,6 +267,9 @@ body {
   text-align: left;
   margin-top: 30px;
 }
+.about-item__see-more {
+  display: none;
+}
 
 .gad {
   margin-top: 60px;
