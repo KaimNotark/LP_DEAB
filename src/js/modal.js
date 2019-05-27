@@ -104,4 +104,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+
+  // Отображать-скрыть текст в секции about
+  document.getElementById("btn-1").addEventListener("click", function () {
+    var moreText = document.getElementById("more-1");
+    var btnText = document.getElementById("btn-1");
+
+    console.log('btn "See more..." was pressed');
+
+    btnText.classList.add('_hide-button');
+    moreText.classList.remove('_hide-text');
+    moreText.classList.add('_visible-text');
+  });
+
+ document.getElementById("btn-2").addEventListener("click", function () {
+   var moreText = document.getElementById("more-2");
+   var btnText = document.getElementById("btn-2");
+
+   console.log('btn "See more..." was pressed');
+
+   btnText.classList.add('_hide-button');
+   moreText.classList.remove('_hide-text');
+   moreText.classList.add('_visible-text');
+ });
+ 
+ document.getElementById("btn-3").addEventListener("click", function () {
+   var moreText = document.getElementById("more-3");
+   var btnText = document.getElementById("btn-3");
+
+   console.log('btn "See more..." was pressed');
+
+   btnText.classList.add('_hide-button');
+   moreText.classList.remove('_hide-text');
+   moreText.classList.add('_visible-text');
+ });
+  // function showMore() {
+  //  var dots = document.getElementById("dots");
+  // var moreText = document.getElementById("more");
+  // var btnText = document.getElementById("btn");
+
+  // if (more.style.display === "none") {
+  //   btnText.style.display = "none";
+  //   moreText.style.display = "inline";
+  // };
+  // else {
+  //   dots.style.display = "none";
+  //   btnText.innerHTML = "Показать меньше";
+  //   moreText.style.display = "inline";
+  // };
+  // }
 });

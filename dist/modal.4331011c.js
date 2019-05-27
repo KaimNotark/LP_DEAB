@@ -229,7 +229,45 @@ document.addEventListener("DOMContentLoaded", function () {
       //   // };
       // }, 200); // время transition в CSS
     });
+  }); // Отображать-скрыть текст в секции about
+
+  document.getElementById("btn-1").addEventListener("click", function () {
+    var moreText = document.getElementById("more-1");
+    var btnText = document.getElementById("btn-1");
+    console.log('btn "See more..." was pressed');
+    btnText.classList.add('_hide-button');
+    moreText.classList.remove('_hide-text');
+    moreText.classList.add('_visible-text');
   });
+  document.getElementById("btn-2").addEventListener("click", function () {
+    var moreText = document.getElementById("more-2");
+    var btnText = document.getElementById("btn-2");
+    console.log('btn "See more..." was pressed');
+    btnText.classList.add('_hide-button');
+    moreText.classList.remove('_hide-text');
+    moreText.classList.add('_visible-text');
+  });
+  document.getElementById("btn-3").addEventListener("click", function () {
+    var moreText = document.getElementById("more-3");
+    var btnText = document.getElementById("btn-3");
+    console.log('btn "See more..." was pressed');
+    btnText.classList.add('_hide-button');
+    moreText.classList.remove('_hide-text');
+    moreText.classList.add('_visible-text');
+  }); // function showMore() {
+  //  var dots = document.getElementById("dots");
+  // var moreText = document.getElementById("more");
+  // var btnText = document.getElementById("btn");
+  // if (more.style.display === "none") {
+  //   btnText.style.display = "none";
+  //   moreText.style.display = "inline";
+  // };
+  // else {
+  //   dots.style.display = "none";
+  //   btnText.innerHTML = "Показать меньше";
+  //   moreText.style.display = "inline";
+  // };
+  // }
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -259,7 +297,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49178" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54323" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
