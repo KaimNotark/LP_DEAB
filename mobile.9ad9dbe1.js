@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../Users/User/AppData/Roaming/npm-cache/_npx/5776/node_modules/parcel/src/builtins/bundle-url.js"}],"css/sweetalert2.min.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../Users/User/AppData/Roaming/npm-cache/_npx/5776/node_modules/parcel/src/builtins/bundle-url.js"}],"css/mobile.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../Users/User/AppData/Roaming/npm-cache/_npx/5776/node_modules/parcel/src/builtins/css-loader.js"}],"../../../Users/User/AppData/Roaming/npm-cache/_npx/5776/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\img\\works-ocean-mobile.png":[["works-ocean-mobile.d423de86.png","img/works-ocean-mobile.png"],"img/works-ocean-mobile.png"],"./..\\img\\works-mountains-mobile.png":[["works-mountains-mobile.6b84963b.png","img/works-mountains-mobile.png"],"img/works-mountains-mobile.png"],"./..\\img\\works-doors-mobile.png":[["works-doors-mobile.8de3eb41.png","img/works-doors-mobile.png"],"img/works-doors-mobile.png"],"./..\\img\\works-building-mobile.png":[["works-building-mobile.d169e817.png","img/works-building-mobile.png"],"img/works-building-mobile.png"],"_css_loader":"../../../Users/User/AppData/Roaming/npm-cache/_npx/5776/node_modules/parcel/src/builtins/css-loader.js"}],"../../../Users/User/AppData/Roaming/npm-cache/_npx/5776/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,4 +393,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../../../Users/User/AppData/Roaming/npm-cache/_npx/5776/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/sweetalert2.min.dd4edca8.js.map
+//# sourceMappingURL=/mobile.9ad9dbe1.js.map

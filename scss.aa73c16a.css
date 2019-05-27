@@ -271,7 +271,7 @@ body {
 
 .about-item {
     display: block;
-    width: 47%;
+    width: 45%;
     margin-top: 60px
 }
 
@@ -289,6 +289,10 @@ body {
     line-height: 30px;
     text-align: left;
     margin-top: 30px
+}
+
+.about-item__see-more {
+    display: none
 }
 
 .gad {
@@ -519,4 +523,4 @@ body {
     margin-right: 5px
 }
 
-/*# sourceMappingURL=/scss.07fbaeba.css.map */
+/*# sourceMappingURL=/scss.aa73c16a.css.map */

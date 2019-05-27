@@ -120,37 +120,27 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"js/modal.js":[function(require,module,exports) {
 // ------------------ скрипты модального меню -------------------
 // появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
-var btnOpenElem = document.getElementById('modalBtn');
-var minY = 500;
-
-window.onscroll = function () {
-  // отслеживаем координаты по оси Y
-  var pageY = function pageY() {
-    return window.pageYOffset || window.scrollY;
-  };
-
-  var scrollYPos = pageY(); // смотрим на разрешение окна браузера
-
-  var widthWin = document.body.clientWidth;
-
-  if (widthWin < 480) {
-    minY = 200;
-  } else {
-    minY = 100;
-  }
-
-  ; // if координаты больше minY, то показываем кнопку, else убираем
-
-  if (scrollYPos >= minY) {
-    btnOpenElem.classList.add('_visible');
-  } else {
-    btnOpenElem.classList.remove('_visible');
-  }
-
-  ;
-}; // убрать скролл страницы после отображения модального окна
-
-
+// const btnOpenElem = document.getElementById('modalBtn');
+// let minY = 500;
+// window.onscroll = function () {
+//   // отслеживаем координаты по оси Y
+//   const pageY = () => (window.pageYOffset || window.scrollY);
+//   let scrollYPos = pageY();
+//   // смотрим на разрешение окна браузера
+//   const widthWin = document.body.clientWidth;
+//   if (widthWin < 480) {
+//     minY = 200
+//   } else {
+//     minY = 100
+//   };
+//   // if координаты больше minY, то показываем кнопку, else убираем
+//   // if (scrollYPos >= minY) {
+//   //   btnOpenElem.classList.add('_visible');
+//   // } else {
+//   //   btnOpenElem.classList.remove('_visible');
+//   // };
+// };
+// убрать скролл страницы после отображения модального окна
 document.addEventListener("DOMContentLoaded", function () {
   // вычисляем ширину полосы прокрутки и берем ее модуль
   var scrollbar = Math.abs(document.body.clientWidth - window.innerWidth) + 'px';
@@ -217,40 +207,69 @@ document.addEventListener("DOMContentLoaded", function () {
       var targetModalId = event.target.attributes['data-modal-close'].value;
       console.log('targetModalId = ' + targetModalId);
       closeModal(targetModalId); // появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
-
-      var btnOpenElem = document.getElementById('modalBtn');
-      var minY = 500; // отслеживаем координаты по оси Y
-
-      var pageY = function pageY() {
-        return window.pageYOffset || window.scrollY;
-      };
-
-      var scrollYPos = pageY(); // смотрим на разрешение окна браузера
-
-      var widthWin = document.body.clientWidth;
-
-      if (widthWin < 480) {
-        minY = 200;
-      } else {
-        minY = 100;
-      }
-
-      ;
-      console.log('minY= ' + minY); // if координаты больше minY, то показываем кнопку, else убираем
-
-      setTimeout(function () {
-        if (scrollYPos <= minY) {
-          btnOpenElem.classList.remove('_visible');
-        } else {
-          btnOpenElem.classList.add('_visible');
-        }
-
-        ;
-      }, 200); // время transition в CSS
+      // const btnOpenElem = document.getElementById('modalBtn');
+      // let minY = 500;
+      // // отслеживаем координаты по оси Y
+      // const pageY = () => (window.pageYOffset || window.scrollY);
+      // let scrollYPos = pageY();
+      // // смотрим на разрешение окна браузера
+      // const widthWin = document.body.clientWidth;
+      // if (widthWin < 480) {
+      //   minY = 200
+      // } else {
+      //   minY = 100
+      // };
+      // console.log('minY= ' + minY);
+      // // if координаты больше minY, то показываем кнопку, else убираем
+      // setTimeout(() => {
+      //   // if (scrollYPos <= minY) {
+      //   //   btnOpenElem.classList.remove('_visible');
+      //   // } else {
+      //   //   btnOpenElem.classList.add('_visible');
+      //   // };
+      // }, 200); // время transition в CSS
     });
+  }); // Отображать-скрыть текст в секции about
+
+  document.getElementById("btn-1").addEventListener("click", function () {
+    var moreText = document.getElementById("more-1");
+    var btnText = document.getElementById("btn-1");
+    console.log('btn "See more..." was pressed');
+    btnText.classList.add('_hide-button');
+    moreText.classList.remove('_hide-text');
+    moreText.classList.add('_visible-text');
   });
+  document.getElementById("btn-2").addEventListener("click", function () {
+    var moreText = document.getElementById("more-2");
+    var btnText = document.getElementById("btn-2");
+    console.log('btn "See more..." was pressed');
+    btnText.classList.add('_hide-button');
+    moreText.classList.remove('_hide-text');
+    moreText.classList.add('_visible-text');
+  });
+  document.getElementById("btn-3").addEventListener("click", function () {
+    var moreText = document.getElementById("more-3");
+    var btnText = document.getElementById("btn-3");
+    console.log('btn "See more..." was pressed');
+    btnText.classList.add('_hide-button');
+    moreText.classList.remove('_hide-text');
+    moreText.classList.add('_visible-text');
+  }); // function showMore() {
+  //  var dots = document.getElementById("dots");
+  // var moreText = document.getElementById("more");
+  // var btnText = document.getElementById("btn");
+  // if (more.style.display === "none") {
+  //   btnText.style.display = "none";
+  //   moreText.style.display = "inline";
+  // };
+  // else {
+  //   dots.style.display = "none";
+  //   btnText.innerHTML = "Показать меньше";
+  //   moreText.style.display = "inline";
+  // };
+  // }
 });
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../../../Users/User/AppData/Roaming/npm-cache/_npx/5776/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -278,7 +297,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49918" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63621" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -453,5 +472,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal.js"], null)
+},{}]},{},["../../../Users/User/AppData/Roaming/npm-cache/_npx/5776/node_modules/parcel/src/builtins/hmr-runtime.js","js/modal.js"], null)
 //# sourceMappingURL=/modal.4331011c.js.map

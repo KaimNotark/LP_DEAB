@@ -1,6 +1,11 @@
 @media only screen and (max-width:480px) {
     .header {
-        padding-top: 50px
+        padding-top: 50px;
+        height: 120px
+    }
+
+    ._bg-white {
+        background-color: #fff
     }
 
     .header-mobile__btn-div {
@@ -12,6 +17,10 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center
+    }
+
+    ._fixed {
+        position: fixed
     }
 
     .header-mobile__btn-open {
@@ -125,6 +134,35 @@
 
     .about-item {
         width: 80%
+    }
+
+    ._hide-button {
+        display: none;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        padding: 0
+    }
+
+    ._hide-text {
+        display: none
+    }
+
+    ._visible-text {
+        display: inline
+    }
+
+    .about-item__see-more {
+        display: inline;
+        font-family: Nunito;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: left;
+        margin: 0;
+        color: #007fff;
+        border: none;
+        background: none
     }
 
     .about__sub-tittle {
@@ -296,4 +334,4 @@
     }
 }
 
-/*# sourceMappingURL=/index-mobile.2ee901df.css.map */
+/*# sourceMappingURL=/mobile.bfe5c680.css.map */
