@@ -117,7 +117,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
+<<<<<<< HEAD
 })({"../../../Users/User/AppData/Roaming/npm-cache/_npx/4572/node_modules/parcel/node_modules/process/browser.js":[function(require,module,exports) {
+=======
+})({"../node_modules/process/browser.js":[function(require,module,exports) {
+>>>>>>> eaa0a9c0aecaf19f118911a3434683976357b0ac
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -945,7 +949,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
   }]);
 });
+<<<<<<< HEAD
 },{"process":"../../../Users/User/AppData/Roaming/npm-cache/_npx/4572/node_modules/parcel/node_modules/process/browser.js"}],"js/sweetalert2.min.js":[function(require,module,exports) {
+=======
+},{"process":"../node_modules/process/browser.js"}],"js/sweetalert2.min.js":[function(require,module,exports) {
+>>>>>>> eaa0a9c0aecaf19f118911a3434683976357b0ac
 var define;
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2180,7 +2188,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< HEAD
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "54323" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49918" + '/');
+>>>>>>> eaa0a9c0aecaf19f118911a3434683976357b0ac
 
   ws.onmessage = function (event) {
     checkedAssets = {};
