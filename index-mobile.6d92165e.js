@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\img\\works-ocean-mobile.png":[["works-ocean-mobile.d423de86.png","img/works-ocean-mobile.png"],"img/works-ocean-mobile.png"],"./..\\img\\works-mountains-mobile.png":[["works-mountains-mobile.6b84963b.png","img/works-mountains-mobile.png"],"img/works-mountains-mobile.png"],"./..\\img\\works-doors-mobile.png":[["works-doors-mobile.8de3eb41.png","img/works-doors-mobile.png"],"img/works-doors-mobile.png"],"./..\\img\\works-building-mobile.png":[["works-building-mobile.d169e817.png","img/works-building-mobile.png"],"img/works-building-mobile.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51800" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49178" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
