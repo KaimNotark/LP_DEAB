@@ -250,11 +250,7 @@ body {
 }
 .about-item {
   display: block;
-<<<<<<< HEAD
   width: 45%;
-=======
-  width: 47%;
->>>>>>> eaa0a9c0aecaf19f118911a3434683976357b0ac
   margin-top: 60px;
 }
 .about-item__title {
@@ -270,6 +266,9 @@ body {
   line-height: 30px;
   text-align: left;
   margin-top: 30px;
+}
+.about-item__see-more {
+  display: none;
 }
 
 .gad {

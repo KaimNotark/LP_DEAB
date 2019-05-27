@@ -291,6 +291,10 @@ body {
     margin-top: 30px
 }
 
+.about-item__see-more {
+    display: none
+}
+
 .gad {
     margin-top: 60px;
     margin-left: -7px
@@ -463,10 +467,7 @@ body {
     margin-top: 20px;
     margin-bottom: 10px
 }
-.about-item__see-more {
-    display: none;
-    visibility: hidden;
-}
+
 .contact-form__button {
     background: none;
     border: none;
@@ -522,4 +523,4 @@ body {
     margin-right: 5px
 }
 
-/*# sourceMappingURL=/scss.229955a7.css.map */
+/*# sourceMappingURL=/scss.aa73c16a.css.map */
