@@ -1,26 +1,26 @@
 // ------------------ скрипты модального меню -------------------
 
 // появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
-const btnOpenElem = document.getElementById('modalBtn');
-let minY = 500;
-window.onscroll = function () {
-  // отслеживаем координаты по оси Y
-  const pageY = () => (window.pageYOffset || window.scrollY);
-  let scrollYPos = pageY();
-  // смотрим на разрешение окна браузера
-  const widthWin = document.body.clientWidth;
-  if (widthWin < 480) {
-    minY = 200
-  } else {
-    minY = 100
-  };
-  // if координаты больше minY, то показываем кнопку, else убираем
-  if (scrollYPos >= minY) {
-    btnOpenElem.classList.add('_visible');
-  } else {
-    btnOpenElem.classList.remove('_visible');
-  };
-};
+// const btnOpenElem = document.getElementById('modalBtn');
+// let minY = 500;
+// window.onscroll = function () {
+//   // отслеживаем координаты по оси Y
+//   const pageY = () => (window.pageYOffset || window.scrollY);
+//   let scrollYPos = pageY();
+//   // смотрим на разрешение окна браузера
+//   const widthWin = document.body.clientWidth;
+//   if (widthWin < 480) {
+//     minY = 200
+//   } else {
+//     minY = 100
+//   };
+//   // if координаты больше minY, то показываем кнопку, else убираем
+//   // if (scrollYPos >= minY) {
+//   //   btnOpenElem.classList.add('_visible');
+//   // } else {
+//   //   btnOpenElem.classList.remove('_visible');
+//   // };
+// };
 
 // убрать скролл страницы после отображения модального окна
 document.addEventListener("DOMContentLoaded", function () {
@@ -78,28 +78,28 @@ document.addEventListener("DOMContentLoaded", function () {
       closeModal(targetModalId);
 
       // появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
-      const btnOpenElem = document.getElementById('modalBtn');
-      let minY = 500;
+      // const btnOpenElem = document.getElementById('modalBtn');
+      // let minY = 500;
 
-      // отслеживаем координаты по оси Y
-      const pageY = () => (window.pageYOffset || window.scrollY);
-      let scrollYPos = pageY();
-      // смотрим на разрешение окна браузера
-      const widthWin = document.body.clientWidth;
-      if (widthWin < 480) {
-        minY = 200
-      } else {
-        minY = 100
-      };
-      console.log('minY= ' + minY);
-      // if координаты больше minY, то показываем кнопку, else убираем
-      setTimeout(() => {
-        if (scrollYPos <= minY) {
-          btnOpenElem.classList.remove('_visible');
-        } else {
-          btnOpenElem.classList.add('_visible');
-        };
-      }, 200); // время transition в CSS
+      // // отслеживаем координаты по оси Y
+      // const pageY = () => (window.pageYOffset || window.scrollY);
+      // let scrollYPos = pageY();
+      // // смотрим на разрешение окна браузера
+      // const widthWin = document.body.clientWidth;
+      // if (widthWin < 480) {
+      //   minY = 200
+      // } else {
+      //   minY = 100
+      // };
+      // console.log('minY= ' + minY);
+      // // if координаты больше minY, то показываем кнопку, else убираем
+      // setTimeout(() => {
+      //   // if (scrollYPos <= minY) {
+      //   //   btnOpenElem.classList.remove('_visible');
+      //   // } else {
+      //   //   btnOpenElem.classList.add('_visible');
+      //   // };
+      // }, 200); // время transition в CSS
 
     });
   });
