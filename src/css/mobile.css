@@ -2,17 +2,22 @@
 
   .header {
     padding-top: 50px;
+    height: 120px;
+  }
+
+  ._bg-white {
+    background-color: #ffffff;
   }
 
   .header-mobile__btn-div {
     visibility: visible;
     opacity: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
+  }
+
+  ._fixed {
+    position: fixed;
   }
 
   .header-mobile__btn-open {
@@ -79,23 +84,14 @@
   }
 
   .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .works-list {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: flex-start;
+    justify-content: center;
     margin-left: 8%;
     width: 84%%;
     padding: 0 0 0 0;
@@ -116,66 +112,64 @@
   }
 
   .works-item._ocean {
-    background-image: url('/works-ocean-mobile.d423de86.png');
+    background-image: url('../img/works-ocean-mobile.png');
     height: 306px;
   }
 
   .works-item._mountains {
-    background-image: url('/works-mountains-mobile.6b84963b.png');
+    background-image: url('../img/works-mountains-mobile.png');
     height: 446px;
   }
 
   .works-item._doors {
-    background-image: url('/works-doors-mobile.8de3eb41.png');
+    background-image: url('../img/works-doors-mobile.png');
     height: 404px;
     margin-top: 30px;
   }
 
   .works-item._building {
-    background-image: url('/works-building-mobile.d169e817.png');
+    background-image: url('../img/works-building-mobile.png');
     height: 264px;
     margin-top: 30px;
   }
 
-  /* .img-ocean-mobile,
-  .img-mountains-mobile,
-  .img-doors-mobile,
-  .img-building-mobile {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 315px;
-    margin: 0 auto;
-    visibility: visible;
-  } */
-  /* 
-  .img-ocean-mobile,
-  .img-doors-mobile,
-  .img-building-mobile {
-    margin-top: 30vw;
-  }
-
-  .img-mountains-mobile {
-    margin-top: 20vw;
-  }
-
-  .works-item._item-ocean {
-    align-self: auto;
-  }
-
-  .works-item._item-doors {
-    margin-top: 0px;
-  } */
-
   .about-list {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     padding: 0 0 0 0;
   }
 
   .about-item {
     width: 80%;
+  }
+
+
+  ._hide-button {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  ._hide-text {
+    display: none;
+  }
+
+  ._visible-text {
+    display: inline;
+  }
+
+  .about-item__see-more {
+    display: inline;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+    margin: 0px;
+    color: #007fff;
+    border: none;
+    background: none;
   }
 
   .about__sub-tittle {
@@ -193,9 +187,7 @@
   }
 
   .gad-list {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     width: 90%;
   }
 
@@ -242,11 +234,8 @@
   ._item-dropbox {}
 
   .links-wrapper {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .links-list {
@@ -255,9 +244,7 @@
   }
 
   .links-content {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
 
   ._year-mobile {
@@ -273,11 +260,8 @@
   }
 
   .row {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .column._width-20proc {
@@ -317,11 +301,8 @@
 
   .footer-buttons {
     width: 90%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: initial;
-        -ms-flex-pack: initial;
-            justify-content: initial;
+    flex-wrap: wrap;
+    justify-content: initial;
   }
 
   .footer-buttons__button {
@@ -360,5 +341,3 @@
     margin: 100px 5% 100px 5%;
   }
 }
-
-/*# sourceMappingURL=/index-mobile.6d92165e.css.map */
