@@ -89,8 +89,8 @@
     align-items: flex-start;
     justify-content: center;
     margin-left: 8%;
-    width: 84%%;
-    padding: 0 0 0 0;
+    width: 84%;
+    padding: 0;
   }
 
   .works-item {
@@ -242,13 +242,9 @@
     float: right;
   }
 
-  ._item-google {}
-
   ._item-airbnb {
     margin-left: 41px;
   }
-
-  ._item-dropbox {}
 
   .links {
     margin-top: 93px;
@@ -270,7 +266,6 @@
 
   .links-item__content {
     line-height: 30px;
-    /* justify-content: flex-start; */
   }
 
   ._year-mobile {
@@ -301,10 +296,6 @@
 
   .column._width-20proc {
     width: 86%;
-  }
-
-  .column {
-    /* width: 80%; */
   }
 
   .contacts__title {
