@@ -66,8 +66,6 @@ body {
   width: 100%;
   padding-top: 100px;
 
-  &-menu {}
-
   &-mobile__btn-div {
     visibility: hidden;
     opacity: 0;
@@ -118,9 +116,6 @@ body {
   margin: 0 auto;
 }
 
-
-.main {}
-
 // -- 01 --
 .hello {
   padding-top: 120px;
@@ -144,21 +139,12 @@ body {
   &-item {
     display: block;
     margin: 0px 15px;
-
-    &__link {}
   }
 }
 
 ._blue {
   color: $color-blue;
 }
-
-
-.img-twitter {}
-
-.img-behance {}
-
-.img-instagram {}
 
 // -- 02 --
 .works {
@@ -281,6 +267,7 @@ body {
       text-align: left;
       margin-top: 30px;
     }
+
     &__see-more {
       display: none;
     }
@@ -302,14 +289,6 @@ body {
   display: block;
   width: 25%;
 }
-
-.gad-picture {}
-
-.img-google {}
-
-.img-airbnb {}
-
-.img-dropbox {}
 
 .img-google-mobile {
   width: 0%;
@@ -381,8 +360,6 @@ body {
   justify-content: space-between;
 }
 
-.column {}
-
 .column._width-20proc {
   width: 20%;
 }
@@ -426,11 +403,28 @@ body {
   margin-top: 3px;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 10em white inset !important;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom-color: $color-gray-dark;
+}
+
+button:focus {
+  outline: none;
+}
+
 .contact-form {
 
   &__label {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-top: 16px;
   }
 
@@ -467,8 +461,8 @@ body {
     border: none;
     width: 52px;
     height: 52px;
-    margin-top: 38px;
-    margin-right: 6px;
+    padding: 0;
+    margin-top: 39px;
   }
 }
 
@@ -509,6 +503,7 @@ body {
     }
   }
 }
+
 ._invoicing {
   margin-right: 5px;
 }

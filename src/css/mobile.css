@@ -1,8 +1,8 @@
 @media only screen and (max-width: 480px) {
 
   .header {
-    padding-top: 50px;
-    height: 120px;
+    padding-top: 62px;
+    height: 140px;
   }
 
   ._bg-white {
@@ -31,7 +31,7 @@
   .header-mobile__btn-open::before {
     content: "";
     position: absolute;
-    top: 72px;
+    top: 83px;
     left: 8%;
     width: 20px;
     height: 2px;
@@ -41,34 +41,21 @@
   .header-mobile__btn-open::after {
     content: "";
     position: absolute;
-    top: 81px;
+    top: 92px;
     left: 8%;
     width: 20px;
     height: 2px;
     background-color: #007fff;
   }
 
-  .header-mobile-avatar {}
+  .header-mobile-avatar {
+    margin-left: 2px;
+  }
 
   .header-list {
     visibility: hidden;
     opacity: 0;
   }
-
-  /* .header__btn-div {
-    visibility: visible;
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    top: 0;
-    background: #ffffff;
-  } */
-
-  /* .header-item__link {
-    visibility: hidden;
-  } */
 
   .hello {
     padding-top: 50px;
@@ -81,6 +68,11 @@
     font-weight: 700;
     line-height: 36px;
     text-align: center;
+    margin-top: 125px;
+  }
+
+  .hello-list {
+    padding-top: 29px;
   }
 
   .row {
@@ -89,12 +81,16 @@
     justify-content: center;
   }
 
+  .works {
+    padding-top: 72px;
+  }
+
   .works-list {
     align-items: flex-start;
     justify-content: center;
     margin-left: 8%;
-    width: 84%%;
-    padding: 0 0 0 0;
+    width: 84%;
+    padding: 0;
   }
 
   .works-item {
@@ -104,6 +100,7 @@
 
   .works-item__button {
     line-height: 16px;
+    margin-bottom: 10px;
   }
 
   .works-item__title {
@@ -114,6 +111,10 @@
   .works-item._ocean {
     background-image: url('../img/works-ocean-mobile.png');
     height: 306px;
+  }
+
+  ._title-ocean {
+    width: 67%;
   }
 
   .works-item._mountains {
@@ -133,15 +134,30 @@
     margin-top: 30px;
   }
 
+  .about {
+    margin-top: 76px;
+    margin-left: -3%;
+  }
+
   .about-list {
     justify-content: center;
     padding: 0 0 0 0;
   }
 
   .about-item {
-    width: 80%;
+    width: 78%;
+    margin-top: 29px;
   }
 
+  .about-item__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+
+  .about-item__content {
+    margin-top: 10px;
+  }
 
   ._hide-button {
     display: none;
@@ -183,12 +199,13 @@
   }
 
   .gad {
-    margin-left: 10%;
+    margin-top: 28px;
+    margin-left: 8%;
   }
 
   .gad-list {
     justify-content: space-between;
-    width: 90%;
+    width: 91%;
   }
 
   .gad-item {
@@ -225,13 +242,13 @@
     float: right;
   }
 
-  ._item-google {}
-
   ._item-airbnb {
-    margin-left: 20px;
+    margin-left: 41px;
   }
 
-  ._item-dropbox {}
+  .links {
+    margin-top: 93px;
+  }
 
   .links-wrapper {
     flex-wrap: wrap;
@@ -239,12 +256,16 @@
   }
 
   .links-list {
-    width: 80%;
-    padding: 0 0 0 0;
+    width: 85%;
+    padding: 0;
   }
 
-  .links-content {
-    justify-content: flex-start;
+  .links-item {
+    margin-top: 10px;
+  }
+
+  .links-item__content {
+    line-height: 30px;
   }
 
   ._year-mobile {
@@ -256,7 +277,16 @@
   }
 
   .contacts {
-    margin-left: 10%;
+    margin-top: 120px;
+    margin-left: 8%;
+  }
+
+  .contacts__content {
+    margin-top: 11px;
+  }
+
+  ._br-hidden {
+    display: none;
   }
 
   .row {
@@ -265,11 +295,21 @@
   }
 
   .column._width-20proc {
-    width: 90%;
+    width: 86%;
   }
 
-  .column {
-    /* width: 80%; */
+  .contacts__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+
+  .contacts-list {
+    padding-top: 19px;
+  }
+
+  .contacts-item {
+    margin-right: 15px;
   }
 
   ._form-column {
@@ -277,21 +317,27 @@
   }
 
   .column._width-75proc {
-    width: 90%;
-    margin-top: 50px;
+    width: 92%;
+    margin-top: 29px;
+  }
+
+  .contact-form__label {
+    margin-top: 5px;
   }
 
   ._message {
-    height: 150px;
+    height: 114px;
   }
 
   ._button-mobile {
-    margin-top: 5vw;
-    margin-left: 66vw;
+    margin-top: -2px;
+    margin-left: 263px;
   }
 
   .footer {
-    margin-left: 10%;
+    margin-left: 8%;
+    margin-top: 56px;
+    margin-bottom: 60px;
   }
 
   .footer__content {
@@ -308,6 +354,7 @@
   .footer-buttons__button {
     width: 100%;
     font-size: 12px;
+    margin-top: 10px;
   }
 
   /* modal window */
