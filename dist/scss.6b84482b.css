@@ -464,8 +464,8 @@ button:focus {
   border: none;
   width: 52px;
   height: 52px;
-  margin-top: 38px;
-  margin-right: 6px;
+  padding: 0;
+  margin-top: 39px;
 }
 
 ._message {
