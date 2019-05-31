@@ -1,5 +1,33 @@
 // ------------------ скрипты модального меню -------------------
 
+
+// изменение высоты у header в процессе прокрутки окна
+const headerHeight = document.getElementById('headerId');
+const headerButton = document.getElementById('buttonId');
+const headerAvatar = document.getElementById('avatarId');
+headerHeight.classList.remove('_header-min');
+headerButton.classList.remove('_button-min');
+headerAvatar.classList.remove('_avatar-min');
+const minY = 200;
+window.onscroll = function () {
+  // отслеживаем координаты по оси Y
+  const pageY = () => (window.pageYOffset || window.scrollY);
+  let scrollYPos = pageY();
+  // setTimeout(() => {
+
+    // if координаты больше minY, то уменьшаем высоту header, else оставляем прежней
+    if (scrollYPos >= minY) {
+      headerHeight.classList.add('_header-min');
+      headerButton.classList.add('_button-min');
+      headerAvatar.classList.add('_avatar-min');
+    } else {
+      headerHeight.classList.remove('_header-min');
+      headerButton.classList.remove('_button-min');
+      headerAvatar.classList.remove('_avatar-min');
+    };
+  // }, 200); // время transition в CSS
+};
+
 // убрать скролл страницы после отображения модального окна
 document.addEventListener("DOMContentLoaded", function () {
   // вычисляем ширину полосы прокрутки и берем ее модуль
@@ -72,16 +100,16 @@ document.addEventListener("DOMContentLoaded", function () {
     moreText.classList.remove('_hide-text');
     moreText.classList.add('_visible-text');
   }
-// нажали на 1-ю кнопку
-  document.getElementById("btn-1").addEventListener('click', event =>  {
-  openText('more-1', 'btn-1');
+  // нажали на 1-ю кнопку
+  document.getElementById("btn-1").addEventListener('click', event => {
+    openText('more-1', 'btn-1');
   });
-// нажали на 2-ю кнопку
-  document.getElementById("btn-2").addEventListener('click', event =>  {
-  openText('more-2', 'btn-2');
+  // нажали на 2-ю кнопку
+  document.getElementById("btn-2").addEventListener('click', event => {
+    openText('more-2', 'btn-2');
   });
-// нажали на 2-ю кнопку
-  document.getElementById("btn-3").addEventListener('click', event =>  {
-  openText('more-3', 'btn-3');
+  // нажали на 2-ю кнопку
+  document.getElementById("btn-3").addEventListener('click', event => {
+    openText('more-3', 'btn-3');
   });
 });

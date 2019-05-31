@@ -1,8 +1,14 @@
 @media only screen and (max-width: 480px) {
 
   .header {
-    padding-top: 62px;
+    padding: 0px;
     height: 140px;
+    transition:
+      height 200ms ease-in;
+  }
+
+  .header._header-min {
+    height: 100px;
   }
 
   .container {
@@ -32,8 +38,9 @@
     background: none;
     border: none;
     position: absolute;
-    top: 63px;
+    top: 45%;
     left: 4%;
+    transition: top 200ms ease-in;
   }
 
   .header-mobile__btn-open::before {
@@ -56,10 +63,19 @@
     background-color: #007fff;
   }
 
+  .header-mobile__btn-open._button-min {
+    top: 20%;
+  }
+
   .header-mobile-avatar {
     position: absolute;
     left: 162px;
-    top: 62px;
+    top: 44%;
+    transition: top 200ms ease-in;
+  }
+
+  .header-mobile-avatar._avatar-min {
+    top: 22%;
   }
 
   .header-list {

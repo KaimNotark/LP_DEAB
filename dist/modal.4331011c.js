@@ -119,7 +119,38 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"js/modal.js":[function(require,module,exports) {
 // ------------------ скрипты модального меню -------------------
-// убрать скролл страницы после отображения модального окна
+// изменение высоты у header в процессе прокрутки окна
+var headerHeight = document.getElementById('headerId');
+var headerButton = document.getElementById('buttonId');
+var headerAvatar = document.getElementById('avatarId');
+headerHeight.classList.remove('_header-min');
+headerButton.classList.remove('_button-min');
+headerAvatar.classList.remove('_avatar-min');
+var minY = 200;
+
+window.onscroll = function () {
+  // отслеживаем координаты по оси Y
+  var pageY = function pageY() {
+    return window.pageYOffset || window.scrollY;
+  };
+
+  var scrollYPos = pageY(); // setTimeout(() => {
+  // if координаты больше minY, то уменьшаем высоту header, else оставляем прежней
+
+  if (scrollYPos >= minY) {
+    headerHeight.classList.add('_header-min');
+    headerButton.classList.add('_button-min');
+    headerAvatar.classList.add('_avatar-min');
+  } else {
+    headerHeight.classList.remove('_header-min');
+    headerButton.classList.remove('_button-min');
+    headerAvatar.classList.remove('_avatar-min');
+  }
+
+  ; // }, 200); // время transition в CSS
+}; // убрать скролл страницы после отображения модального окна
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // вычисляем ширину полосы прокрутки и берем ее модуль
   var scrollbar = Math.abs(document.body.clientWidth - window.innerWidth) + 'px';
