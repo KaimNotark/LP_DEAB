@@ -34,12 +34,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // смотрим на какую кнопку нажали
   // это кнопки вызывающие открытие модалки
-  const modalTrigger = Array.from(document.querySelectorAll('[data-modal]')); // формируем массив из всех элементов содержащих data-modal
+  const modalTrigger = Array.from(document.querySelectorAll('[mobile-menu]')); // формируем массив из всех элементов содержащих mobile-menu
   console.log('modalTrigger = ' + modalTrigger); // проверяем, что он сформировался
   // перебираем массив и выделяем элемент по которому кликнули
   modalTrigger.forEach(element => {
     element.addEventListener('click', event => {
-      const targetModalId = event.target.attributes['data-modal'].value;
+      const targetModalId = event.target.attributes['mobile-menu'].value;
       console.log('targetModalId = ' + targetModalId); // проверяем тот ли это элемент
       openModal(targetModalId); // обращаемся к функции, которая откроет модалку
     });
@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // смотрим на какую кнопку нажали
   // это кнопки вызывающие закрытие модалки
-  const modalCloseTrigger = Array.from(document.querySelectorAll('[data-modal-close]'));
+  const modalCloseTrigger = Array.from(document.querySelectorAll('[mobile-menu-close]'));
   console.log(modalCloseTrigger);
   modalCloseTrigger.forEach(element => {
     element.addEventListener('click', event => {
-      const targetModalId = event.target.attributes['data-modal-close'].value;
+      const targetModalId = event.target.attributes['mobile-menu-close'].value;
       console.log('targetModalId = ' + targetModalId);
       closeModal(targetModalId);
     });

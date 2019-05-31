@@ -119,27 +119,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"js/modal.js":[function(require,module,exports) {
 // ------------------ скрипты модального меню -------------------
-// появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
-// const btnOpenElem = document.getElementById('modalBtn');
-// let minY = 500;
-// window.onscroll = function () {
-//   // отслеживаем координаты по оси Y
-//   const pageY = () => (window.pageYOffset || window.scrollY);
-//   let scrollYPos = pageY();
-//   // смотрим на разрешение окна браузера
-//   const widthWin = document.body.clientWidth;
-//   if (widthWin < 480) {
-//     minY = 200
-//   } else {
-//     minY = 100
-//   };
-//   // if координаты больше minY, то показываем кнопку, else убираем
-//   // if (scrollYPos >= minY) {
-//   //   btnOpenElem.classList.add('_visible');
-//   // } else {
-//   //   btnOpenElem.classList.remove('_visible');
-//   // };
-// };
 // убрать скролл страницы после отображения модального окна
 document.addEventListener("DOMContentLoaded", function () {
   // вычисляем ширину полосы прокрутки и берем ее модуль
@@ -185,14 +164,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // это кнопки вызывающие открытие модалки
 
 
-  var modalTrigger = Array.from(document.querySelectorAll('[data-modal]')); // формируем массив из всех элементов содержащих data-modal
+  var modalTrigger = Array.from(document.querySelectorAll('[mobile-menu]')); // формируем массив из всех элементов содержащих mobile-menu
 
   console.log('modalTrigger = ' + modalTrigger); // проверяем, что он сформировался
   // перебираем массив и выделяем элемент по которому кликнули
 
   modalTrigger.forEach(function (element) {
     element.addEventListener('click', function (event) {
-      var targetModalId = event.target.attributes['data-modal'].value;
+      var targetModalId = event.target.attributes['mobile-menu'].value;
       console.log('targetModalId = ' + targetModalId); // проверяем тот ли это элемент
 
       openModal(targetModalId); // обращаемся к функции, которая откроет модалку
@@ -200,34 +179,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }); // смотрим на какую кнопку нажали
   // это кнопки вызывающие закрытие модалки
 
-  var modalCloseTrigger = Array.from(document.querySelectorAll('[data-modal-close]'));
+  var modalCloseTrigger = Array.from(document.querySelectorAll('[mobile-menu-close]'));
   console.log(modalCloseTrigger);
   modalCloseTrigger.forEach(function (element) {
     element.addEventListener('click', function (event) {
-      var targetModalId = event.target.attributes['data-modal-close'].value;
+      var targetModalId = event.target.attributes['mobile-menu-close'].value;
       console.log('targetModalId = ' + targetModalId);
-      closeModal(targetModalId); // появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
-      // const btnOpenElem = document.getElementById('modalBtn');
-      // let minY = 500;
-      // // отслеживаем координаты по оси Y
-      // const pageY = () => (window.pageYOffset || window.scrollY);
-      // let scrollYPos = pageY();
-      // // смотрим на разрешение окна браузера
-      // const widthWin = document.body.clientWidth;
-      // if (widthWin < 480) {
-      //   minY = 200
-      // } else {
-      //   minY = 100
-      // };
-      // console.log('minY= ' + minY);
-      // // if координаты больше minY, то показываем кнопку, else убираем
-      // setTimeout(() => {
-      //   // if (scrollYPos <= minY) {
-      //   //   btnOpenElem.classList.remove('_visible');
-      //   // } else {
-      //   //   btnOpenElem.classList.add('_visible');
-      //   // };
-      // }, 200); // время transition в CSS
+      closeModal(targetModalId);
     });
   }); // Отображать-скрыть текст в секции about
 
@@ -254,22 +212,9 @@ document.addEventListener("DOMContentLoaded", function () {
     btnText.classList.add('_hide-button');
     moreText.classList.remove('_hide-text');
     moreText.classList.add('_visible-text');
-  }); // function showMore() {
-  //  var dots = document.getElementById("dots");
-  // var moreText = document.getElementById("more");
-  // var btnText = document.getElementById("btn");
-  // if (more.style.display === "none") {
-  //   btnText.style.display = "none";
-  //   moreText.style.display = "inline";
-  // };
-  // else {
-  //   dots.style.display = "none";
-  //   btnText.innerHTML = "Показать меньше";
-  //   moreText.style.display = "inline";
-  // };
-  // }
+  });
 });
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../../../Users/User/AppData/Roaming/npm-cache/_npx/6924/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -297,7 +242,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59248" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49950" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -472,5 +417,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal.js"], null)
+},{}]},{},["../../../Users/User/AppData/Roaming/npm-cache/_npx/6924/node_modules/parcel/src/builtins/hmr-runtime.js","js/modal.js"], null)
 //# sourceMappingURL=/modal.4331011c.js.map
