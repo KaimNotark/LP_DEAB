@@ -156,7 +156,7 @@
 
   .about {
     margin-top: 76px;
-    margin-left: -20px;
+    margin-left: 10px;
   }
 
   .about-list {
@@ -226,6 +226,7 @@
   .gad-list {
     justify-content: space-between;
     width: 94%;
+    margin-left: 0;
   }
 
   .gad-item {
@@ -273,6 +274,7 @@
   .links-wrapper {
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: -4px;
   }
 
   .links-list {
@@ -298,7 +300,6 @@
 
   .contacts {
     margin-top: 120px;
-    margin-left: 20px;
   }
 
   .contacts__content {
@@ -316,7 +317,8 @@
   }
 
   .column._width-20proc {
-    width: 86%;
+    width: 85%;
+    margin-left: 20px;
   }
 
   .contacts__title {
@@ -338,9 +340,9 @@
   }
 
   .column._width-75proc {
-    width: 100%;
+    width: 94%;
     margin-top: 29px;
-    margin-left: -10px;
+    margin-left: 10px;
   }
 
   .contact-form__label {
@@ -366,6 +368,7 @@
     width: 90%;
     font-size: 12px;
     letter-spacing: 0.1px;
+    margin-left: 0px;
   }
 
   .footer-buttons {

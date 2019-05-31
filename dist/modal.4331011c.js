@@ -187,34 +187,32 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log('targetModalId = ' + targetModalId);
       closeModal(targetModalId);
     });
-  }); // Отображать-скрыть текст в секции about
+  }); // ------------- Отображать скрытый текст в секции about  -----------------
+  // функция отрабатывающая открытие текста и сокрытие кнопки
 
-  document.getElementById("btn-1").addEventListener("click", function () {
-    var moreText = document.getElementById("more-1");
-    var btnText = document.getElementById("btn-1");
+  function openText(textSelector, buttonSelector) {
+    var moreText = document.getElementById(textSelector);
+    var btnText = document.getElementById(buttonSelector);
     console.log('btn "See more..." was pressed');
     btnText.classList.add('_hide-button');
     moreText.classList.remove('_hide-text');
     moreText.classList.add('_visible-text');
-  });
-  document.getElementById("btn-2").addEventListener("click", function () {
-    var moreText = document.getElementById("more-2");
-    var btnText = document.getElementById("btn-2");
-    console.log('btn "See more..." was pressed');
-    btnText.classList.add('_hide-button');
-    moreText.classList.remove('_hide-text');
-    moreText.classList.add('_visible-text');
-  });
-  document.getElementById("btn-3").addEventListener("click", function () {
-    var moreText = document.getElementById("more-3");
-    var btnText = document.getElementById("btn-3");
-    console.log('btn "See more..." was pressed');
-    btnText.classList.add('_hide-button');
-    moreText.classList.remove('_hide-text');
-    moreText.classList.add('_visible-text');
+  } // нажали на 1-ю кнопку
+
+
+  document.getElementById("btn-1").addEventListener('click', function (event) {
+    openText('more-1', 'btn-1');
+  }); // нажали на 2-ю кнопку
+
+  document.getElementById("btn-2").addEventListener('click', function (event) {
+    openText('more-2', 'btn-2');
+  }); // нажали на 2-ю кнопку
+
+  document.getElementById("btn-3").addEventListener('click', function (event) {
+    openText('more-3', 'btn-3');
   });
 });
-},{}],"../../../Users/User/AppData/Roaming/npm-cache/_npx/6924/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -242,7 +240,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49950" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60020" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -417,5 +415,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../Users/User/AppData/Roaming/npm-cache/_npx/6924/node_modules/parcel/src/builtins/hmr-runtime.js","js/modal.js"], null)
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal.js"], null)
 //# sourceMappingURL=/modal.4331011c.js.map

@@ -58,37 +58,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  // Отображать-скрыть текст в секции about
-  document.getElementById("btn-1").addEventListener("click", function () {
-    var moreText = document.getElementById("more-1");
-    var btnText = document.getElementById("btn-1");
+  // ------------- Отображать скрытый текст в секции about  -----------------
+
+  // функция отрабатывающая открытие текста и сокрытие кнопки
+  function openText(textSelector, buttonSelector) {
+
+    const moreText = document.getElementById(textSelector);
+    const btnText = document.getElementById(buttonSelector);
 
     console.log('btn "See more..." was pressed');
 
     btnText.classList.add('_hide-button');
     moreText.classList.remove('_hide-text');
     moreText.classList.add('_visible-text');
+  }
+// нажали на 1-ю кнопку
+  document.getElementById("btn-1").addEventListener('click', event =>  {
+  openText('more-1', 'btn-1');
   });
-
-  document.getElementById("btn-2").addEventListener("click", function () {
-    var moreText = document.getElementById("more-2");
-    var btnText = document.getElementById("btn-2");
-
-    console.log('btn "See more..." was pressed');
-
-    btnText.classList.add('_hide-button');
-    moreText.classList.remove('_hide-text');
-    moreText.classList.add('_visible-text');
+// нажали на 2-ю кнопку
+  document.getElementById("btn-2").addEventListener('click', event =>  {
+  openText('more-2', 'btn-2');
   });
-
-  document.getElementById("btn-3").addEventListener("click", function () {
-    var moreText = document.getElementById("more-3");
-    var btnText = document.getElementById("btn-3");
-
-    console.log('btn "See more..." was pressed');
-
-    btnText.classList.add('_hide-button');
-    moreText.classList.remove('_hide-text');
-    moreText.classList.add('_visible-text');
+// нажали на 2-ю кнопку
+  document.getElementById("btn-3").addEventListener('click', event =>  {
+  openText('more-3', 'btn-3');
   });
 });
