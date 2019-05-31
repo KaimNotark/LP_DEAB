@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/process/browser.js":[function(require,module,exports) {
+})({"../../../Users/User/AppData/Roaming/npm-cache/_npx/6924/node_modules/parcel/node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -945,7 +945,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     };
   }]);
 });
-},{"process":"../node_modules/process/browser.js"}],"js/sweetalert2.min.js":[function(require,module,exports) {
+},{"process":"../../../Users/User/AppData/Roaming/npm-cache/_npx/6924/node_modules/parcel/node_modules/process/browser.js"}],"js/sweetalert2.min.js":[function(require,module,exports) {
 var define;
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2180,7 +2180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59248" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60020" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -60,6 +60,11 @@ body {
     padding-top: 100px
 }
 
+.header-menu {
+    width: 104%;
+    margin-left: -20px
+}
+
 .header-mobile__btn-div {
     visibility: hidden;
     opacity: 0
@@ -118,8 +123,10 @@ body {
 }
 
 .container {
-    max-width: 1100px;
-    margin: 0 auto
+    max-width: 104%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px
 }
 
 .hello {
@@ -166,8 +173,9 @@ body {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0;
+    margin-left: -20px;
     padding: 0;
+    width: 104%;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start
@@ -218,7 +226,7 @@ body {
 
 .works-item__button {
     padding: 0;
-    margin-bottom: 20px
+    margin-bottom: 23px
 }
 
 .works-item__title {
@@ -266,13 +274,16 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    margin-left: -40px;
+    width: 104%
 }
 
 .about-item {
     display: block;
     width: 45%;
-    margin-top: 60px
+    margin-top: 60px;
+    margin-left: 20px
 }
 
 .about-item__title {
@@ -303,7 +314,9 @@ body {
 .gad-list {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex
+    display: flex;
+    margin-left: -20px;
+    width: 104%
 }
 
 .gad-item {
@@ -329,7 +342,9 @@ body {
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-left: -20px;
+    width: 104%
 }
 
 .links-list {
@@ -367,10 +382,6 @@ body {
     visibility: visible
 }
 
-.contacts {
-    margin-top: 245px
-}
-
 .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -381,12 +392,18 @@ body {
 }
 
 .column._width-20proc {
-    width: 20%
+    width: 21%;
+    margin-left: -20px
 }
 
 .column._width-75proc {
-    width: 75%;
-    margin-top: 50px
+    width: 82%;
+    margin-top: 50px;
+    margin-right: -40px
+}
+
+.contacts {
+    margin-top: 247px
 }
 
 .contacts__title {
@@ -506,7 +523,7 @@ button:focus {
 }
 
 .footer {
-    margin-top: 121px;
+    margin-top: 124px;
     margin-bottom: 100px
 }
 
@@ -514,17 +531,19 @@ button:focus {
     font-family: Nunito;
     font-size: 16px;
     font-weight: 600;
-    line-height: 30px
+    line-height: 30px;
+    margin-left: -20px
 }
 
 .footer-buttons {
-    width: 31%;
+    width: 32%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between
+    justify-content: space-between;
+    margin-right: -20px
 }
 
 .footer-buttons__button {
@@ -540,4 +559,4 @@ button:focus {
     margin-right: 5px
 }
 
-/*# sourceMappingURL=/scss.13fcb5d0.css.map */
+/*# sourceMappingURL=/scss.24193ac8.css.map */

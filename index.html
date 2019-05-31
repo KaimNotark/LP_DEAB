@@ -8,18 +8,19 @@
  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="./normalize.e1f125f0.css">
  <link rel="stylesheet" href="./sweetalert2.min.a8def367.css">
- <link rel="stylesheet" href="./scss.13fcb5d0.css">
- <link rel="stylesheet" href="./mobile.b5541593.css">
+ <link rel="stylesheet" href="./scss.24193ac8.css">
+ <link rel="stylesheet" href="./mobile.931bd537.css">
  <link rel="stylesheet" href="./modal.0ad194f4.css">
 </head>
 
 <body>
  <div id="wrapper" class="wrapper">
-  <header class="header _bg-white _fixed">
+  <header id="headerId" class="header _bg-white _fixed _header-min">
    <div class="container">
     <nav class="header-menu">
-     <div class="header-mobile__btn-div"> <button data-modal="modal-window" class="header-mobile__btn-open"> </button>
-      <picture class="header-mobile-avatar">
+     <div class="header-mobile__btn-div"> <button id="buttonId" mobile-menu="mobile-menu"
+       class="header-mobile__btn-open _button-min"></button>
+      <picture id="avatarId" class="header-mobile-avatar _avatar-min">
        <source srcset="" media="" type=""> <img src="./header-avatar.754fe700.png" srcset="" alt="avatar"
         class="img-avatar"> </picture>
      </div>
@@ -35,14 +36,8 @@
       <li class="header-item"> <a href="#contacts" class="header-item__link"> contacts </a> </li>
      </ul>
     </nav>
-    <div id="modalBtn" class="modal__btn-div"> <button data-modal="modal-window" class="modal__btn-open">
-     </button>
-     <picture class="modal-avatar">
-      <source srcset="" media="" type=""> <img src="./header-avatar.754fe700.png" srcset="" alt="avatar"
-       class="img-avatar"> </picture>
-    </div>
-    <div id="modal-window" class="modal">
-     <div data-modal-close="modal-window" class="modal__overlay"></div>
+    <div id="mobile-menu" class="modal">
+     <div mobile-menu-close="mobile-menu" class="modal__overlay"></div>
      <div class="modal__dialog">
       <div class="modal__content">
        <header class="modal__header">
@@ -50,18 +45,18 @@
          <picture class="modal-avatar">
           <source srcset="" media="" type=""> <img src="./header-avatar.754fe700.png" srcset="" alt="avatar"
            class="img-avatar"> </picture>
-        </div> <button data-modal-close="modal-window" title="Close menu" class="modal-close">×</button>
+        </div> <button mobile-menu-close="mobile-menu" title="Close menu" class="modal-close">×</button>
        </header>
        <div class="modal-main">
         <nav class="modal-menu">
          <ul class="modal-list">
-          <li class="modal-item"> <a data-modal-close="modal-window" href="#works" class="modal-item__link"> works </a>
+          <li class="modal-item"> <a mobile-menu-close="mobile-menu" href="#works" class="modal-item__link"> works </a>
           </li>
-          <li class="modal-item"> <a data-modal-close="modal-window" href="#about" class="modal-item__link"> about </a>
+          <li class="modal-item"> <a mobile-menu-close="mobile-menu" href="#about" class="modal-item__link"> about </a>
           </li>
-          <li class="modal-item"> <a data-modal-close="modal-window" href="#links" class="modal-item__link"> links </a>
+          <li class="modal-item"> <a mobile-menu-close="mobile-menu" href="#links" class="modal-item__link"> links </a>
           </li>
-          <li class="modal-item"> <a data-modal-close="modal-window" href="#contacts" class="modal-item__link"> contacts
+          <li class="modal-item"> <a mobile-menu-close="mobile-menu" href="#contacts" class="modal-item__link"> contacts
            </a> </li>
          </ul>
         </nav>
@@ -260,7 +255,7 @@
    </div>
   </footer>
  </div>
- <script src="./modal.99e01f76.js"></script>
+ <script src="./modal.b57fc66a.js"></script>
  <script src="./form.c4f0a313.js"></script>
 </body>
 
