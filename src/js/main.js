@@ -1,6 +1,20 @@
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import modal from './modal.js';
 
+
+// подключение внешнего *.js файла
+//  function addScript(src) {
+//    var script = document.createElement('script');
+//    script.src = src;
+//    script.async = false;
+//    document.head.appendChild(script);
+//  };
+
+//  addScript('./modal.js');
+
+
+// обработка формы
 document.addEventListener('load', event => {
 
   const form = document.getElementById('formId');

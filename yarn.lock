@@ -3333,13 +3333,6 @@ nopt@^4.0.1, nopt@~4.0.1:
     abbrev "1"
     osenv "^0.1.4"
 
-normalise@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/normalise/-/normalise-10.0.0.tgz#e9dbaccd7a677ff60a43d12e8fb791b68748e7b7"
-  integrity sha1-6duszXpnf/YKQ9Euj7eRtodI57c=
-  dependencies:
-    to-decimal-arbitrary-precision "^1.0.2"
-
 normalize-html-whitespace@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/normalize-html-whitespace/-/normalize-html-whitespace-0.2.0.tgz#101722f6423551c75cdb8f9d104ff850daf1e10e"
@@ -3366,6 +3359,11 @@ normalize-url@^3.0.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
+
+normalize.css@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
 npm-bundled@^1.0.1:
   version "1.0.6"
@@ -4894,11 +4892,6 @@ to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
   integrity sha1-fSKbH8xjfkZsoIEYCDanqr/4P0M=
-
-to-decimal-arbitrary-precision@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/to-decimal-arbitrary-precision/-/to-decimal-arbitrary-precision-1.0.2.tgz#c9f6849de3fc8feda815735315112d900fffae15"
-  integrity sha1-yfaEneP8j+2oFXNTFREtkA//rhU=
 
 to-fast-properties@^1.0.3:
   version "1.0.3"
