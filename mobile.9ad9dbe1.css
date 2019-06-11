@@ -76,7 +76,7 @@
 
   .header-mobile-avatar {
     position: absolute;
-    left: 162px;
+    left: 43%;
     top: 44%;
     -webkit-transition: top 200ms ease-in;
     transition: top 200ms ease-in;
@@ -132,7 +132,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-left: 20px;
+    margin-left: 5%;
     width: 89%;
     padding: 0;
   }
