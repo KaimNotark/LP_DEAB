@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"id":"img/works-mountains.png","dependencies":[{"name":"C:\\KN\\LP_DEAB\\package.json","includedInParent":true,"mtime":1560217457521},{"name":"C:\\KN\\LP_DEAB\\.browserslistrc","includedInParent":true,"mtime":1559628543032}],"generated":{"js":"module.exports = \"/f684bfd7fcc5f4976088bc2c7377b155.png\";"},"sourceMaps":null,"error":null,"hash":"f8dc8de0328a45c395675741133447b1","cacheData":{"env":{}}}
+=======
+{"id":"img/works-mountains.png","dependencies":[{"name":"C:\\KN\\LP_DEAB\\package.json","includedInParent":true,"mtime":1559285788432},{"name":"C:\\KN\\LP_DEAB\\.browserslistrc","includedInParent":true,"mtime":1559285787089}],"generated":{"js":"module.exports = \"/f684bfd7fcc5f4976088bc2c7377b155.png\";"},"sourceMaps":null,"error":null,"hash":"f8dc8de0328a45c395675741133447b1","cacheData":{"env":{}}}
+>>>>>>> 17e6712736b4d591fae19675bb2230101a5c209b
