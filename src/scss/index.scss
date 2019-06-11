@@ -68,6 +68,11 @@ body {
   width: 100%;
   padding-top: 100px;
 
+  &-menu {
+    width: 104%;
+    margin-left: -20px;
+  }
+
   &-mobile__btn-div {
     visibility: hidden;
     opacity: 0;
@@ -116,6 +121,8 @@ body {
 .container {
   max-width: 1100px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 // -- 01 --
@@ -157,8 +164,9 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
-    margin: 0;
+    margin-left: -20px;
     padding: 0;
+    width: 104%;
     align-items: flex-start;
   }
 
@@ -196,7 +204,7 @@ body {
     &__button {
       @extend %button-yellow;
       padding: 0;
-      margin-bottom: 20px;
+      margin-bottom: 23px;
     }
 
     &:hover {
@@ -247,12 +255,15 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-left: -40px;
+    width: 104%;
   }
 
   &-item {
     display: block;
     width: 45%;
     margin-top: 60px;
+    margin-left: 20px;
 
     &__title {
       font-family: nunito;
@@ -285,6 +296,8 @@ body {
 
 .gad-list {
   display: flex;
+  margin-left: -20px;
+  width: 104%;
 }
 
 .gad-item {
@@ -317,6 +330,8 @@ body {
   &-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-left: -20px;
+    width: 104%;
   }
 
   &-list {
@@ -353,9 +368,6 @@ body {
 }
 
 // -- 06 --
-.contacts {
-  margin-top: 245px;
-}
 
 .row {
   display: flex;
@@ -363,15 +375,19 @@ body {
 }
 
 .column._width-20proc {
-  width: 20%;
+  width: 21%;
+  margin-left: -20px;
 }
 
 .column._width-75proc {
-  width: 75%;
+  width: 82%;
   margin-top: 50px;
+  margin-right: -40px;
 }
 
 .contacts {
+  margin-top: 247px;
+
   &__title {
     font-family: nunito;
     font-size: 28px;
@@ -480,7 +496,7 @@ button:focus {
 }
 
 .footer {
-  margin-top: 121px;
+  margin-top: 124px;
   margin-bottom: 100px;
 
   &__content {
@@ -488,12 +504,14 @@ button:focus {
     font-size: 16px;
     font-weight: 600;
     line-height: 30px;
+    margin-left: -20px;
   }
 
   &-buttons {
-    width: 31%;
+    width: 32%;
     display: flex;
     justify-content: space-between;
+    margin-right: -20px;
 
     &__button {
       color: $color-gray-dark;
