@@ -119,9 +119,6 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"js/modal.js":[function(require,module,exports) {
 // ------------------ скрипты модального меню -------------------
-<<<<<<< HEAD
-// убрать скролл страницы после отображения модального окна
-=======
 // изменение высоты у header в процессе прокрутки окна
 var headerHeight = document.getElementById('headerId');
 var headerButton = document.getElementById('buttonId');
@@ -154,7 +151,6 @@ window.onscroll = function () {
 }; // убрать скролл страницы после отображения модального окна
 
 
->>>>>>> 17e6712736b4d591fae19675bb2230101a5c209b
 document.addEventListener("DOMContentLoaded", function () {
   // вычисляем ширину полосы прокрутки и берем ее модуль
   var scrollbar = Math.abs(document.body.clientWidth - window.innerWidth) + 'px';
@@ -246,17 +242,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("btn-3").addEventListener('click', function (event) {
     openText('more-3', 'btn-3');
   });
-<<<<<<< HEAD
-  document.getElementById("btn-3").addEventListener("click", function () {
-    var moreText = document.getElementById("more-3");
-    var btnText = document.getElementById("btn-3");
-    console.log('btn "See more..." was pressed');
-    btnText.classList.add('_hide-button');
-    moreText.classList.remove('_hide-text');
-    moreText.classList.add('_visible-text');
-  });
-=======
->>>>>>> 17e6712736b4d591fae19675bb2230101a5c209b
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -286,11 +271,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53333" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55171" + '/');
->>>>>>> 17e6712736b4d591fae19675bb2230101a5c209b
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54010" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

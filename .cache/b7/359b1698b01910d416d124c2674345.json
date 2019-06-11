@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 {"id":"img/gad-airbnb-mobile.png","dependencies":[{"name":"C:\\KN\\LP_DEAB\\package.json","includedInParent":true,"mtime":1560217457521},{"name":"C:\\KN\\LP_DEAB\\.browserslistrc","includedInParent":true,"mtime":1559628543032}],"generated":{"js":"module.exports = \"/b9b7c688bc1cbb57edcd1d6a2f1db367.png\";"},"sourceMaps":null,"error":null,"hash":"b23c8f4ced1da9c41df5f6374308064a","cacheData":{"env":{}}}
-=======
-{"id":"img/gad-airbnb-mobile.png","dependencies":[{"name":"C:\\KN\\LP_DEAB\\package.json","includedInParent":true,"mtime":1559285788432},{"name":"C:\\KN\\LP_DEAB\\.browserslistrc","includedInParent":true,"mtime":1559285787089}],"generated":{"js":"module.exports = \"/b9b7c688bc1cbb57edcd1d6a2f1db367.png\";"},"sourceMaps":null,"error":null,"hash":"b23c8f4ced1da9c41df5f6374308064a","cacheData":{"env":{}}}
->>>>>>> 17e6712736b4d591fae19675bb2230101a5c209b

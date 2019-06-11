@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 {"id":"img/form-button.png","dependencies":[{"name":"C:\\KN\\LP_DEAB\\package.json","includedInParent":true,"mtime":1560217457521},{"name":"C:\\KN\\LP_DEAB\\.browserslistrc","includedInParent":true,"mtime":1559628543032}],"generated":{"js":"module.exports = \"/135afb0f6bc0851b38101121f7cbb6ca.png\";"},"sourceMaps":null,"error":null,"hash":"400f2c9a4f7a91323a3c5ecb21eebd09","cacheData":{"env":{}}}
-=======
-{"id":"img/form-button.png","dependencies":[{"name":"C:\\KN\\LP_DEAB\\package.json","includedInParent":true,"mtime":1559285788432},{"name":"C:\\KN\\LP_DEAB\\.browserslistrc","includedInParent":true,"mtime":1559285787089}],"generated":{"js":"module.exports = \"/135afb0f6bc0851b38101121f7cbb6ca.png\";"},"sourceMaps":null,"error":null,"hash":"400f2c9a4f7a91323a3c5ecb21eebd09","cacheData":{"env":{}}}
->>>>>>> 17e6712736b4d591fae19675bb2230101a5c209b
