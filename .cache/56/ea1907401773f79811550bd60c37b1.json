@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"id":"img/works-ocean-mobile.png","dependencies":[{"name":"C:\\KN\\LP_DEAB\\package.json","includedInParent":true,"mtime":1560218647526},{"name":"C:\\KN\\LP_DEAB\\.browserslistrc","includedInParent":true,"mtime":1559628543032}],"generated":{"js":"module.exports = \"/98f5eec410cc3634f2a97433d423de86.png\";"},"sourceMaps":null,"error":null,"hash":"57337359e73045457e26923054f50c52","cacheData":{"env":{}}}
-=======
-{"id":"img/works-ocean-mobile.png","dependencies":[{"name":"C:\\KN\\LP_DEAB\\package.json","includedInParent":true,"mtime":1560217457521},{"name":"C:\\KN\\LP_DEAB\\.browserslistrc","includedInParent":true,"mtime":1559628543032}],"generated":{"js":"module.exports = \"/98f5eec410cc3634f2a97433d423de86.png\";"},"sourceMaps":null,"error":null,"hash":"57337359e73045457e26923054f50c52","cacheData":{"env":{}}}
->>>>>>> develop
+{"id":"img/works-ocean-mobile.png","dependencies":[{"name":"C:\\KN\\LP_DEAB\\package.json","includedInParent":true,"mtime":1560221260569},{"name":"C:\\KN\\LP_DEAB\\.browserslistrc","includedInParent":true,"mtime":1559628543032}],"generated":{"js":"module.exports = \"/98f5eec410cc3634f2a97433d423de86.png\";"},"sourceMaps":null,"error":null,"hash":"57337359e73045457e26923054f50c52","cacheData":{"env":{}}}
