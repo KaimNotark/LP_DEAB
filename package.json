@@ -1,27 +1,36 @@
 {
   "name": "LP_DEAB",
   "version": "1.0.0",
-  "description": "",
+  "description": "landing page deab",
   "main": "index.js",
-  "dependencies": {
-    "parcel-bundler": "^1.12.3"
+  "keywords": [],
+  "author": {
+    "name": "KaimNotark",
+    "e-mail": "KaimNotark@yandex.ru"
   },
-  "devDependencies": {
-    "autoprefixer": "^9.5.1",
-    "sass": "^1.20.1"
-  },
+  "license": "ISC",
+  "homepage": "https://github.com/KaimNotark/LP_DEAB#readme",
   "scripts": {
+    "build": "parcel build src/index.html --open",
+    "start": "parcel src/index.html --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KaimNotark/LP_DEAB.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "normalize.css": "^8.0.1",
+    "parcel-bundler": "^1.12.3",
+    "sweetalert2": "^8.11.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "sass": "^1.20.1"
+  },
   "bugs": {
     "url": "https://github.com/KaimNotark/LP_DEAB/issues"
   },
-  "homepage": "https://github.com/KaimNotark/LP_DEAB#readme"
+  "private": true
 }

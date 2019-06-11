@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+{"id":"img/gad-dropbox-mobile.png","dependencies":[{"name":"C:\\KN\\LP_DEAB\\package.json","includedInParent":true,"mtime":1560218647526},{"name":"C:\\KN\\LP_DEAB\\.browserslistrc","includedInParent":true,"mtime":1559628543032}],"generated":{"js":"module.exports = \"/48936f7f88c51009f8071e0c779c8e45.png\";"},"sourceMaps":null,"error":null,"hash":"bd996b80f9c68c27d43bdac2d5f24be8","cacheData":{"env":{}}}
+=======
 {"id":"img/gad-dropbox-mobile.png","dependencies":[{"name":"C:\\KN\\LP_DEAB\\package.json","includedInParent":true,"mtime":1560217457521},{"name":"C:\\KN\\LP_DEAB\\.browserslistrc","includedInParent":true,"mtime":1559628543032}],"generated":{"js":"module.exports = \"/48936f7f88c51009f8071e0c779c8e45.png\";"},"sourceMaps":null,"error":null,"hash":"bd996b80f9c68c27d43bdac2d5f24be8","cacheData":{"env":{}}}
+>>>>>>> develop
