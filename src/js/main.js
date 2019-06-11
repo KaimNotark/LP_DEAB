@@ -1,9 +1,9 @@
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import modal from './modal.js';
+import modal from './modal.js'; // подключение внешнего *.js файла
 
 
-// подключение внешнего *.js файла
+// подключение внешнего *.js файла через функцию
 //  function addScript(src) {
 //    var script = document.createElement('script');
 //    script.src = src;
@@ -16,6 +16,8 @@ import modal from './modal.js';
 
 // обработка формы
 document.addEventListener('load', event => {
+
+  console.log(modal);
 
   const form = document.getElementById('formId');
 
