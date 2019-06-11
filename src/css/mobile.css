@@ -69,7 +69,7 @@
 
   .header-mobile-avatar {
     position: absolute;
-    left: 162px;
+    left: 43%;
     top: 44%;
     transition: top 200ms ease-in;
   }
@@ -115,7 +115,7 @@
   .works-list {
     align-items: flex-start;
     justify-content: center;
-    margin-left: 20px;
+    margin-left: 5%;
     width: 89%;
     padding: 0;
   }
