@@ -5,25 +5,40 @@
 const headerHeight = document.getElementById('headerId');
 const headerButton = document.getElementById('buttonId');
 const headerAvatar = document.getElementById('avatarId');
+const headerTable = document.getElementById('tableId');
 headerHeight.classList.remove('_header-min');
 headerButton.classList.remove('_button-min');
 headerAvatar.classList.remove('_avatar-min');
+headerTable.classList.remove('_table-min');
+headerTable.classList.remove('_hidden-min');
 const minY = 200;
+const minYhr = 3300;
+
 window.onscroll = function () {
   // отслеживаем координаты по оси Y
   const pageY = () => (window.pageYOffset || window.scrollY);
   let scrollYPos = pageY();
   // setTimeout(() => {
 
+  // if координаты больше minYhr, то убераем серые полоски у header
+  if (scrollYPos >= minYhr) {
+    headerTable.classList.add('_hidden-min');
+    headerTable.classList.remove('_table-min');
+  } else {
+    headerTable.classList.remove('_hidden-min');
+  };
+
   // if координаты больше minY, то уменьшаем высоту header, else оставляем прежней
   if (scrollYPos >= minY) {
     headerHeight.classList.add('_header-min');
     headerButton.classList.add('_button-min');
     headerAvatar.classList.add('_avatar-min');
+    headerTable.classList.add('_table-min');
   } else {
     headerHeight.classList.remove('_header-min');
     headerButton.classList.remove('_button-min');
     headerAvatar.classList.remove('_avatar-min');
+    headerTable.classList.remove('_table-min');
   };
   // }, 200); // время transition в CSS
 };
