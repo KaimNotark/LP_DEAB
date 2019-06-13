@@ -15,16 +15,16 @@ window.onscroll = function () {
   let scrollYPos = pageY();
   // setTimeout(() => {
 
-    // if координаты больше minY, то уменьшаем высоту header, else оставляем прежней
-    if (scrollYPos >= minY) {
-      headerHeight.classList.add('_header-min');
-      headerButton.classList.add('_button-min');
-      headerAvatar.classList.add('_avatar-min');
-    } else {
-      headerHeight.classList.remove('_header-min');
-      headerButton.classList.remove('_button-min');
-      headerAvatar.classList.remove('_avatar-min');
-    };
+  // if координаты больше minY, то уменьшаем высоту header, else оставляем прежней
+  if (scrollYPos >= minY) {
+    headerHeight.classList.add('_header-min');
+    headerButton.classList.add('_button-min');
+    headerAvatar.classList.add('_avatar-min');
+  } else {
+    headerHeight.classList.remove('_header-min');
+    headerButton.classList.remove('_button-min');
+    headerAvatar.classList.remove('_avatar-min');
+  };
   // }, 200); // время transition в CSS
 };
 
@@ -100,16 +100,30 @@ document.addEventListener("DOMContentLoaded", function () {
     moreText.classList.remove('_hide-text');
     moreText.classList.add('_visible-text');
   }
+
+  let btns = document.querySelectorAll('.about-item__see-more');
+
+  for (i = 0; i < btns.length; i++) {
+    let numBtn = 'btn-' + (i + 1);
+    let numTxt = 'more-' + (i + 1);
+
+    document.getElementById(numBtn).addEventListener('click', event => {
+      console.log('btn "' + numBtn + '" was pressed');
+      openText(numTxt, numBtn);
+    });
+
+  };
+
   // нажали на 1-ю кнопку
-  document.getElementById("btn-1").addEventListener('click', event => {
-    openText('more-1', 'btn-1');
-  });
-  // нажали на 2-ю кнопку
-  document.getElementById("btn-2").addEventListener('click', event => {
-    openText('more-2', 'btn-2');
-  });
-  // нажали на 2-ю кнопку
-  document.getElementById("btn-3").addEventListener('click', event => {
-    openText('more-3', 'btn-3');
-  });
+  // document.getElementById("btn-01").addEventListener('click', event => {
+  //   openText('more-01', 'btn-01');
+  // });
+  // // нажали на 2-ю кнопку
+  // document.getElementById("btn-02").addEventListener('click', event => {
+  //   openText('more-02', 'btn-02');
+  // });
+  // // нажали на 2-ю кнопку
+  // document.getElementById("btn-03").addEventListener('click', event => {
+  //   openText('more-03', 'btn-03');
+  // });
 });
