@@ -40,13 +40,16 @@
 }
 
 .contacts-line {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: -120px 0px 0px 0px;
+  padding: 120px 0px 0px 0px;
   height: 1px;
-  background-color: #ededed;
-  border: none;
+  /* background-color: #ededed; */
+  border-top: 1px solid #ededed;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
   top: 2992px;
   z-index: -1;
 }
@@ -77,6 +80,10 @@
 .about-about {
   -webkit-transform-origin: 13px 107px 0;
           transform-origin: 13px 107px 0;
+}
+
+.links-table {
+  visibility: hidden;
 }
 
 .links-links {

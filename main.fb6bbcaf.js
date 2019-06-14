@@ -4698,7 +4698,7 @@ headerAvatar.classList.remove('_avatar-min');
 headerTable.classList.remove('_table-min');
 headerTable.classList.remove('_hidden-min');
 var minY = 200;
-var minYhr = 3300;
+var minYhr = 0;
 
 window.onscroll = function () {
   // отслеживаем координаты по оси Y
@@ -4707,6 +4707,18 @@ window.onscroll = function () {
   };
 
   var scrollYPos = pageY(); // setTimeout(() => {
+  // смотрим ширину окна
+
+  var widthWindow = Math.abs(document.body.clientWidth); // console.log("Ширина окна = " + widthWindow);
+  // console.log(scrollYPos);
+
+  if (481 <= widthWindow && widthWindow <= 710) {
+    minYhr = 2870;
+  } else {
+    minYhr = 3300;
+  }
+
+  ; // console.log("minYhr= " + minYhr);
   // if координаты больше minYhr, то убераем серые полоски у header
 
   if (scrollYPos >= minYhr) {
@@ -4922,7 +4934,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55412" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58103" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
