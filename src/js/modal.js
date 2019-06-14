@@ -12,13 +12,25 @@ headerAvatar.classList.remove('_avatar-min');
 headerTable.classList.remove('_table-min');
 headerTable.classList.remove('_hidden-min');
 const minY = 200;
-const minYhr = 3300;
+let minYhr = 0;
 
 window.onscroll = function () {
   // отслеживаем координаты по оси Y
   const pageY = () => (window.pageYOffset || window.scrollY);
   let scrollYPos = pageY();
   // setTimeout(() => {
+
+  // смотрим ширину окна
+  const widthWindow = Math.abs(document.body.clientWidth);
+  // console.log("Ширина окна = " + widthWindow);
+  // console.log(scrollYPos);
+
+  if (481 <= widthWindow && widthWindow <= 710) {
+    minYhr = 2870;
+  } else {
+    minYhr = 3300;
+  };
+  // console.log("minYhr= " + minYhr);
 
   // if координаты больше minYhr, то убераем серые полоски у header
   if (scrollYPos >= minYhr) {
