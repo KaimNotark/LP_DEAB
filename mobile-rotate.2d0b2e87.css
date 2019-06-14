@@ -1,4 +1,4 @@
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 481px) and (max-width: 710px) {
 
   .header {
     padding: 0px;
@@ -14,6 +14,7 @@
   }
 
   .container {
+    /* width: 702px; */
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -76,7 +77,7 @@
 
   .header-mobile-avatar {
     position: absolute;
-    left: 42%;
+    left: 46%;
     top: 44%;
     -webkit-transition: top 200ms ease-in;
     transition: top 200ms ease-in;
@@ -97,7 +98,7 @@
 
   .hello__title {
     width: 89%;
-    margin-left: 15px;
+    margin-left: 51px;
     font-size: 28px;
     font-weight: 700;
     line-height: 36px;
@@ -108,7 +109,7 @@
 
   .hello-list {
     padding-top: 29px;
-    margin-left: -5px
+    margin-left: 21px
   }
 
   .row {
@@ -135,7 +136,7 @@
             justify-content: center;
     margin-left: 5%;
     width: 89%;
-    padding: 0;
+    padding: 0% 0% 0% 23.5%;
   }
 
   .works-item {
@@ -198,6 +199,8 @@
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0 0 0 0;
+    margin-left: -64px;
+    width: 120%;
   }
 
   .about-item {
@@ -264,7 +267,7 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 94%;
-    margin-left: 0;
+    margin-left: 3.5%;
   }
 
   .gad-item {
@@ -302,7 +305,7 @@
   }
 
   ._item-airbnb {
-    margin-left: 41px;
+    margin-left: 113px;
   }
 
   .links {
@@ -362,7 +365,7 @@
 
   .column._width-20proc {
     width: 85%;
-    margin-left: 20px;
+    margin-left: 42px;
   }
 
   .contacts__title {
@@ -386,7 +389,7 @@
   .column._width-75proc {
     width: 94%;
     margin-top: 29px;
-    margin-left: 10px;
+    margin-left: 35px;
   }
 
   .contact-form__label {
@@ -399,11 +402,11 @@
 
   ._button-mobile {
     margin-top: -2px;
-    margin-left: 263px;
+    margin-left: 572px;
   }
 
   .footer {
-    margin-left: 20px;
+    margin-left: 47px;
     margin-top: 56px;
     margin-bottom: 60px;
   }
@@ -458,20 +461,20 @@
   .modal__dialog {
     position: relative;
     width: 90%;
-    margin: 100px 5% 100px 5%;
+    margin: 3px 5% 100px 5%;
   }
 
   /* modify gray-lines.css */
 
   .header-table {
-    width: 315px;
-    left: 48px;
+    width: 622px;
+    left: 56px;
   }
 
   .table {
-    width: 315px;
-    height: 3400px;
-    left: 48px;
+    width: 622px;
+    height: 2773px;
+    left: 73px;
   }
 
   .table-td._hidden {
@@ -486,28 +489,28 @@
   }
 
   .works-works {
-    margin-left: 146px;
+    margin-left: 322px;
     margin-top: -16px;
   }
 
   .about-about {
-    margin-left: 138px;
+    margin-left: 316px;
     margin-top: -16px;
   }
 
   .links-table {
     visibility: visible;
     position: absolute;
-    width: 315px;
-    height: 520px;
-    left: 28px;
+    width: 622px;
+    height: 339px;
+    left: 53px;
     border-collapse: collapse;
     border-spacing: 1px;
     z-index: -1;
   }
 
   .links-links {
-    margin-left: 151px;
+    margin-left: 333px;
     margin-top: -36px;
   }
 
@@ -517,4 +520,4 @@
   }
 }
 
-/*# sourceMappingURL=/mobile.9ad9dbe1.css.map */
+/*# sourceMappingURL=/mobile-rotate.2d0b2e87.css.map */
