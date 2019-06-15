@@ -7,6 +7,11 @@
       height 200ms ease-in;
   }
 
+  .header-menu {
+    width: 100%;
+    margin-left: 0px;
+  }
+
   .header._header-min {
     height: 100px;
   }
@@ -174,14 +179,14 @@
 
   .about {
     margin-top: 76px;
-    margin-left: 10px;
+    margin-left: 0px;
   }
 
   .about-list {
     justify-content: center;
     padding: 0 0 0 0;
-    margin-left: -64px;
-    width: 120%;
+    margin-left: 0px;
+    width: 100%;
   }
 
   .about-item {
@@ -240,7 +245,7 @@
 
   .gad {
     margin-top: 28px;
-    margin-left: 20px;
+    margin-left: 0px;
   }
 
   .gad-list {
@@ -294,7 +299,8 @@
   .links-wrapper {
     flex-wrap: wrap;
     justify-content: center;
-    margin-left: -4px;
+    margin-left: 0px;
+    width: 100%;
   }
 
   .links-list {
@@ -363,6 +369,7 @@
     width: 94%;
     margin-top: 29px;
     margin-left: 35px;
+    margin-right: 0px;
   }
 
   .contact-form__label {
@@ -375,7 +382,7 @@
 
   ._button-mobile {
     margin-top: -2px;
-    margin-left: 572px;
+    margin-left: 272px;
   }
 
   .footer {
@@ -444,7 +451,8 @@
   .table {
     width: 622px;
     height: 2773px;
-    left: 73px;
+    left: 0px;
+    margin-left: 0px;
   }
 
   .table-td._hidden {
@@ -472,7 +480,7 @@
     position: absolute;
     width: 622px;
     height: 339px;
-    left: 53px;
+    left: 0px;
     border-collapse: collapse;
     border-spacing: 1px;
     z-index: -1;
