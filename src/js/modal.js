@@ -26,7 +26,7 @@ window.onscroll = function () {
   // console.log(scrollYPos);
 
   if (481 <= widthWindow && widthWindow <= 710) {
-    minYhr = 2870;
+    minYhr = 2970;
   } else {
     minYhr = 3300;
   };
