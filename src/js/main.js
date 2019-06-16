@@ -1,8 +1,10 @@
-import axios from 'axios';
-import Swal from 'sweetalert2/dist/sweetalert2.js';
-import modal from './modal.js'; // подключение внешнего *.js файла
-import mobile from './mobile.js';
-import form from './form.js';
+import './modal.js'; // подключение внешнего *.js файла
+import './mobile.js';
+import './form.js';
+
+// margin-left: -10px;
+// margin-right: -10px;
+
 
 // подключение внешнего *.js файла через функцию
 //  function addScript(src) {
