@@ -1,9 +1,12 @@
+import axios from 'axios';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+
 // обработка формы
 document.addEventListener('load', event => {
 
   const form = document.getElementById('formId');
 
-  form.addEventListener("submit", function (event) {
+  form.addEventListener('submit', function (event) {
     event.preventDefault();
     event.stopPropagation();
 
