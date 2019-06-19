@@ -1,6 +1,8 @@
+
 import axios from 'axios';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 
+document.addEventListener('DOMContentLoaded', function () {
 // обработка формы
 document.addEventListener('load', event => {
 
@@ -41,3 +43,5 @@ document.addEventListener('load', event => {
 
   });
 });
+
+}); //  -------------  'DOMContentLoaded'

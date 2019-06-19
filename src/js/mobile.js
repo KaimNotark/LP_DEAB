@@ -34,54 +34,40 @@ document.addEventListener('DOMContentLoaded', function () {
   const headerAvatar = document.getElementById('avatarId');
   const headerGrayLines = document.getElementById('tableId');
 
-  headerHeight.classList.remove('_header-min');
-  headerButton.classList.remove('_button-min');
-  headerAvatar.classList.remove('_avatar-min');
-  headerGrayLines.classList.remove('_table-min');
-  headerGrayLines.classList.remove('_hidden-min');
-  
-  const minY = 200;
-  let minYhr = 0;
+  const scrollYPositionForReductionHeightAtHeader = 200;
+  let scrollYPositionForHideGrayLinesAtHeader = 0;
 
   window.onscroll = function () {
     // отслеживаем координаты по оси Y
-    const pageY = () => (window.pageYOffset || window.scrollY);
-    let scrollYPos = pageY();
-    // setTimeout(() => {
+    const pageScrollYPosition = () => (window.pageYOffset || window.scrollY);
+    let currentScrollYPositionByPage = pageScrollYPosition();
 
     // смотрим ширину окна
     const widthWindow = Math.abs(document.body.clientWidth);
-    // console.log("Ширина окна = " + widthWindow);
-    // console.log(scrollYPos);
 
     if (481 <= widthWindow && widthWindow <= 710) {
-      minYhr = 2970;
+      scrollYPositionForHideGrayLinesAtHeader = 2970;
     } else {
-      minYhr = 3300;
+      scrollYPositionForHideGrayLinesAtHeader = 3300;
     };
-    // console.log("minYhr= " + minYhr);
 
-    // if координаты больше minYhr, то убераем серые линии у header
-    if (scrollYPos >= minYhr) {
+    // if координаты больше scrollYPositionForHideGrayLinesAtHeader, то убераем серые линии у header
+    if (currentScrollYPositionByPage >= scrollYPositionForHideGrayLinesAtHeader) {
       headerGrayLines.classList.add('_hidden-min');
       headerGrayLines.classList.remove('_table-min');
     } else {
       headerGrayLines.classList.remove('_hidden-min');
     };
 
-    // if координаты больше minY, то уменьшаем высоту header, else оставляем прежней
-    if (scrollYPos >= minY) {
-      headerHeight.classList.add('_header-min');
-      headerButton.classList.add('_button-min');
-      headerAvatar.classList.add('_avatar-min');
-      headerGrayLines.classList.add('_table-min');
-    } else {
-      headerHeight.classList.remove('_header-min');
-      headerButton.classList.remove('_button-min');
-      headerAvatar.classList.remove('_avatar-min');
-      headerGrayLines.classList.remove('_table-min');
-    };
-    // }, 200); // время transition в CSS
+    // if координаты больше scrollYPositionForReductionHeightAtHeader, 
+    // то уменьшаем высоту header, else оставляем прежней
+    const headerHeightMinMax = currentScrollYPositionByPage >= scrollYPositionForReductionHeightAtHeader ? 'add' : 'remove';
+
+    headerHeight.classList[headerHeightMinMax]('_header-min');
+    headerButton.classList[headerHeightMinMax]('_button-min');
+    headerAvatar.classList[headerHeightMinMax]('_avatar-min');
+    headerGrayLines.classList[headerHeightMinMax]('_table-min');
+
   };
 
 }); //  -------------  'DOMContentLoaded'

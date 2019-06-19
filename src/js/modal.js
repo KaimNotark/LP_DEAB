@@ -1,15 +1,13 @@
 // ------------------ скрипты модального меню -------------------
 
-
 // убрать скролл страницы после отображения модального окна
 document.addEventListener('DOMContentLoaded', function () {
+
   // вычисляем ширину полосы прокрутки и берем ее модуль
-  const scrollbar = Math.abs(document.body.clientWidth - window.innerWidth) + 'px';
-  console.log(scrollbar);
+  const scrollbarWidth = Math.abs(document.body.clientWidth - window.innerWidth) + 'px';
 
   const pageOffset = () => (window.pageYOffset || window.scrollY);
   let prevBodyOverflow = document.body.style.overflow || 'initial'; // сохраняем значение overflow на старте страницы
-  let prevScrollYPosition = 0; // вводим переменную для сохранения параметра scrollY
 
   // функция отрабатывающая открытие модального окна
   function openModal(selector) {
@@ -18,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const el = document.getElementById(selector);
     el.classList.add('_opened'); // добавляем модификатор _opened
     document.body.style.overflow = 'hidden'; // скрываем полосу прокрутки
-    document.body.style.marginRight = scrollbar; // компенсируем отсутсвие полосы прокрутки (иначе будет скачкообразнное смещение страницы)
+    document.body.style.marginRight = scrollbarWidth; // компенсируем отсутсвие полосы прокрутки (иначе будет скачкообразнное смещение страницы)
     btnOpenElem.classList.remove('_visible');
   }
   // функция отрабатывающая закрытие модального окна
