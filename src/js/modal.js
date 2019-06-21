@@ -1,7 +1,7 @@
 // ------------------ скрипты модального меню -------------------
 
 // убрать скролл страницы после отображения модального окна
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
 
   // вычисляем ширину полосы прокрутки и берем ее модуль
   const scrollbarWidth = Math.abs(document.body.clientWidth - window.innerWidth) + 'px';

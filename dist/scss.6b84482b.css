@@ -392,7 +392,7 @@ p {
 
 ul,
 li {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -409,8 +409,8 @@ body {
   padding-top: 100px;
 }
 .header-menu {
-  width: 104%;
   margin-left: -20px;
+  margin-right: -20px;
 }
 .header-mobile__btn-div {
   visibility: hidden;
@@ -476,13 +476,11 @@ body {
   padding-top: 120px;
 }
 .hello__title {
-  width: 50%;
-  margin-left: 25%;
   font-size: 48px;
   font-weight: 700;
   line-height: 60px;
   text-align: center;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.1px;
 }
 .hello-list {
   display: -webkit-box;
@@ -516,8 +514,7 @@ body {
       flex-wrap: wrap;
   list-style: none;
   margin-left: -20px;
-  padding: 0;
-  width: 104%;
+  margin-right: -20px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -606,7 +603,6 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: -40px;
-  width: 104%;
 }
 .about-item {
   display: block;
@@ -642,7 +638,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-left: -20px;
-  width: 104%;
+  margin-right: -20px;
 }
 
 .gad-item {
@@ -650,18 +646,8 @@ body {
   width: 25%;
 }
 
-.img-google-mobile {
-  width: 0%;
-  max-width: 0px;
-  visibility: hidden;
-}
-
-.img-airbnb-mobile {
-  width: 0%;
-  max-width: 0px;
-  visibility: hidden;
-}
-
+.img-google-mobile,
+.img-airbnb-mobile,
 .img-dropbox-mobile {
   width: 0%;
   max-width: 0px;
@@ -669,7 +655,7 @@ body {
 }
 
 .links {
-  margin-top: 82px;
+  margin-top: 80px;
 }
 .links-wrapper {
   display: -webkit-box;
@@ -679,7 +665,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-left: -20px;
-  width: 104%;
+  margin-right: -20px;
 }
 .links-list {
   display: block;
