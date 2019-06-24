@@ -117,7 +117,149 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
+})({"js/modal.js":[function(require,module,exports) {
+// ------------------ скрипты модального меню -------------------
+// убрать скролл страницы после отображения модального окна
+document.addEventListener('DOMContentLoaded', function () {
+  // вычисляем ширину полосы прокрутки и берем ее модуль
+  var scrollbarWidth = Math.abs(document.body.clientWidth - window.innerWidth) + 'px';
+
+  var pageOffset = function pageOffset() {
+    return window.pageYOffset || window.scrollY;
+  };
+
+  var prevBodyOverflow = document.body.style.overflow || 'initial'; // сохраняем значение overflow на старте страницы
+  // функция отрабатывающая открытие модального окна
+
+  function openModal(selector) {
+    prevScrollYPosition = pageOffset(); // сохраняем значение параметра scrollY
+
+    prevBodyOverflow = document.body.style.overflow; // сохраняем значение overflow до открытия модалки
+
+    var el = document.getElementById(selector);
+    el.classList.add('_opened'); // добавляем модификатор _opened
+
+    document.body.style.overflow = 'hidden'; // скрываем полосу прокрутки
+
+    document.body.style.marginRight = scrollbarWidth; // компенсируем отсутсвие полосы прокрутки (иначе будет скачкообразнное смещение страницы)
+
+    btnOpenElem.classList.remove('_visible');
+  } // функция отрабатывающая закрытие модального окна
+
+
+  function closeModal(selector) {
+    var el = document.getElementById(selector);
+    el.classList.remove('_opened'); // удаляем модификатор _opened
+    // ждем пока отработает transition в CSS, чтобы вернуть полосу прокрутки
+
+    setTimeout(function () {
+      document.body.style.overflow = prevBodyOverflow;
+      document.body.style.marginRight = 0;
+      btnOpenElem.classList.add('_visible');
+    }, 200); // время transition в CSS
+  } // смотрим на какую кнопку нажали
+  // это кнопки вызывающие открытие модалки
+
+
+  var modalTrigger = Array.from(document.querySelectorAll('[mobile-menu]')); // формируем массив из всех элементов содержащих mobile-menu
+
+  console.log('modalTrigger = ' + modalTrigger); // проверяем, что он сформировался
+  // перебираем массив и выделяем элемент по которому кликнули
+
+  modalTrigger.forEach(function (element) {
+    element.addEventListener('click', function (event) {
+      var targetModalId = event.target.attributes['mobile-menu'].value;
+      console.log('targetModalId = ' + targetModalId); // проверяем тот ли это элемент
+
+      openModal(targetModalId); // обращаемся к функции, которая откроет модалку
+    });
+  }); // смотрим на какую кнопку нажали
+  // это кнопки вызывающие закрытие модалки
+
+  var modalCloseTrigger = Array.from(document.querySelectorAll('[mobile-menu-close]'));
+  console.log(modalCloseTrigger);
+  modalCloseTrigger.forEach(function (element) {
+    element.addEventListener('click', function (event) {
+      var targetModalId = event.target.attributes['mobile-menu-close'].value;
+      console.log('targetModalId = ' + targetModalId);
+      closeModal(targetModalId);
+    });
+  });
+});
+},{}],"js/mobile.js":[function(require,module,exports) {
+document.addEventListener('DOMContentLoaded', function () {
+  // ------------- Отображать скрытый текст в секции about  -----------------
+  // функция отрабатывающая открытие текста и сокрытие кнопки
+  function showText(textSelector, buttonSelector) {
+    var hiddenText = document.getElementById(textSelector);
+    var buttonShowText = document.getElementById(buttonSelector);
+    console.log('btn "See more..." was pressed');
+    buttonShowText.classList.add('_hide-button');
+    hiddenText.classList.remove('_hide-text');
+    hiddenText.classList.add('_visible-text');
+  }
+
+  var showTextButtons = document.querySelectorAll('.about-item__see-more');
+
+  var _loop = function _loop() {
+    var numberOfShowTextButton = 'btn-' + (i + 1);
+    var numberHiddenText = 'more-' + (i + 1);
+    document.getElementById(numberOfShowTextButton).addEventListener('click', function (event) {
+      console.log('btn "' + numberOfShowTextButton + '" was pressed');
+      showText(numberHiddenText, numberOfShowTextButton);
+    });
+  };
+
+  for (i = 0; i < showTextButtons.length; i++) {
+    _loop();
+  }
+
+  ; // ------------------ изменение высоты header и показать/скрыть серые линии ------------------
+  // изменение высоты у header в процессе прокрутки окна
+
+  var headerHeight = document.getElementById('headerId');
+  var headerButton = document.getElementById('buttonId');
+  var headerAvatar = document.getElementById('avatarId');
+  var headerGrayLines = document.getElementById('tableId');
+  var scrollYPositionForReductionHeightAtHeader = 200;
+  var scrollYPositionForHideGrayLinesAtHeader = 0;
+
+  window.onscroll = function () {
+    // отслеживаем координаты по оси Y
+    var pageScrollYPosition = function pageScrollYPosition() {
+      return window.pageYOffset || window.scrollY;
+    };
+
+    var currentScrollYPositionByPage = pageScrollYPosition(); // смотрим ширину окна
+
+    var widthWindow = Math.abs(document.body.clientWidth);
+
+    if (481 <= widthWindow && widthWindow <= 710) {
+      scrollYPositionForHideGrayLinesAtHeader = 2970;
+    } else {
+      scrollYPositionForHideGrayLinesAtHeader = 3300;
+    }
+
+    ; // if координаты больше scrollYPositionForHideGrayLinesAtHeader, то убераем серые линии у header
+
+    if (currentScrollYPositionByPage >= scrollYPositionForHideGrayLinesAtHeader) {
+      headerGrayLines.classList.add('_hidden-min');
+      headerGrayLines.classList.remove('_table-min');
+    } else {
+      headerGrayLines.classList.remove('_hidden-min');
+    }
+
+    ; // if координаты больше scrollYPositionForReductionHeightAtHeader, 
+    // то уменьшаем высоту header, else оставляем прежней
+
+    var headerHeightMinMax = currentScrollYPositionByPage >= scrollYPositionForReductionHeightAtHeader ? 'add' : 'remove';
+    headerHeight.classList[headerHeightMinMax]('_header-min');
+    headerButton.classList[headerHeightMinMax]('_button-min');
+    headerAvatar.classList[headerHeightMinMax]('_avatar-min');
+    headerGrayLines.classList[headerHeightMinMax]('_table-min');
+  };
+}); //  -------------  'DOMContentLoaded'
+},{}],"../node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -4685,228 +4827,153 @@ var global = arguments[3];
 if (typeof window !== 'undefined' && window.Sweetalert2) {
   window.swal = window.sweetAlert = window.Swal = window.SweetAlert = window.Sweetalert2;
 }
-},{}],"js/modal.js":[function(require,module,exports) {
-// ------------------ скрипты модального меню -------------------
-// изменение высоты у header в процессе прокрутки окна
-var headerHeight = document.getElementById('headerId');
-var headerButton = document.getElementById('buttonId');
-var headerAvatar = document.getElementById('avatarId');
-var headerTable = document.getElementById('tableId');
-headerHeight.classList.remove('_header-min');
-headerButton.classList.remove('_button-min');
-headerAvatar.classList.remove('_avatar-min');
-headerTable.classList.remove('_table-min');
-headerTable.classList.remove('_hidden-min');
-var minY = 200;
-var minYhr = 0;
-
-window.onscroll = function () {
-  // отслеживаем координаты по оси Y
-  var pageY = function pageY() {
-    return window.pageYOffset || window.scrollY;
-  };
-
-  var scrollYPos = pageY(); // setTimeout(() => {
-  // смотрим ширину окна
-
-  var widthWindow = Math.abs(document.body.clientWidth); // console.log("Ширина окна = " + widthWindow);
-  // console.log(scrollYPos);
-
-  if (481 <= widthWindow && widthWindow <= 710) {
-    minYhr = 2970;
-  } else {
-    minYhr = 3300;
-  }
-
-  ; // console.log("minYhr= " + minYhr);
-  // if координаты больше minYhr, то убераем серые полоски у header
-
-  if (scrollYPos >= minYhr) {
-    headerTable.classList.add('_hidden-min');
-    headerTable.classList.remove('_table-min');
-  } else {
-    headerTable.classList.remove('_hidden-min');
-  }
-
-  ; // if координаты больше minY, то уменьшаем высоту header, else оставляем прежней
-
-  if (scrollYPos >= minY) {
-    headerHeight.classList.add('_header-min');
-    headerButton.classList.add('_button-min');
-    headerAvatar.classList.add('_avatar-min');
-    headerTable.classList.add('_table-min');
-  } else {
-    headerHeight.classList.remove('_header-min');
-    headerButton.classList.remove('_button-min');
-    headerAvatar.classList.remove('_avatar-min');
-    headerTable.classList.remove('_table-min');
-  }
-
-  ; // }, 200); // время transition в CSS
-}; // убрать скролл страницы после отображения модального окна
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  // вычисляем ширину полосы прокрутки и берем ее модуль
-  var scrollbar = Math.abs(document.body.clientWidth - window.innerWidth) + 'px';
-  console.log(scrollbar);
-
-  var pageOffset = function pageOffset() {
-    return window.pageYOffset || window.scrollY;
-  };
-
-  var prevBodyOverflow = document.body.style.overflow || 'initial'; // сохраняем значение overflow на старте страницы
-
-  var prevScrollYPosition = 0; // вводим переменную для сохранения параметра scrollY
-  // функция отрабатывающая открытие модального окна
-
-  function openModal(selector) {
-    prevScrollYPosition = pageOffset(); // сохраняем значение параметра scrollY
-
-    prevBodyOverflow = document.body.style.overflow; // сохраняем значение overflow до открытия модалки
-
-    var el = document.getElementById(selector);
-    el.classList.add('_opened'); // добавляем модификатор _opened
-
-    document.body.style.overflow = 'hidden'; // скрываем полосу прокрутки
-
-    document.body.style.marginRight = scrollbar; // компенсируем отсутсвие полосы прокрутки (иначе будет скачкообразнное смещение страницы)
-
-    btnOpenElem.classList.remove('_visible');
-  } // функция отрабатывающая закрытие модального окна
-
-
-  function closeModal(selector) {
-    var el = document.getElementById(selector);
-    el.classList.remove('_opened'); // удаляем модификатор _opened
-    // ждем пока отработает transition в CSS, чтобы вернуть полосу прокрутки
-
-    setTimeout(function () {
-      document.body.style.overflow = prevBodyOverflow;
-      document.body.style.marginRight = 0;
-      btnOpenElem.classList.add('_visible');
-    }, 200); // время transition в CSS
-  } // смотрим на какую кнопку нажали
-  // это кнопки вызывающие открытие модалки
-
-
-  var modalTrigger = Array.from(document.querySelectorAll('[mobile-menu]')); // формируем массив из всех элементов содержащих mobile-menu
-
-  console.log('modalTrigger = ' + modalTrigger); // проверяем, что он сформировался
-  // перебираем массив и выделяем элемент по которому кликнули
-
-  modalTrigger.forEach(function (element) {
-    element.addEventListener('click', function (event) {
-      var targetModalId = event.target.attributes['mobile-menu'].value;
-      console.log('targetModalId = ' + targetModalId); // проверяем тот ли это элемент
-
-      openModal(targetModalId); // обращаемся к функции, которая откроет модалку
-    });
-  }); // смотрим на какую кнопку нажали
-  // это кнопки вызывающие закрытие модалки
-
-  var modalCloseTrigger = Array.from(document.querySelectorAll('[mobile-menu-close]'));
-  console.log(modalCloseTrigger);
-  modalCloseTrigger.forEach(function (element) {
-    element.addEventListener('click', function (event) {
-      var targetModalId = event.target.attributes['mobile-menu-close'].value;
-      console.log('targetModalId = ' + targetModalId);
-      closeModal(targetModalId);
-    });
-  });
-});
-},{}],"js/mobile.js":[function(require,module,exports) {
-// ------------- Отображать скрытый текст в секции about  -----------------
-// функция отрабатывающая открытие текста и сокрытие кнопки
-function openText(textSelector, buttonSelector) {
-  var moreText = document.getElementById(textSelector);
-  var btnText = document.getElementById(buttonSelector);
-  console.log('btn "See more..." was pressed');
-  btnText.classList.add('_hide-button');
-  moreText.classList.remove('_hide-text');
-  moreText.classList.add('_visible-text');
-}
-
-var btns = document.querySelectorAll('.about-item__see-more');
-
-var _loop = function _loop() {
-  var numBtn = 'btn-' + (i + 1);
-  var numTxt = 'more-' + (i + 1);
-  document.getElementById(numBtn).addEventListener('click', function (event) {
-    console.log('btn "' + numBtn + '" was pressed');
-    openText(numTxt, numBtn);
-  });
-};
-
-for (i = 0; i < btns.length; i++) {
-  _loop();
-}
-
-;
 },{}],"js/form.js":[function(require,module,exports) {
-// обработка формы
-document.addEventListener('load', function (event) {
-  var form = document.getElementById('formId');
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    var parsedForm = event.target.querySelectorAll('input, textarea');
-    console.log(parsedForm);
-    var prsObj = {};
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
-
-    try {
-      for (var _iterator = parsedForm[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var val = _step.value;
-        prsObj[val.name] = val.value;
-      }
-    } catch (err) {
-      _didIteratorError = true;
-      _iteratorError = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion && _iterator.return != null) {
-          _iterator.return();
-        }
-      } finally {
-        if (_didIteratorError) {
-          throw _iteratorError;
-        }
-      }
-    }
-
-    console.log(prsObj);
-    axios.post('http://localhost:5000/call', prsObj).then(function (response) {
-      console.log(response);
-      Swal.fire(response.data, 'Всё хорошо, сервер принял запрос.', 'success');
-    }).catch(function (error) {
-      console.error(error.response.data);
-      Swal.fire({
-        type: 'error',
-        title: 'Что-то пошло не так.',
-        text: error.response.data,
-        footer: 'Сервер запрос не принял.'
-      });
-    });
-  });
-});
-},{}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
 var _axios = _interopRequireDefault(require("axios"));
 
 var _sweetalert = _interopRequireDefault(require("sweetalert2/dist/sweetalert2.js"));
 
-var _modal = _interopRequireDefault(require("./modal.js"));
-
-var _mobile = _interopRequireDefault(require("./mobile.js"));
-
-var _form = _interopRequireDefault(require("./form.js"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"axios":"../node_modules/axios/index.js","sweetalert2/dist/sweetalert2.js":"../node_modules/sweetalert2/dist/sweetalert2.js","./modal.js":"js/modal.js","./mobile.js":"js/mobile.js","./form.js":"js/form.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+document.addEventListener('DOMContentLoaded', function () {
+  // обработка формы
+  document.addEventListener('load', function (event) {
+    var form = document.getElementById('formId');
+    form.addEventListener('submit',
+    /*#__PURE__*/
+    function () {
+      var _ref = _asyncToGenerator(
+      /*#__PURE__*/
+      regeneratorRuntime.mark(function _callee(event) {
+        var parsedForm, prsObj, _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, val, response;
+
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                event.preventDefault();
+                event.stopPropagation();
+                parsedForm = event.target.querySelectorAll('input, textarea');
+                console.log(parsedForm);
+                prsObj = {};
+                _iteratorNormalCompletion = true;
+                _didIteratorError = false;
+                _iteratorError = undefined;
+                _context.prev = 8;
+
+                for (_iterator = parsedForm[Symbol.iterator](); !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                  val = _step.value;
+                  prsObj[val.name] = val.value;
+                }
+
+                _context.next = 16;
+                break;
+
+              case 12:
+                _context.prev = 12;
+                _context.t0 = _context["catch"](8);
+                _didIteratorError = true;
+                _iteratorError = _context.t0;
+
+              case 16:
+                _context.prev = 16;
+                _context.prev = 17;
+
+                if (!_iteratorNormalCompletion && _iterator.return != null) {
+                  _iterator.return();
+                }
+
+              case 19:
+                _context.prev = 19;
+
+                if (!_didIteratorError) {
+                  _context.next = 22;
+                  break;
+                }
+
+                throw _iteratorError;
+
+              case 22:
+                return _context.finish(19);
+
+              case 23:
+                return _context.finish(16);
+
+              case 24:
+                console.log(prsObj);
+                _context.prev = 25;
+                _context.next = 28;
+                return _axios.default.post('http://localhost:5000/call', prsObj);
+
+              case 28:
+                response = _context.sent;
+                console.log(response);
+
+                _sweetalert.default.fire(response.data, 'Всё хорошо, сервер принял запрос.', 'success');
+
+                _context.next = 37;
+                break;
+
+              case 33:
+                _context.prev = 33;
+                _context.t1 = _context["catch"](25);
+                console.error(_context.t1.response.data);
+
+                _sweetalert.default.fire({
+                  type: 'error',
+                  title: 'Что-то пошло не так.',
+                  text: _context.t1.response.data,
+                  footer: 'Сервер запрос не принял.'
+                });
+
+              case 37:
+                ; // axios.post('http://localhost:5000/call', prsObj)
+                //   .then(response => {
+                //     console.log(response);
+                //     Swal.fire(
+                //       response.data,
+                //       'Всё хорошо, сервер принял запрос.',
+                //       'success'
+                //     )
+                //   })
+                //   .catch(error => {
+                //     console.error(error.response.data);
+                //     Swal.fire({
+                //       type: 'error',
+                //       title: 'Что-то пошло не так.',
+                //       text: error.response.data,
+                //       footer: 'Сервер запрос не принял.'
+                //     })
+                //   });
+
+              case 38:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[8, 12, 16, 24], [17,, 19, 23], [25, 33]]);
+      }));
+
+      return function (_x) {
+        return _ref.apply(this, arguments);
+      };
+    }());
+  });
+}); //  -------------  'DOMContentLoaded'
+},{"axios":"../node_modules/axios/index.js","sweetalert2/dist/sweetalert2.js":"../node_modules/sweetalert2/dist/sweetalert2.js"}],"js/main.js":[function(require,module,exports) {
+"use strict";
+
+require("./modal.js");
+
+require("./mobile.js");
+
+require("./form.js");
+},{"./modal.js":"js/modal.js","./mobile.js":"js/mobile.js","./form.js":"js/form.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -4934,7 +5001,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58738" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58144" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

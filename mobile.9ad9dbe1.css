@@ -14,6 +14,7 @@
   }
 
   .container {
+    width: 315px;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -44,7 +45,7 @@
     background: none;
     border: none;
     position: absolute;
-    top: 45%;
+    top: 44%;
     left: 4%;
     -webkit-transition: top 200ms ease-in;
     transition: top 200ms ease-in;
@@ -76,7 +77,9 @@
 
   .header-mobile-avatar {
     position: absolute;
-    left: 42%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     top: 44%;
     -webkit-transition: top 200ms ease-in;
     transition: top 200ms ease-in;
@@ -96,19 +99,16 @@
   }
 
   .hello__title {
-    width: 89%;
-    margin-left: 15px;
     font-size: 28px;
     font-weight: 700;
     line-height: 36px;
     letter-spacing: 0.5px;
     text-align: center;
-    margin-top: 125px;
+    margin-top: 124px;
   }
 
   .hello-list {
     padding-top: 29px;
-    margin-left: -5px
   }
 
   .row {
@@ -120,6 +120,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 0 auto;
   }
 
   .works {
@@ -133,8 +134,8 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-left: 5%;
-    width: 89%;
+    margin-left: -10px;
+    margin-right: -10px;
     padding: 0;
   }
 
@@ -159,17 +160,9 @@
     height: 306px;
   }
 
-  ._title-ocean {
-    width: 75%;
-  }
-
   .works-item._mountains {
     background-image: url('/works-mountains-mobile.6b84963b.png');
     height: 446px;
-  }
-
-  ._title-mountains {
-    width: 80%;
   }
 
   .works-item._doors {
@@ -184,25 +177,20 @@
     margin-top: 30px;
   }
 
-  ._title-building {
-    width: 83%;
-  }
-
   .about {
     margin-top: 76px;
-    margin-left: 10px;
   }
 
   .about-list {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0 0 0 0;
+    margin: 0;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 
   .about-item {
-    width: 78%;
     margin-top: 29px;
+    margin-left: 0%;
+    width: 94%;
   }
 
   .about-item__title {
@@ -256,15 +244,15 @@
 
   .gad {
     margin-top: 28px;
-    margin-left: 20px;
+    margin-left: 0px;
   }
 
   .gad-list {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 94%;
-    margin-left: 0;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 
   .gad-item {
@@ -312,14 +300,13 @@
   .links-wrapper {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-left: -4px;
+    margin-left: -10px;
+    margin-right: -10px;
+    /* justify-content: center; */
   }
 
   .links-list {
-    width: 87%;
+    width: 98%;
     padding: 0;
   }
 
@@ -340,7 +327,7 @@
   }
 
   .contacts {
-    margin-top: 120px;
+    margin-top: 119px;
   }
 
   .contacts__content {
@@ -361,8 +348,8 @@
   }
 
   .column._width-20proc {
-    width: 85%;
-    margin-left: 20px;
+    width: 94%;
+    margin-left: -10px;
   }
 
   .contacts__title {
@@ -380,13 +367,17 @@
   }
 
   ._form-column {
-    width: 100%;
+    width: 107%;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 
   .column._width-75proc {
-    width: 94%;
     margin-top: 29px;
-    margin-left: 10px;
+  }
+
+  .contact-form {
+    margin-left: -4%;
   }
 
   .contact-form__label {
@@ -399,11 +390,11 @@
 
   ._button-mobile {
     margin-top: -2px;
-    margin-left: 263px;
+    margin-left: 86%;
   }
 
   .footer {
-    margin-left: 20px;
+    margin-left: -4%;
     margin-top: 56px;
     margin-bottom: 60px;
   }
@@ -464,14 +455,17 @@
   /* modify gray-lines.css */
 
   .header-table {
+    position: relative;
     width: 315px;
-    left: 48px;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 
   .table {
     width: 315px;
+    margin-left: -10px;
+    margin-right: -10px;
     height: 3400px;
-    left: 48px;
   }
 
   .table-td._hidden {
@@ -486,12 +480,12 @@
   }
 
   .works-works {
-    margin-left: 146px;
+    margin-left: 31.5%;
     margin-top: -16px;
   }
 
   .about-about {
-    margin-left: 138px;
+    margin-left: 32%;
     margin-top: -16px;
   }
 
@@ -500,15 +494,16 @@
     position: absolute;
     width: 315px;
     height: 520px;
-    left: 28px;
+    margin-left: -10px;
+    margin-right: -10px;
     border-collapse: collapse;
     border-spacing: 1px;
     z-index: -1;
   }
 
   .links-links {
-    margin-left: 151px;
-    margin-top: -36px;
+    margin-left: 32.5%;
+    margin-top: -37px;
   }
 
   .contacts-line {
