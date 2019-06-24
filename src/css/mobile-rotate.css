@@ -1,4 +1,4 @@
-@media only screen and (min-width: 481px) and (max-width: 710px) {
+@media only screen and (min-width: 481px) and (max-width: 992px) {
 
   .header {
     padding: 0px;
@@ -40,7 +40,7 @@
     border: none;
     position: absolute;
     top: 44%;
-    left: 4%;
+    left: 2.7%;
     transition: top 200ms ease-in;
   }
 

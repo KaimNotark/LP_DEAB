@@ -40,7 +40,7 @@
     border: none;
     position: absolute;
     top: 44%;
-    left: 4%;
+    left: 2.7%;
     transition: top 200ms ease-in;
   }
 
@@ -438,7 +438,7 @@
     width: 315px;
     margin-left: -10px;
     margin-right: -10px;
-    height: 3400px;
+    height: 3398px;
   }
 
   .table-td._hidden {
@@ -465,7 +465,7 @@
     visibility: visible;
     position: absolute;
     width: 315px;
-    height: 520px;
+    height: 517px;
     margin-left: -10px;
     margin-right: -10px;
     border-collapse: collapse;

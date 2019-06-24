@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const widthWindow = Math.abs(document.body.clientWidth);
 
     if (481 <= widthWindow && widthWindow <= 710) {
-      scrollYPositionForHideGrayLinesAtHeader = 2970;
+      scrollYPositionForHideGrayLinesAtHeader = 2870;
     } else {
       scrollYPositionForHideGrayLinesAtHeader = 3300;
     };
