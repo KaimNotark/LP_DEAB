@@ -43,7 +43,7 @@
         border: none;
         position: absolute;
         top: 44%;
-        left: 4%;
+        left: 3%;
         -webkit-transition: top .2s ease-in;
         transition: top .2s ease-in
     }
@@ -448,7 +448,7 @@
     }
 
     .table {
-        height: 3400px
+        height: 3398px
     }
 
     .table-td._hidden {
