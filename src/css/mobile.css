@@ -343,13 +343,17 @@
   }
 
   ._form-column {
-    width: 100%;
+    width: 107%;
     margin-left: -10px;
     margin-right: -10px;
   }
 
   .column._width-75proc {
     margin-top: 29px;
+  }
+
+  .contact-form {
+    margin-left: -4%;
   }
 
   .contact-form__label {
@@ -362,11 +366,11 @@
 
   ._button-mobile {
     margin-top: -2px;
-    margin-left: 263px;
+    margin-left: 86%;
   }
 
   .footer {
-    margin-left: 20px;
+    margin-left: -4%;
     margin-top: 56px;
     margin-bottom: 60px;
   }
