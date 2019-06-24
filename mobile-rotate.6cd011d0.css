@@ -43,7 +43,7 @@
         border: none;
         position: absolute;
         top: 44%;
-        left: 4%;
+        left: 6%;
         -webkit-transition: top .2s ease-in;
         transition: top .2s ease-in
     }
