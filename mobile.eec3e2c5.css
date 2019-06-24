@@ -1,4 +1,4 @@
-@media only screen and (min-width:481px) and (max-width:710px) {
+@media only screen and (max-width:480px) {
     .header {
         padding: 0;
         height: 140px;
@@ -11,7 +11,7 @@
     }
 
     .container {
-        width: 586px;
+        width: 315px;
         padding-left: 10px;
         padding-right: 10px
     }
@@ -43,7 +43,7 @@
         border: none;
         position: absolute;
         top: 44%;
-        left: 4%;
+        left: 2.7%;
         -webkit-transition: top .2s ease-in;
         transition: top .2s ease-in
     }
@@ -133,7 +133,6 @@
     }
 
     .works-item {
-        width: 315px;
         margin-top: 30px;
         padding: 30px
     }
@@ -282,7 +281,7 @@
     }
 
     ._item-airbnb {
-        margin-left: 109px
+        margin-left: 41px
     }
 
     .links {
@@ -381,7 +380,7 @@
 
     ._button-mobile {
         margin-top: -2px;
-        margin-left: 93%
+        margin-left: 86%
     }
 
     .footer {
@@ -434,7 +433,7 @@
     .modal__dialog {
         position: relative;
         width: 90%;
-        margin: 3px 5% 100px
+        margin: 100px 5%
     }
 
     .header-table {
@@ -443,13 +442,13 @@
 
     .header-table,
     .table {
-        width: 586px;
+        width: 315px;
         margin-left: -10px;
         margin-right: -10px
     }
 
     .table {
-        height: 2900px
+        height: 3398px
     }
 
     .table-td._hidden {
@@ -464,20 +463,20 @@
     }
 
     .works-works {
-        margin-left: 38%;
+        margin-left: 31.5%;
         margin-top: -16px
     }
 
     .about-about {
-        margin-left: 38.3%;
+        margin-left: 32%;
         margin-top: -16px
     }
 
     .links-table {
         visibility: visible;
         position: absolute;
-        width: 586px;
-        height: 338px;
+        width: 315px;
+        height: 517px;
         margin-left: -10px;
         margin-right: -10px;
         border-collapse: collapse;
@@ -486,7 +485,7 @@
     }
 
     .links-links {
-        margin-left: 38.8%;
+        margin-left: 32.5%;
         margin-top: -37px
     }
 
@@ -496,4 +495,4 @@
     }
 }
 
-/*# sourceMappingURL=/mobile-rotate.6cd011d0.css.map */
+/*# sourceMappingURL=/mobile.eec3e2c5.css.map */
