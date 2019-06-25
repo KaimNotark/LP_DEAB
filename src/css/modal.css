@@ -22,8 +22,6 @@
   border: none;
 }
 
-.modal__btn-open:hover {}
-
 .modal__btn-open::before {
   content: "";
   position: absolute;
@@ -107,7 +105,6 @@
 .modal-close {
   font-family: sans-serif;
   border: none;
-  /* border-radius: 4px; */
   transition:
     background-color .1s ease,
     border-color .3s ease;

@@ -119,9 +119,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"js/modal.js":[function(require,module,exports) {
 // ------------------ скрипты модального меню -------------------
-// появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
-var btnOpenElem = document.getElementById('modalBtn');
-var minY = 500;
+// изменение высоты у header в процессе прокрутки окна
+var headerHeight = document.getElementById('headerId');
+var headerButton = document.getElementById('buttonId');
+var headerAvatar = document.getElementById('avatarId');
+headerHeight.classList.remove('_header-min');
+headerButton.classList.remove('_button-min');
+headerAvatar.classList.remove('_avatar-min');
+var minY = 200;
 
 window.onscroll = function () {
   // отслеживаем координаты по оси Y
@@ -129,25 +134,20 @@ window.onscroll = function () {
     return window.pageYOffset || window.scrollY;
   };
 
-  var scrollYPos = pageY(); // смотрим на разрешение окна браузера
-
-  var widthWin = document.body.clientWidth;
-
-  if (widthWin < 480) {
-    minY = 200;
-  } else {
-    minY = 100;
-  }
-
-  ; // if координаты больше minY, то показываем кнопку, else убираем
+  var scrollYPos = pageY(); // setTimeout(() => {
+  // if координаты больше minY, то уменьшаем высоту header, else оставляем прежней
 
   if (scrollYPos >= minY) {
-    btnOpenElem.classList.add('_visible');
+    headerHeight.classList.add('_header-min');
+    headerButton.classList.add('_button-min');
+    headerAvatar.classList.add('_avatar-min');
   } else {
-    btnOpenElem.classList.remove('_visible');
+    headerHeight.classList.remove('_header-min');
+    headerButton.classList.remove('_button-min');
+    headerAvatar.classList.remove('_avatar-min');
   }
 
-  ;
+  ; // }, 200); // время transition в CSS
 }; // убрать скролл страницы после отображения модального окна
 
 
@@ -195,14 +195,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // это кнопки вызывающие открытие модалки
 
 
-  var modalTrigger = Array.from(document.querySelectorAll('[data-modal]')); // формируем массив из всех элементов содержащих data-modal
+  var modalTrigger = Array.from(document.querySelectorAll('[mobile-menu]')); // формируем массив из всех элементов содержащих mobile-menu
 
   console.log('modalTrigger = ' + modalTrigger); // проверяем, что он сформировался
   // перебираем массив и выделяем элемент по которому кликнули
 
   modalTrigger.forEach(function (element) {
     element.addEventListener('click', function (event) {
-      var targetModalId = event.target.attributes['data-modal'].value;
+      var targetModalId = event.target.attributes['mobile-menu'].value;
       console.log('targetModalId = ' + targetModalId); // проверяем тот ли это элемент
 
       openModal(targetModalId); // обращаемся к функции, которая откроет модалку
@@ -210,47 +210,37 @@ document.addEventListener("DOMContentLoaded", function () {
   }); // смотрим на какую кнопку нажали
   // это кнопки вызывающие закрытие модалки
 
-  var modalCloseTrigger = Array.from(document.querySelectorAll('[data-modal-close]'));
+  var modalCloseTrigger = Array.from(document.querySelectorAll('[mobile-menu-close]'));
   console.log(modalCloseTrigger);
   modalCloseTrigger.forEach(function (element) {
     element.addEventListener('click', function (event) {
-      var targetModalId = event.target.attributes['data-modal-close'].value;
+      var targetModalId = event.target.attributes['mobile-menu-close'].value;
       console.log('targetModalId = ' + targetModalId);
-      closeModal(targetModalId); // появление/исчезновение кнопки вызова модалки в процессе прокрутки окна
-
-      var btnOpenElem = document.getElementById('modalBtn');
-      var minY = 500; // отслеживаем координаты по оси Y
-
-      var pageY = function pageY() {
-        return window.pageYOffset || window.scrollY;
-      };
-
-      var scrollYPos = pageY();
-      console.log('scrollYPos=pageY() = ' + scrollYPos); // смотрим на разрешение окна браузера
-
-      var widthWin = document.body.clientWidth;
-
-      if (widthWin < 480) {
-        minY = 200;
-      } else {
-        minY = 100;
-      }
-
-      ;
-      console.log('minY= ' + minY); // if координаты больше minY, то показываем кнопку, else убираем
-
-      setTimeout(function () {
-        if (scrollYPos <= minY) {
-          btnOpenElem.classList.remove('_visible');
-          console.log('remove(_visible)');
-        } else {
-          btnOpenElem.classList.add('_visible');
-          console.log('add(_visible)');
-        }
-
-        ;
-      }, 200); // время transition в CSS
+      closeModal(targetModalId);
     });
+  }); // ------------- Отображать скрытый текст в секции about  -----------------
+  // функция отрабатывающая открытие текста и сокрытие кнопки
+
+  function openText(textSelector, buttonSelector) {
+    var moreText = document.getElementById(textSelector);
+    var btnText = document.getElementById(buttonSelector);
+    console.log('btn "See more..." was pressed');
+    btnText.classList.add('_hide-button');
+    moreText.classList.remove('_hide-text');
+    moreText.classList.add('_visible-text');
+  } // нажали на 1-ю кнопку
+
+
+  document.getElementById("btn-1").addEventListener('click', function (event) {
+    openText('more-1', 'btn-1');
+  }); // нажали на 2-ю кнопку
+
+  document.getElementById("btn-2").addEventListener('click', function (event) {
+    openText('more-2', 'btn-2');
+  }); // нажали на 2-ю кнопку
+
+  document.getElementById("btn-3").addEventListener('click', function (event) {
+    openText('more-3', 'btn-3');
   });
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -281,7 +271,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52504" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54010" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
