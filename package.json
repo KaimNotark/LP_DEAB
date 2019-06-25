@@ -6,7 +6,7 @@
   "keywords": [],
   "author": {
     "name": "KaimNotark",
-    "e-mail": "KaimNotark@yandex.ru"
+    "email": "KaimNotark@yandex.ru"
   },
   "license": "ISC",
   "homepage": "https://github.com/KaimNotark/LP_DEAB#readme",
@@ -23,11 +23,11 @@
   "dependencies": {
     "axios": "^0.19.0",
     "normalize.css": "^8.0.1",
-    "parcel-bundler": "^1.12.3",
     "sweetalert2": "^8.11.7"
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
+    "parcel-bundler": "^1.12.3",
     "sass": "^1.20.1"
   },
   "bugs": {

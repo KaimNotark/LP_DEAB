@@ -53,7 +53,7 @@ p {
 
 ul,
 li {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -69,8 +69,8 @@ body {
   padding-top: 100px;
 
   &-menu {
-    width: 104%;
     margin-left: -20px;
+    margin-right: -20px;
   }
 
   &-mobile__btn-div {
@@ -130,13 +130,11 @@ body {
   padding-top: 120px;
 
   &__title {
-    width: 50%;
-    margin-left: 25%;
     font-size: 48px;
     font-weight: 700;
     line-height: 60px;
     text-align: center;
-    letter-spacing: 1.3px;
+    letter-spacing: 1.1px;
   }
 
   &-list {
@@ -164,9 +162,11 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
+
+    // * @AlexQuidditch
     margin-left: -20px;
-    padding: 0;
-    width: 104%;
+    margin-right: -20px;
+
     align-items: flex-start;
   }
 
@@ -222,22 +222,6 @@ body {
 
 }
 
-._title-ocean {
-  width: 65%;
-}
-
-._title-mountains {
-  width: 75%;
-}
-
-._title-doors {
-  width: 70%;
-}
-
-._title-building {
-  width: 75%;
-}
-
 .img-ocean-mobile,
 .img-mountains-mobile,
 .img-doors-mobile,
@@ -256,7 +240,6 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-left: -40px;
-    width: 104%;
   }
 
   &-item {
@@ -297,7 +280,7 @@ body {
 .gad-list {
   display: flex;
   margin-left: -20px;
-  width: 104%;
+  margin-right: -20px;
 }
 
 .gad-item {
@@ -305,18 +288,8 @@ body {
   width: 25%;
 }
 
-.img-google-mobile {
-  width: 0%;
-  max-width: 0px;
-  visibility: hidden;
-}
-
-.img-airbnb-mobile {
-  width: 0%;
-  max-width: 0px;
-  visibility: hidden;
-}
-
+.img-google-mobile,
+.img-airbnb-mobile,
 .img-dropbox-mobile {
   width: 0%;
   max-width: 0px;
@@ -325,13 +298,13 @@ body {
 
 // -- 05 --
 .links {
-  margin-top: 82px;
+  margin-top: 80px;
 
   &-wrapper {
     display: flex;
     justify-content: space-between;
     margin-left: -20px;
-    width: 104%;
+    margin-right: -20px;
   }
 
   &-list {
