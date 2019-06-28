@@ -33,11 +33,10 @@
 
         <nav class="header-menu">
 
-          <div id="" class="header-mobile__btn-div">
+          <div class="header-mobile__btn-div">
             <button id="buttonId" mobile-menu="mobile-menu" class="header-mobile__btn-open"></button>
             <picture id="avatarId" class="header-mobile-avatar">
-              <source srcset="" media="" type="" />
-              <img src="./img/header-avatar.png" srcset="" alt="avatar" class="img-avatar" />
+              <img src="./img/header-avatar.png" alt="avatar" class="img-avatar" />
             </picture>
           </div>
 
@@ -54,8 +53,7 @@
             </li>
             <li class="header-item _item-avatar">
               <picture class="header-avatar">
-                <source srcset="" media="" type="" />
-                <img src="./img/header-avatar.png" srcset="" alt="avatar" class="img-avatar" />
+                <img src="./img/header-avatar.png" alt="avatar" class="img-avatar" />
               </picture>
             </li>
             <li class="header-item">
@@ -71,65 +69,65 @@
 
           </ul>
         </nav>
-        <!-- modal -->
-        <!-- само модальное окно -->
-        <div id="mobile-menu" class="modal">
-          <!-- оверлей (подложка) кликая по нему модалка должна закрыться -->
-          <div mobile-menu-close="mobile-menu" class="modal__overlay"></div>
 
-          <div class="modal__dialog">
-            <div class="modal__content">
-
-              <header class="modal__header">
-                <div class="modal-logo">
-                  <picture class="modal-avatar">
-                    <source srcset="" media="" type="" />
-                    <img src="./img/header-avatar.png" srcset="" alt="avatar" class="img-avatar" />
-                  </picture>
-                </div>
-                <button mobile-menu-close="mobile-menu" title="Close menu" class="modal-close">×</button>
-              </header>
-
-              <div class="modal-main">
-                <nav class="modal-menu">
-                  <ul class="modal-list">
-                    <li class="modal-item">
-                      <a mobile-menu-close="mobile-menu" href="#works" class="modal-item__link">
-                        works
-                      </a>
-                    </li>
-                    <li class="modal-item">
-                      <a mobile-menu-close="mobile-menu" href="#about" class="modal-item__link">
-                        about
-                      </a>
-                    </li>
-                    <li class="modal-item">
-                      <a mobile-menu-close="mobile-menu" href="#links" class="modal-item__link">
-                        links
-                      </a>
-                    </li>
-                    <li class="modal-item">
-                      <a mobile-menu-close="mobile-menu" href="#contacts" class="modal-item__link">
-                        contacts
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-
-              <footer class="modal-footer">
-                <p class="modal-footer-p">
-                  Site navigation. Select a section.
-                </p>
-              </footer>
-
-            </div>
-          </div>
-        </div> <!-- /modal -->
       </div> <!-- /container -->
     </header>
 
     <main class="main">
+      <!-- modal -->
+      <!-- само модальное окно -->
+      <div id="mobile-menu" class="modal">
+        <!-- оверлей (подложка) кликая по нему модалка должна закрыться -->
+        <div mobile-menu-close="mobile-menu" class="modal__overlay"></div>
+
+        <div class="modal__dialog">
+          <div class="modal__content">
+
+            <header class="modal__header">
+              <div class="modal-logo">
+                <picture class="modal-avatar">
+                  <img src="./img/header-avatar.png" alt="avatar" class="img-avatar" />
+                </picture>
+              </div>
+              <button mobile-menu-close="mobile-menu" title="Close menu" class="modal-close">×</button>
+            </header>
+
+            <div class="modal-main">
+              <nav class="modal-menu">
+                <ul class="modal-list">
+                  <li class="modal-item">
+                    <a mobile-menu-close="mobile-menu" href="#works" class="modal-item__link">
+                      works
+                    </a>
+                  </li>
+                  <li class="modal-item">
+                    <a mobile-menu-close="mobile-menu" href="#about" class="modal-item__link">
+                      about
+                    </a>
+                  </li>
+                  <li class="modal-item">
+                    <a mobile-menu-close="mobile-menu" href="#links" class="modal-item__link">
+                      links
+                    </a>
+                  </li>
+                  <li class="modal-item">
+                    <a mobile-menu-close="mobile-menu" href="#contacts" class="modal-item__link">
+                      contacts
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <footer class="modal-footer">
+              <p class="modal-footer-p">
+                Site navigation. Select a section.
+              </p>
+            </footer>
+
+          </div>
+        </div>
+      </div> <!-- /modal -->
       <!-- 01 -->
       <section class="hello">
         <div class="container">
@@ -263,22 +261,19 @@
             <li class="gad-item _item-google">
               <img src="img/gad-google-mobile.png" alt="google" class="img-google-mobile" />
               <picture class="gad-picture">
-                <source srcset="" media="" type="" />
-                <img src="img/gad-google.png" srcset="" alt="google" class="img-google" />
+                <img src="img/gad-google.png" alt="google" class="img-google" />
               </picture>
             </li>
             <li class="gad-item _item-airbnb">
               <img src="img/gad-airbnb-mobile.png" alt="airbnb" class="img-airbnb-mobile" />
               <picture class="gad-picture">
-                <source srcset="" media="" type="" />
-                <img src="img/gad-airbnb.png" srcset="" alt="airbnb" class="img-airbnb" />
+                <img src="img/gad-airbnb.png" alt="airbnb" class="img-airbnb" />
               </picture>
             </li>
             <li id="links" class="gad-item _item-dropbox">
               <img src="img/gad-dropbox-mobile.png" alt="dropbox" class="img-dropbox-mobile" />
               <picture class="gad-picture">
-                <source srcset="" media="" type="" />
-                <img src="img/gad-dropbox.png" srcset="" alt="dropbox" class="img-dropbox" />
+                <img src="img/gad-dropbox.png" alt="dropbox" class="img-dropbox" />
               </picture>
             </li>
           </ul>
@@ -425,7 +420,7 @@
                   <label class="contact-form__label">
                     <span class="contact-form__span">MESSAGE</span>
                     <textarea class="contact-form__input _message" name="message" maxlength="500"
-                      placeholder="Your question or suggestion" wrap="hard" required></textarea>
+                      placeholder="Your question or suggestion" wrap="hard" required cols="500"></textarea>
                   </label>
 
                 </div> <!-- /column -->
