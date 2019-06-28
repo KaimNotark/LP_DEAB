@@ -34,7 +34,7 @@
         <nav class="header-menu">
 
           <div class="header-mobile__btn-div">
-            <button id="buttonId" class="header-mobile__btn-open"></button>
+            <button id="buttonId" mobile-menu="mobile-menu" class="header-mobile__btn-open"></button>
             <picture id="avatarId" class="header-mobile-avatar">
               <img src="./img/header-avatar.png" alt="avatar" class="img-avatar" />
             </picture>
@@ -69,7 +69,7 @@
 
           </ul>
         </nav>
-        
+
       </div> <!-- /container -->
     </header>
 
@@ -78,7 +78,7 @@
       <!-- само модальное окно -->
       <div id="mobile-menu" class="modal">
         <!-- оверлей (подложка) кликая по нему модалка должна закрыться -->
-        <div class="modal__overlay"></div>
+        <div mobile-menu-close="mobile-menu" class="modal__overlay"></div>
 
         <div class="modal__dialog">
           <div class="modal__content">
@@ -89,29 +89,29 @@
                   <img src="./img/header-avatar.png" alt="avatar" class="img-avatar" />
                 </picture>
               </div>
-              <button title="Close menu" class="modal-close">×</button>
+              <button mobile-menu-close="mobile-menu" title="Close menu" class="modal-close">×</button>
             </header>
 
             <div class="modal-main">
               <nav class="modal-menu">
                 <ul class="modal-list">
                   <li class="modal-item">
-                    <a href="#works" class="modal-item__link">
+                    <a mobile-menu-close="mobile-menu" href="#works" class="modal-item__link">
                       works
                     </a>
                   </li>
                   <li class="modal-item">
-                    <a href="#about" class="modal-item__link">
+                    <a mobile-menu-close="mobile-menu" href="#about" class="modal-item__link">
                       about
                     </a>
                   </li>
                   <li class="modal-item">
-                    <a href="#links" class="modal-item__link">
+                    <a mobile-menu-close="mobile-menu" href="#links" class="modal-item__link">
                       links
                     </a>
                   </li>
                   <li class="modal-item">
-                    <a href="#contacts" class="modal-item__link">
+                    <a mobile-menu-close="mobile-menu" href="#contacts" class="modal-item__link">
                       contacts
                     </a>
                   </li>
