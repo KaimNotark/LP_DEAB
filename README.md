@@ -1,6 +1,8 @@
 # Deab Landing Page.
 ***
 ## How to run.
+run file `\dist\index.html` or ...
+<br>
 #### Global dependencies:
 * Yarn
 * Node JS
