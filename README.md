@@ -7,12 +7,12 @@
 #### Commands:
 **for dev** 
 <br>
-'$ yarn install && yarn start'
+`$ yarn install && yarn start`
 <br>
 <br>
 **for build**
 <br>
-'$ yarn install && yarn build'
+`$ yarn install && yarn build`
 ***
 ## About the project.
 **This is my second project.**
