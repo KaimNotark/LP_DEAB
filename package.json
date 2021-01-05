@@ -21,7 +21,7 @@
     "url": "git+https://github.com/KaimNotark/LP_DEAB.git"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "normalize.css": "^8.0.1",
     "sweetalert2": "^8.11.7"
   },
